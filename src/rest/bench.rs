@@ -119,8 +119,7 @@ pub async fn bench_mark(
             tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;
             let start = chrono::Utc::now();
             let _login = login(
-                config.username.as_str(),
-                config.password.as_str(),
+                &config,
                 false
             ).await;
             let duration = chrono::Utc::now().signed_duration_since(start);
@@ -137,8 +136,7 @@ pub async fn bench_mark(
             tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;
             let start = chrono::Utc::now();
             let _login = login(
-                config.username.as_str(),
-                config.password.as_str(),
+                &config,
                 true
             ).await;
             let duration = chrono::Utc::now().signed_duration_since(start);

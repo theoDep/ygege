@@ -14,6 +14,7 @@ services:
       # TMDB_TOKEN: "your_token"               # Optional: TMDB API token
       # YGG_DOMAIN: "https://www.ygg.re"       # Optional: YGG domain
       # TURBO_ENABLED: "true"                  # Optional: Enable turbo mode
+      # FLARESOLVERR_URL: "http://flaresolverr:8191"  # Optional: FlareSolverr URL for CF bypass
     volumes:
       - ygege:/app/sessions           # Use named volume for proper permissions
       - ./ygege/config.json:/app/config.json:ro # Optional: read-only config file
@@ -25,6 +26,20 @@ services:
       timeout: 20s
       retries: 3
       start_period: 10s
+    # depends_on:
+    #   - flaresolverr
+
+  # Optional: FlareSolverr for Cloudflare bypass when leaked IP method fails
+  # flaresolverr:
+  #   image: ghcr.io/flaresolverr/flaresolverr:latest
+  #   container_name: flaresolverr
+  #   restart: unless-stopped
+  #   environment:
+  #     - LOG_LEVEL=info
+  #     - LOG_HTML=false
+  #     - CAPTCHA_SOLVER=none
+  #   ports:
+  #     - "8191:8191"
 
 volumes:
   ygege:

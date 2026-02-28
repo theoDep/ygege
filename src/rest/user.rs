@@ -13,7 +13,7 @@ pub async fn get_user_info(
         if e.to_string().contains("Session expired") && !data.is_custom {
             info!("Trying to renew session...");
             let new_client =
-                crate::auth::login(config.username.as_str(), config.password.as_str(), true)
+                crate::auth::login(&config, true)
                     .await?;
 
             // Copy cookies from new client to shared client

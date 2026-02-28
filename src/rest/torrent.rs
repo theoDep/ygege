@@ -61,10 +61,10 @@ pub async fn download_torrent(
     );
     debug!("download URL {}", url);
 
-    let response = data.client.get(&url).send().await?;
+    let result = crate::flaresolverr::fetch_page(&data.client, &url).await?;
 
-    if !response.status().is_success() {
-        if response.status() == 302 {
+    if result.status_code != 200 {
+        if result.status_code == 302 {
             return match crate::utils::get_remaining_downloads(&data.client).await {
                 Ok(0) => {
                     error!("No remaining downloads");
@@ -84,14 +84,13 @@ pub async fn download_torrent(
             };
         }
         return Err(format!(
-            "Failed to get torrent file: {} {}",
-            response.status(),
-            response.text().await?
+            "Failed to get torrent file: {}",
+            result.status_code,
         )
         .into());
     }
 
-    let body = response.bytes().await?;
+    let body = result.body.into_bytes();
 
     let mut response_builder = HttpResponse::Ok();
     response_builder

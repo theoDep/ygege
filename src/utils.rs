@@ -1,5 +1,6 @@
 use crate::{DOMAIN, LOGIN_PAGE};
 
+#[allow(dead_code)]
 pub fn check_session_expired(response: &wreq::Response) -> bool {
     if !response.status().is_success() {
         let code = response.status();
@@ -33,13 +34,13 @@ pub async fn get_remaining_downloads(
         "https://{}//torrent/application/windows/316475-microsoft-toolkit-v2-6-4-activateur-office-2016---2019-windows-10",
         domain
     );
-    let response = client.get(&url).send().await?;
+    let result = crate::flaresolverr::fetch_page(client, &url).await?;
 
-    if check_session_expired(&response) {
+    if result.status_code == 307 || result.status_code == 302 {
         return Err("Session expired".into());
     }
 
-    let body = response.text().await?;
+    let body = result.body;
     if body.contains("Limite atteinte") {
         return Ok(0);
     }

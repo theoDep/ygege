@@ -1,5 +1,4 @@
 use crate::DOMAIN;
-use crate::utils::check_session_expired;
 use serde::Serialize;
 
 #[derive(Debug, Default, Serialize)]
@@ -32,17 +31,17 @@ pub async fn get_account(client: &wreq::Client) -> Result<UserAccount, Box<dyn s
     };
 
     let url = format!("https://{}/user/account", domain);
-    let response = client.get(&url).send().await?;
+    let result = crate::flaresolverr::fetch_page(client, &url).await?;
 
-    if check_session_expired(&response) {
+    if result.status_code == 307 || result.status_code == 302 {
         return Err("Session expired".into());
     }
 
-    if !response.status().is_success() {
-        return Err(format!("Failed to fetch account info: {}", response.status()).into());
+    if result.status_code != 200 {
+        return Err(format!("Failed to fetch account info: {}", result.status_code).into());
     }
 
-    let body = response.text().await?;
+    let body = result.body;
     let document = scraper::Html::parse_document(&body);
     let mut account = UserAccount::default();
 
@@ -230,7 +229,7 @@ mod tests_user {
         let config = config::load_config()?;
 
         std::fs::create_dir_all("sessions")?;
-        let client = login(config.username.as_str(), config.password.as_str(), true).await?;
+        let client = login(&config, true).await?;
 
         let account = get_account(&client).await?;
         println!("Account : {:?}", account);

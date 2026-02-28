@@ -1,28 +1,24 @@
+use crate::client::build_client;
+use crate::config::Config;
 use crate::domain::get_leaked_ip;
-use crate::resolver::AsyncDNSResolverAdapter;
+use crate::flaresolverr::{Cookie, FlareSolverrClient, set_global_flaresolverr};
 use crate::{DOMAIN, LOGIN_PAGE, LOGIN_PROCESS_PAGE};
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::Write;
-use std::net::{IpAddr, SocketAddr};
-use std::str::FromStr;
-use std::sync::{Arc, OnceLock};
+use std::sync::OnceLock;
 use wreq::header::HeaderMap;
 use wreq::{Client, Url};
-use wreq_util::{Emulation, EmulationOS, EmulationOption};
 
 pub static KEY: OnceLock<String> = OnceLock::new();
 
 pub async fn login(
-    username: &str,
-    password: &str,
+    config: &Config,
     use_sessions: bool,
 ) -> Result<Client, Box<dyn std::error::Error>> {
+    let username: &str = config.username.as_str();
+    let password: &str = config.password.as_str();
     debug!("Logging in with username: {}", username);
-
-    let emu = EmulationOption::builder()
-        .emulation(Emulation::Chrome132) // no H3 check on CF before 133
-        .emulation_os(EmulationOS::Windows)
-        .build();
 
     let domain_lock = DOMAIN.lock()?;
     let cloned_guard = domain_lock.clone();
@@ -30,22 +26,7 @@ pub async fn login(
     drop(domain_lock);
 
     let leaked_ip = get_leaked_ip().await?;
-
-    let client = Client::builder()
-        .emulation(emu)
-        .gzip(true)
-        .deflate(true)
-        .brotli(true)
-        .zstd(true)
-        .cookie_store(true)
-        .dns_resolver(Arc::new(AsyncDNSResolverAdapter::new()?))
-        .cert_verification(false)
-        .verify_hostname(false)
-        .resolve(
-            &domain,
-            SocketAddr::new(IpAddr::from_str(leaked_ip.as_str())?, 443),
-        )
-        .build()?;
+    let client = build_client(domain, &leaked_ip)?;
 
     let mut headers = HeaderMap::new();
     add_bypass_headers(&mut headers);
@@ -103,6 +84,7 @@ pub async fn login(
                 response.status()
             );
             // session is not valid, delete the file
+            let session_file = format!("sessions/{}.cookies", username);
             let _ = std::fs::remove_file(&session_file);
             debug!("Session file deleted");
         }
@@ -110,6 +92,70 @@ pub async fn login(
 
     client.clear_cookies();
 
+    // Try leaked IP method first
+    match try_leaked_ip_login(&client, domain, username, password, &headers).await {
+        Ok(()) => {
+            let stop = std::time::Instant::now();
+            debug!(
+                "Logged in successfully with leaked IP in {:?}",
+                stop.duration_since(start)
+            );
+
+            if use_sessions {
+                save_session(username, &client).await?;
+            }
+            return Ok(client);
+        }
+        Err(e) => {
+            warn!("Leaked IP login failed: {}, trying FlareSolverr", e);
+        }
+    }
+
+    // Fallback to FlareSolverr if available
+    if let Some(flaresolverr_url) = &config.flaresolverr_url {
+        let (flare_client, cookies) =
+            try_flaresolverr_login(domain, username, password, flaresolverr_url).await?;
+
+        // Build a simple client with the FlareSolverr cookies applied
+        let simple_client = crate::client::build_simple_client()
+            .map_err(|e| -> Box<dyn std::error::Error> { format!("{}", e).into() })?;
+
+        let base_url = Url::parse(format!("https://{domain}/").as_str())?;
+        for cookie in &cookies {
+            let wreq_cookie = wreq::cookie::CookieBuilder::new(&cookie.name, &cookie.value)
+                .domain(domain)
+                .path("/")
+                .http_only(true)
+                .secure(true)
+                .build();
+            simple_client.set_cookie(&base_url, wreq_cookie);
+        }
+
+        // Store the FlareSolverr client globally so fetch_page() can use it
+        set_global_flaresolverr(flare_client, cookies);
+
+        let stop = std::time::Instant::now();
+        debug!(
+            "Logged in successfully with FlareSolverr in {:?}",
+            stop.duration_since(start)
+        );
+
+        if use_sessions {
+            save_session(username, &simple_client).await?;
+        }
+        return Ok(simple_client);
+    }
+
+    Err("Leaked IP login failed and no FlareSolverr URL configured".into())
+}
+
+async fn try_leaked_ip_login(
+    client: &Client,
+    domain: &str,
+    username: &str,
+    password: &str,
+    headers: &HeaderMap,
+) -> Result<(), Box<dyn std::error::Error>> {
     // inject account_created=true cookie (cookie magique)
     let cookie = wreq::cookie::CookieBuilder::new("account_created", "true")
         .domain(domain)
@@ -123,19 +169,14 @@ pub async fn login(
 
     // make a request to the login page
     let response = client
-        //.get(format!("https://rp.lila.ws:8749/api/all"))
         .get(format!("https://{domain}{LOGIN_PAGE}"))
         .headers(headers.clone())
         .send()
         .await?;
 
-    /*println!("Body: {}", response.text().await?);
-    panic!();*/
-
     if !response.status().is_success() {
         return Err(format!("Failed to fetch login page: {}", response.status()).into());
     }
-    let _headers = response.headers(); // digest the headers to get the cookies
 
     // detect if the ygg_ cookie is set
     let cookies = response.cookies();
@@ -170,8 +211,6 @@ pub async fn login(
         return Err(format!("Failed to login: {}", response.status()).into());
     }
 
-    let _headers = response.headers(); // digest the headers to get the cookies
-
     // get site root page for final cookies
     let response = client
         .get(format!("https://{domain}/"))
@@ -182,16 +221,59 @@ pub async fn login(
         return Err(format!("Failed to fetch site root page: {}", response.status()).into());
     }
 
-    let stop = std::time::Instant::now();
-    debug!("Logged in successfully in {:?}", stop.duration_since(start));
+    Ok(())
+}
 
-    let _headers = response.cookies(); // digest the headers to get the cookies
+async fn try_flaresolverr_login(
+    domain: &str,
+    username: &str,
+    password: &str,
+    flaresolverr_url: &str,
+) -> Result<(FlareSolverrClient, Vec<Cookie>), Box<dyn std::error::Error>> {
+    let mut flare_client = FlareSolverrClient::new(flaresolverr_url.to_string())?;
 
-    if use_sessions {
-        save_session(username, &client).await?;
+    // Step 1: Get login page with account_created cookie
+    let account_cookie = Cookie {
+        name: "account_created".to_string(),
+        value: "true".to_string(),
+    };
+
+    let (_, mut cookies) = flare_client
+        .get_with_cookies(
+            &format!("https://{domain}{LOGIN_PAGE}"),
+            Some(&[account_cookie]),
+        )
+        .await?;
+
+    // Check for ygg_ cookie
+    let has_ygg_cookie = cookies.iter().any(|c| c.name == "ygg_");
+    if !has_ygg_cookie {
+        return Err("No ygg_ cookie found via FlareSolverr".into());
     }
 
-    Ok(client)
+    // Step 2: Submit login form
+    let mut form_data = HashMap::new();
+    form_data.insert("id".to_string(), username.to_string());
+    form_data.insert("pass".to_string(), password.to_string());
+
+    let login_cookies = flare_client
+        .post_form(
+            &format!("https://{domain}{LOGIN_PROCESS_PAGE}"),
+            &form_data,
+            Some(&cookies),
+        )
+        .await?;
+
+    cookies.extend(login_cookies);
+
+    // Step 3: Get final cookies from root page
+    let (_, final_cookies) = flare_client
+        .get_with_cookies(&format!("https://{domain}/"), Some(&cookies))
+        .await?;
+
+    cookies.extend(final_cookies);
+
+    Ok((flare_client, cookies))
 }
 
 async fn save_session(username: &str, client: &Client) -> Result<(), Box<dyn std::error::Error>> {
