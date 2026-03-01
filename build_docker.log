@@ -1,0 +1,2562 @@
+#0 building with "ygege-builder" instance using docker-container driver
+
+#1 [internal] booting buildkit
+#1 pulling image moby/buildkit:buildx-stable-1
+#1 pulling image moby/buildkit:buildx-stable-1 4.9s done
+#1 creating container buildx_buildkit_ygege-builder0
+#1 creating container buildx_buildkit_ygege-builder0 0.4s done
+#1 DONE 5.3s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 2.86kB done
+#2 DONE 0.0s
+
+#3 [linux/amd64 internal] load metadata for docker.io/library/rust:1.93-slim-trixie
+#3 ...
+
+#4 [auth] library/debian:pull token for registry-1.docker.io
+#4 DONE 0.0s
+
+#5 [auth] library/rust:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#6 [linux/amd64 internal] load metadata for docker.io/library/debian:bookworm-slim
+#6 DONE 1.0s
+
+#7 [linux/arm64 internal] load metadata for docker.io/library/rust:1.93-slim-trixie
+#7 ...
+
+#8 [linux/arm64 internal] load metadata for docker.io/library/debian:bookworm-slim
+#8 DONE 1.1s
+
+#7 [linux/arm64 internal] load metadata for docker.io/library/rust:1.93-slim-trixie
+#7 ...
+
+#3 [linux/amd64 internal] load metadata for docker.io/library/rust:1.93-slim-trixie
+#3 DONE 1.4s
+
+#9 [internal] load .dockerignore
+#9 transferring context: 2B done
+#9 DONE 0.0s
+
+#7 [linux/arm64 internal] load metadata for docker.io/library/rust:1.93-slim-trixie
+#7 DONE 1.4s
+
+#10 [linux/arm64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#10 resolve docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956 0.0s done
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 0B / 249.89MB 0.3s
+#10 ...
+
+#11 [linux/amd64 stage-1 1/7] FROM docker.io/library/debian:bookworm-slim@sha256:74d56e3931e0d5a1dd51f8c8a2466d21de84a271cd3b5a733b803aa91abf4421
+#11 resolve docker.io/library/debian:bookworm-slim@sha256:74d56e3931e0d5a1dd51f8c8a2466d21de84a271cd3b5a733b803aa91abf4421 0.0s done
+#11 sha256:84a2afebaf4de2e8eb885634a69abd0087b79c947c53fa4f0481235d6dfadc6c 28.24MB / 28.24MB 1.4s done
+#11 extracting sha256:84a2afebaf4de2e8eb885634a69abd0087b79c947c53fa4f0481235d6dfadc6c 0.6s done
+#11 DONE 2.0s
+
+#10 [linux/arm64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 12.58MB / 249.89MB 0.8s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 28.31MB / 249.89MB 1.4s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 40.89MB / 249.89MB 1.8s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 54.53MB / 249.89MB 2.3s
+#10 ...
+
+#12 [linux/arm64 stage-1 1/7] FROM docker.io/library/debian:bookworm-slim@sha256:74d56e3931e0d5a1dd51f8c8a2466d21de84a271cd3b5a733b803aa91abf4421
+#12 resolve docker.io/library/debian:bookworm-slim@sha256:74d56e3931e0d5a1dd51f8c8a2466d21de84a271cd3b5a733b803aa91abf4421 0.0s done
+#12 sha256:eb04ef52de3a23999fcda632f100324a4d1dbebd588b4df190c4a172bb88c603 28.12MB / 28.12MB 4.0s done
+#12 DONE 4.0s
+
+#10 [linux/arm64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 67.11MB / 249.89MB 2.7s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 0B / 30.14MB 0.2s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 80.74MB / 249.89MB 3.2s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 2.10MB / 30.14MB 0.8s
+#10 ...
+
+#12 [linux/arm64 stage-1 1/7] FROM docker.io/library/debian:bookworm-slim@sha256:74d56e3931e0d5a1dd51f8c8a2466d21de84a271cd3b5a733b803aa91abf4421
+#12 extracting sha256:eb04ef52de3a23999fcda632f100324a4d1dbebd588b4df190c4a172bb88c603 0.9s done
+#12 DONE 4.9s
+
+#10 [linux/arm64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 95.42MB / 249.89MB 3.6s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 4.19MB / 30.14MB 1.1s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 109.05MB / 249.89MB 4.1s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 6.29MB / 30.14MB 1.5s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 8.39MB / 30.14MB 1.8s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 121.63MB / 249.89MB 4.5s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 10.49MB / 30.14MB 2.3s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 134.22MB / 249.89MB 5.0s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 146.80MB / 249.89MB 5.4s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 12.58MB / 30.14MB 2.7s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 14.68MB / 30.14MB 3.2s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 162.53MB / 249.89MB 6.0s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 16.78MB / 30.14MB 3.6s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 175.11MB / 249.89MB 6.5s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 18.87MB / 30.14MB 3.9s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 188.74MB / 249.89MB 6.9s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 20.97MB / 30.14MB 4.4s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 23.07MB / 30.14MB 4.7s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 202.38MB / 249.89MB 7.4s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 25.17MB / 30.14MB 5.1s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 217.06MB / 249.89MB 7.8s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 27.26MB / 30.14MB 5.4s
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 230.69MB / 249.89MB 8.3s
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 30.14MB / 30.14MB 5.9s
+#10 ...
+
+#13 [internal] load build context
+#13 transferring context: 1.04GB 9.9s
+#13 ...
+
+#14 [linux/amd64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#14 resolve docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956 done
+#14 sha256:0d9aedabe20c6d233d34c2b9851f22f8ce340628650b5a75ab9610119642e5df 47.19MB / 289.51MB 10.1s
+#14 sha256:206356c42440674ecbdf1070cf70ce8ef7885ac2e5c56f1ecf800b758f6b0419 29.78MB / 29.78MB 7.4s done
+#14 extracting sha256:206356c42440674ecbdf1070cf70ce8ef7885ac2e5c56f1ecf800b758f6b0419 0.6s done
+#14 ...
+
+#10 [linux/arm64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#10 sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 249.89MB / 249.89MB 8.8s done
+#10 sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 30.14MB / 30.14MB 6.0s done
+#10 extracting sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86
+#10 extracting sha256:3b66ab8c894cad95899b704e688938517870850391d1349c862c2b09214acb86 0.8s done
+#10 extracting sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d
+#10 ...
+
+#15 [linux/amd64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#15 0.972 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#15 1.230 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#15 1.332 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#15 3.240 Get:4 http://deb.debian.org/debian bookworm/main amd64 Packages [8792 kB]
+#15 5.746 Get:5 http://deb.debian.org/debian bookworm-updates/main amd64 Packages [6924 B]
+#15 6.489 Get:6 http://deb.debian.org/debian-security bookworm-security/main amd64 Packages [297 kB]
+#15 7.036 Fetched 9350 kB in 6s (1458 kB/s)
+#15 7.036 Reading package lists...
+#15 8.087 Reading package lists...
+#15 8.958 Building dependency tree...
+#15 9.165 Reading state information...
+#15 9.402 The following additional packages will be installed:
+#15 9.402   krb5-locales libbrotli1 libcurl4 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+#15 9.402   libkrb5-3 libkrb5support0 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5
+#15 9.402   librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 libssl3
+#15 9.403   openssl publicsuffix
+#15 9.404 Suggested packages:
+#15 9.404   krb5-doc krb5-user libsasl2-modules-gssapi-mit
+#15 9.404   | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+#15 9.404   libsasl2-modules-sql
+#15 9.661 The following NEW packages will be installed:
+#15 9.662   ca-certificates curl krb5-locales libbrotli1 libcurl4 libgssapi-krb5-2
+#15 9.662   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.5-0
+#15 9.662   libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+#15 9.662   libsasl2-modules-db libssh2-1 libssl3 openssl publicsuffix
+#15 9.887 0 upgraded, 22 newly installed, 0 to remove and 0 not upgraded.
+#15 9.887 Need to get 6111 kB of archives.
+#15 9.887 After this operation, 15.7 MB of additional disk space will be used.
+#15 9.887 Get:1 http://deb.debian.org/debian-security bookworm-security/main amd64 libssl3 amd64 3.0.18-1~deb12u2 [2030 kB]
+#15 ...
+
+#13 [internal] load build context
+#13 transferring context: 1.59GB 15.0s
+#13 ...
+
+#16 [linux/arm64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#16 0.247 Get:1 http://deb.debian.org/debian bookworm InRelease [151 kB]
+#16 0.497 Get:2 http://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+#16 0.626 Get:3 http://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+#16 0.711 Get:4 http://deb.debian.org/debian bookworm/main arm64 Packages [8691 kB]
+#16 3.515 Get:5 http://deb.debian.org/debian bookworm-updates/main arm64 Packages [6936 B]
+#16 3.581 Get:6 http://deb.debian.org/debian-security bookworm-security/main arm64 Packages [293 kB]
+#16 4.417 Fetched 9245 kB in 4s (2132 kB/s)
+#16 4.417 Reading package lists...
+#16 5.072 Reading package lists...
+#16 5.573 Building dependency tree...
+#16 5.690 Reading state information...
+#16 5.860 The following additional packages will be installed:
+#16 5.860   krb5-locales libbrotli1 libcurl4 libgssapi-krb5-2 libk5crypto3 libkeyutils1
+#16 5.860   libkrb5-3 libkrb5support0 libldap-2.5-0 libldap-common libnghttp2-14 libpsl5
+#16 5.860   librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libssh2-1 libssl3
+#16 5.860   openssl publicsuffix
+#16 5.860 Suggested packages:
+#16 5.860   krb5-doc krb5-user libsasl2-modules-gssapi-mit
+#16 5.860   | libsasl2-modules-gssapi-heimdal libsasl2-modules-ldap libsasl2-modules-otp
+#16 5.860   libsasl2-modules-sql
+#16 6.079 The following NEW packages will be installed:
+#16 6.079   ca-certificates curl krb5-locales libbrotli1 libcurl4 libgssapi-krb5-2
+#16 6.079   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-2.5-0
+#16 6.079   libldap-common libnghttp2-14 libpsl5 librtmp1 libsasl2-2 libsasl2-modules
+#16 6.080   libsasl2-modules-db libssh2-1 libssl3 openssl publicsuffix
+#16 6.131 0 upgraded, 22 newly installed, 0 to remove and 0 not upgraded.
+#16 6.131 Need to get 5767 kB of archives.
+#16 6.131 After this operation, 16.4 MB of additional disk space will be used.
+#16 6.131 Get:1 http://deb.debian.org/debian-security bookworm-security/main arm64 libssl3 arm64 3.0.18-1~deb12u2 [1818 kB]
+#16 6.328 Get:2 http://deb.debian.org/debian-security bookworm-security/main arm64 openssl arm64 3.0.18-1~deb12u2 [1399 kB]
+#16 6.433 Get:3 http://deb.debian.org/debian bookworm/main arm64 ca-certificates all 20230311+deb12u1 [155 kB]
+#16 6.443 Get:4 http://deb.debian.org/debian bookworm/main arm64 krb5-locales all 1.20.1-2+deb12u4 [63.4 kB]
+#16 6.445 Get:5 http://deb.debian.org/debian bookworm/main arm64 libbrotli1 arm64 1.0.9-2+b6 [269 kB]
+#16 6.486 Get:6 http://deb.debian.org/debian bookworm/main arm64 libkrb5support0 arm64 1.20.1-2+deb12u4 [32.5 kB]
+#16 6.486 Get:7 http://deb.debian.org/debian bookworm/main arm64 libk5crypto3 arm64 1.20.1-2+deb12u4 [80.2 kB]
+#16 6.486 Get:8 http://deb.debian.org/debian bookworm/main arm64 libkeyutils1 arm64 1.6.3-2 [8844 B]
+#16 6.514 Get:9 http://deb.debian.org/debian bookworm/main arm64 libkrb5-3 arm64 1.20.1-2+deb12u4 [314 kB]
+#16 6.550 Get:10 http://deb.debian.org/debian bookworm/main arm64 libgssapi-krb5-2 arm64 1.20.1-2+deb12u4 [124 kB]
+#16 6.575 Get:11 http://deb.debian.org/debian bookworm/main arm64 libsasl2-modules-db arm64 2.1.28+dfsg-10 [20.8 kB]
+#16 6.575 Get:12 http://deb.debian.org/debian bookworm/main arm64 libsasl2-2 arm64 2.1.28+dfsg-10 [58.0 kB]
+#16 6.575 Get:13 http://deb.debian.org/debian bookworm/main arm64 libldap-2.5-0 arm64 2.5.13+dfsg-5 [171 kB]
+#16 6.628 Get:14 http://deb.debian.org/debian bookworm/main arm64 libnghttp2-14 arm64 1.52.0-1+deb12u2 [68.6 kB]
+#16 6.630 Get:15 http://deb.debian.org/debian bookworm/main arm64 libpsl5 arm64 0.21.2-1 [58.6 kB]
+#16 6.660 Get:16 http://deb.debian.org/debian bookworm/main arm64 librtmp1 arm64 2.4+20151223.gitfa8646d.1-2+b2 [59.4 kB]
+#16 6.665 Get:17 http://deb.debian.org/debian bookworm/main arm64 libssh2-1 arm64 1.10.0-3+b1 [172 kB]
+#16 6.712 Get:18 http://deb.debian.org/debian bookworm/main arm64 libcurl4 arm64 7.88.1-10+deb12u14 [367 kB]
+#16 6.789 Get:19 http://deb.debian.org/debian bookworm/main arm64 curl arm64 7.88.1-10+deb12u14 [309 kB]
+#16 6.876 Get:20 http://deb.debian.org/debian bookworm/main arm64 libldap-common all 2.5.13+dfsg-5 [29.3 kB]
+#16 6.881 Get:21 http://deb.debian.org/debian bookworm/main arm64 libsasl2-modules arm64 2.1.28+dfsg-10 [63.1 kB]
+#16 6.885 Get:22 http://deb.debian.org/debian bookworm/main arm64 publicsuffix all 20230209.2326-1 [126 kB]
+#16 6.996 debconf: delaying package configuration, since apt-utils is not installed
+#16 7.017 Fetched 5767 kB in 1s (7042 kB/s)
+#16 7.050 Selecting previously unselected package libssl3:arm64.
+#16 7.050 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6090 files and directories currently installed.)
+#16 7.053 Preparing to unpack .../00-libssl3_3.0.18-1~deb12u2_arm64.deb ...
+#16 7.059 Unpacking libssl3:arm64 (3.0.18-1~deb12u2) ...
+#16 7.187 Selecting previously unselected package openssl.
+#16 7.188 Preparing to unpack .../01-openssl_3.0.18-1~deb12u2_arm64.deb ...
+#16 7.191 Unpacking openssl (3.0.18-1~deb12u2) ...
+#16 7.309 Selecting previously unselected package ca-certificates.
+#16 7.310 Preparing to unpack .../02-ca-certificates_20230311+deb12u1_all.deb ...
+#16 7.434 Unpacking ca-certificates (20230311+deb12u1) ...
+#16 7.476 Selecting previously unselected package krb5-locales.
+#16 7.476 Preparing to unpack .../03-krb5-locales_1.20.1-2+deb12u4_all.deb ...
+#16 7.479 Unpacking krb5-locales (1.20.1-2+deb12u4) ...
+#16 7.512 Selecting previously unselected package libbrotli1:arm64.
+#16 7.512 Preparing to unpack .../04-libbrotli1_1.0.9-2+b6_arm64.deb ...
+#16 7.518 Unpacking libbrotli1:arm64 (1.0.9-2+b6) ...
+#16 7.562 Selecting previously unselected package libkrb5support0:arm64.
+#16 7.563 Preparing to unpack .../05-libkrb5support0_1.20.1-2+deb12u4_arm64.deb ...
+#16 7.566 Unpacking libkrb5support0:arm64 (1.20.1-2+deb12u4) ...
+#16 7.591 Selecting previously unselected package libk5crypto3:arm64.
+#16 7.592 Preparing to unpack .../06-libk5crypto3_1.20.1-2+deb12u4_arm64.deb ...
+#16 7.593 Unpacking libk5crypto3:arm64 (1.20.1-2+deb12u4) ...
+#16 7.627 Selecting previously unselected package libkeyutils1:arm64.
+#16 7.628 Preparing to unpack .../07-libkeyutils1_1.6.3-2_arm64.deb ...
+#16 7.632 Unpacking libkeyutils1:arm64 (1.6.3-2) ...
+#16 7.660 Selecting previously unselected package libkrb5-3:arm64.
+#16 7.661 Preparing to unpack .../08-libkrb5-3_1.20.1-2+deb12u4_arm64.deb ...
+#16 7.664 Unpacking libkrb5-3:arm64 (1.20.1-2+deb12u4) ...
+#16 7.739 Selecting previously unselected package libgssapi-krb5-2:arm64.
+#16 7.739 Preparing to unpack .../09-libgssapi-krb5-2_1.20.1-2+deb12u4_arm64.deb ...
+#16 7.744 Unpacking libgssapi-krb5-2:arm64 (1.20.1-2+deb12u4) ...
+#16 7.779 Selecting previously unselected package libsasl2-modules-db:arm64.
+#16 7.780 Preparing to unpack .../10-libsasl2-modules-db_2.1.28+dfsg-10_arm64.deb ...
+#16 7.783 Unpacking libsasl2-modules-db:arm64 (2.1.28+dfsg-10) ...
+#16 7.817 Selecting previously unselected package libsasl2-2:arm64.
+#16 7.818 Preparing to unpack .../11-libsasl2-2_2.1.28+dfsg-10_arm64.deb ...
+#16 7.822 Unpacking libsasl2-2:arm64 (2.1.28+dfsg-10) ...
+#16 7.856 Selecting previously unselected package libldap-2.5-0:arm64.
+#16 7.857 Preparing to unpack .../12-libldap-2.5-0_2.5.13+dfsg-5_arm64.deb ...
+#16 7.866 Unpacking libldap-2.5-0:arm64 (2.5.13+dfsg-5) ...
+#16 7.902 Selecting previously unselected package libnghttp2-14:arm64.
+#16 7.903 Preparing to unpack .../13-libnghttp2-14_1.52.0-1+deb12u2_arm64.deb ...
+#16 7.906 Unpacking libnghttp2-14:arm64 (1.52.0-1+deb12u2) ...
+#16 7.939 Selecting previously unselected package libpsl5:arm64.
+#16 7.939 Preparing to unpack .../14-libpsl5_0.21.2-1_arm64.deb ...
+#16 7.943 Unpacking libpsl5:arm64 (0.21.2-1) ...
+#16 7.981 Selecting previously unselected package librtmp1:arm64.
+#16 7.981 Preparing to unpack .../15-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_arm64.deb ...
+#16 7.987 Unpacking librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+#16 8.041 Selecting previously unselected package libssh2-1:arm64.
+#16 8.041 Preparing to unpack .../16-libssh2-1_1.10.0-3+b1_arm64.deb ...
+#16 8.047 Unpacking libssh2-1:arm64 (1.10.0-3+b1) ...
+#16 8.084 Selecting previously unselected package libcurl4:arm64.
+#16 8.084 Preparing to unpack .../17-libcurl4_7.88.1-10+deb12u14_arm64.deb ...
+#16 8.088 Unpacking libcurl4:arm64 (7.88.1-10+deb12u14) ...
+#16 8.130 Selecting previously unselected package curl.
+#16 8.130 Preparing to unpack .../18-curl_7.88.1-10+deb12u14_arm64.deb ...
+#16 8.135 Unpacking curl (7.88.1-10+deb12u14) ...
+#16 8.190 Selecting previously unselected package libldap-common.
+#16 8.191 Preparing to unpack .../19-libldap-common_2.5.13+dfsg-5_all.deb ...
+#16 8.194 Unpacking libldap-common (2.5.13+dfsg-5) ...
+#16 8.231 Selecting previously unselected package libsasl2-modules:arm64.
+#16 8.231 Preparing to unpack .../20-libsasl2-modules_2.1.28+dfsg-10_arm64.deb ...
+#16 8.238 Unpacking libsasl2-modules:arm64 (2.1.28+dfsg-10) ...
+#16 8.270 Selecting previously unselected package publicsuffix.
+#16 8.271 Preparing to unpack .../21-publicsuffix_20230209.2326-1_all.deb ...
+#16 8.274 Unpacking publicsuffix (20230209.2326-1) ...
+#16 8.314 Setting up libkeyutils1:arm64 (1.6.3-2) ...
+#16 8.329 Setting up libpsl5:arm64 (0.21.2-1) ...
+#16 8.347 Setting up libbrotli1:arm64 (1.0.9-2+b6) ...
+#16 8.358 Setting up libssl3:arm64 (3.0.18-1~deb12u2) ...
+#16 8.372 Setting up libnghttp2-14:arm64 (1.52.0-1+deb12u2) ...
+#16 8.385 Setting up krb5-locales (1.20.1-2+deb12u4) ...
+#16 8.396 Setting up libldap-common (2.5.13+dfsg-5) ...
+#16 8.411 Setting up libkrb5support0:arm64 (1.20.1-2+deb12u4) ...
+#16 8.423 Setting up libsasl2-modules-db:arm64 (2.1.28+dfsg-10) ...
+#16 8.432 Setting up librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+#16 8.443 Setting up libk5crypto3:arm64 (1.20.1-2+deb12u4) ...
+#16 8.459 Setting up libsasl2-2:arm64 (2.1.28+dfsg-10) ...
+#16 8.474 Setting up libssh2-1:arm64 (1.10.0-3+b1) ...
+#16 8.497 Setting up libkrb5-3:arm64 (1.20.1-2+deb12u4) ...
+#16 8.553 Setting up openssl (3.0.18-1~deb12u2) ...
+#16 8.632 Setting up publicsuffix (20230209.2326-1) ...
+#16 8.641 Setting up libsasl2-modules:arm64 (2.1.28+dfsg-10) ...
+#16 8.663 Setting up libldap-2.5-0:arm64 (2.5.13+dfsg-5) ...
+#16 8.677 Setting up ca-certificates (20230311+deb12u1) ...
+#16 8.730 debconf: unable to initialize frontend: Dialog
+#16 8.730 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#16 8.730 debconf: falling back to frontend: Readline
+#16 8.730 debconf: unable to initialize frontend: Readline
+#16 8.730 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/aarch64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#16 8.730 debconf: falling back to frontend: Teletype
+#16 9.224 Updating certificates in /etc/ssl/certs...
+#16 9.873 142 added, 0 removed; done.
+#16 9.981 Setting up libgssapi-krb5-2:arm64 (1.20.1-2+deb12u4) ...
+#16 9.995 Setting up libcurl4:arm64 (7.88.1-10+deb12u14) ...
+#16 10.00 Setting up curl (7.88.1-10+deb12u14) ...
+#16 10.02 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#16 10.03 Processing triggers for ca-certificates (20230311+deb12u1) ...
+#16 10.04 Updating certificates in /etc/ssl/certs...
+#16 ...
+
+#13 [internal] load build context
+#13 transferring context: 1.71GB 16.0s done
+#13 DONE 16.1s
+
+#15 [linux/amd64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#15 10.30 Get:2 http://deb.debian.org/debian-security bookworm-security/main amd64 openssl amd64 3.0.18-1~deb12u2 [1433 kB]
+#15 10.47 Get:3 http://deb.debian.org/debian bookworm/main amd64 ca-certificates all 20230311+deb12u1 [155 kB]
+#15 10.52 Get:4 http://deb.debian.org/debian bookworm/main amd64 krb5-locales all 1.20.1-2+deb12u4 [63.4 kB]
+#15 10.52 Get:5 http://deb.debian.org/debian bookworm/main amd64 libbrotli1 amd64 1.0.9-2+b6 [275 kB]
+#15 10.58 Get:6 http://deb.debian.org/debian bookworm/main amd64 libkrb5support0 amd64 1.20.1-2+deb12u4 [33.2 kB]
+#15 10.58 Get:7 http://deb.debian.org/debian bookworm/main amd64 libk5crypto3 amd64 1.20.1-2+deb12u4 [79.8 kB]
+#15 10.59 Get:8 http://deb.debian.org/debian bookworm/main amd64 libkeyutils1 amd64 1.6.3-2 [8808 B]
+#15 10.59 Get:9 http://deb.debian.org/debian bookworm/main amd64 libkrb5-3 amd64 1.20.1-2+deb12u4 [334 kB]
+#15 10.64 Get:10 http://deb.debian.org/debian bookworm/main amd64 libgssapi-krb5-2 amd64 1.20.1-2+deb12u4 [135 kB]
+#15 10.67 Get:11 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg-10 [20.3 kB]
+#15 10.67 Get:12 http://deb.debian.org/debian bookworm/main amd64 libsasl2-2 amd64 2.1.28+dfsg-10 [59.7 kB]
+#15 10.68 Get:13 http://deb.debian.org/debian bookworm/main amd64 libldap-2.5-0 amd64 2.5.13+dfsg-5 [183 kB]
+#15 10.71 Get:14 http://deb.debian.org/debian bookworm/main amd64 libnghttp2-14 amd64 1.52.0-1+deb12u2 [73.0 kB]
+#15 10.72 Get:15 http://deb.debian.org/debian bookworm/main amd64 libpsl5 amd64 0.21.2-1 [58.7 kB]
+#15 10.72 Get:16 http://deb.debian.org/debian bookworm/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b2 [60.8 kB]
+#15 10.75 Get:17 http://deb.debian.org/debian bookworm/main amd64 libssh2-1 amd64 1.10.0-3+b1 [179 kB]
+#15 10.78 Get:18 http://deb.debian.org/debian bookworm/main amd64 libcurl4 amd64 7.88.1-10+deb12u14 [392 kB]
+#15 10.83 Get:19 http://deb.debian.org/debian bookworm/main amd64 curl amd64 7.88.1-10+deb12u14 [316 kB]
+#15 10.88 Get:20 http://deb.debian.org/debian bookworm/main amd64 libldap-common all 2.5.13+dfsg-5 [29.3 kB]
+#15 10.88 Get:21 http://deb.debian.org/debian bookworm/main amd64 libsasl2-modules amd64 2.1.28+dfsg-10 [66.6 kB]
+#15 10.89 Get:22 http://deb.debian.org/debian bookworm/main amd64 publicsuffix all 20230209.2326-1 [126 kB]
+#15 11.25 debconf: delaying package configuration, since apt-utils is not installed
+#15 11.40 Fetched 6111 kB in 1s (4974 kB/s)
+#15 11.77 Selecting previously unselected package libssl3:amd64.
+#15 11.77 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 6096 files and directories currently installed.)
+#15 11.77 Preparing to unpack .../00-libssl3_3.0.18-1~deb12u2_amd64.deb ...
+#15 11.79 Unpacking libssl3:amd64 (3.0.18-1~deb12u2) ...
+#15 12.25 Selecting previously unselected package openssl.
+#15 12.25 Preparing to unpack .../01-openssl_3.0.18-1~deb12u2_amd64.deb ...
+#15 12.25 Unpacking openssl (3.0.18-1~deb12u2) ...
+#15 12.87 Selecting previously unselected package ca-certificates.
+#15 12.88 Preparing to unpack .../02-ca-certificates_20230311+deb12u1_all.deb ...
+#15 12.88 Unpacking ca-certificates (20230311+deb12u1) ...
+#15 13.39 Selecting previously unselected package krb5-locales.
+#15 13.39 Preparing to unpack .../03-krb5-locales_1.20.1-2+deb12u4_all.deb ...
+#15 13.39 Unpacking krb5-locales (1.20.1-2+deb12u4) ...
+#15 13.90 Selecting previously unselected package libbrotli1:amd64.
+#15 13.90 Preparing to unpack .../04-libbrotli1_1.0.9-2+b6_amd64.deb ...
+#15 13.90 Unpacking libbrotli1:amd64 (1.0.9-2+b6) ...
+#15 14.12 Selecting previously unselected package libkrb5support0:amd64.
+#15 14.12 Preparing to unpack .../05-libkrb5support0_1.20.1-2+deb12u4_amd64.deb ...
+#15 14.13 Unpacking libkrb5support0:amd64 (1.20.1-2+deb12u4) ...
+#15 ...
+
+#10 [linux/arm64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#10 extracting sha256:fe9c459fe93eda7a0355c8b1141c199eb917714739c95102ecf8d4d2d5f5609d 5.6s done
+#10 DONE 16.5s
+
+#16 [linux/arm64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#16 10.46 0 added, 0 removed; done.
+#16 10.46 Running hooks in /etc/ca-certificates/update.d...
+#16 10.46 done.
+#16 10.49 Reading package lists...
+#16 10.99 Building dependency tree...
+#16 11.13 Reading state information...
+#16 11.35 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#16 DONE 11.5s
+
+#17 [linux/arm64 stage-1 3/7] WORKDIR /app
+#17 DONE 0.0s
+
+#15 [linux/amd64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#15 14.43 Selecting previously unselected package libk5crypto3:amd64.
+#15 14.43 Preparing to unpack .../06-libk5crypto3_1.20.1-2+deb12u4_amd64.deb ...
+#15 14.43 Unpacking libk5crypto3:amd64 (1.20.1-2+deb12u4) ...
+#15 14.54 Selecting previously unselected package libkeyutils1:amd64.
+#15 14.54 Preparing to unpack .../07-libkeyutils1_1.6.3-2_amd64.deb ...
+#15 14.54 Unpacking libkeyutils1:amd64 (1.6.3-2) ...
+#15 14.64 Selecting previously unselected package libkrb5-3:amd64.
+#15 14.64 Preparing to unpack .../08-libkrb5-3_1.20.1-2+deb12u4_amd64.deb ...
+#15 14.64 Unpacking libkrb5-3:amd64 (1.20.1-2+deb12u4) ...
+#15 14.76 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#15 14.77 Preparing to unpack .../09-libgssapi-krb5-2_1.20.1-2+deb12u4_amd64.deb ...
+#15 14.77 Unpacking libgssapi-krb5-2:amd64 (1.20.1-2+deb12u4) ...
+#15 14.87 Selecting previously unselected package libsasl2-modules-db:amd64.
+#15 14.87 Preparing to unpack .../10-libsasl2-modules-db_2.1.28+dfsg-10_amd64.deb ...
+#15 14.88 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+#15 14.98 Selecting previously unselected package libsasl2-2:amd64.
+#15 14.98 Preparing to unpack .../11-libsasl2-2_2.1.28+dfsg-10_amd64.deb ...
+#15 14.98 Unpacking libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+#15 15.09 Selecting previously unselected package libldap-2.5-0:amd64.
+#15 15.09 Preparing to unpack .../12-libldap-2.5-0_2.5.13+dfsg-5_amd64.deb ...
+#15 15.09 Unpacking libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+#15 15.20 Selecting previously unselected package libnghttp2-14:amd64.
+#15 15.20 Preparing to unpack .../13-libnghttp2-14_1.52.0-1+deb12u2_amd64.deb ...
+#15 15.20 Unpacking libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+#15 15.30 Selecting previously unselected package libpsl5:amd64.
+#15 15.30 Preparing to unpack .../14-libpsl5_0.21.2-1_amd64.deb ...
+#15 15.31 Unpacking libpsl5:amd64 (0.21.2-1) ...
+#15 15.40 Selecting previously unselected package librtmp1:amd64.
+#15 15.41 Preparing to unpack .../15-librtmp1_2.4+20151223.gitfa8646d.1-2+b2_amd64.deb ...
+#15 15.41 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+#15 15.51 Selecting previously unselected package libssh2-1:amd64.
+#15 15.51 Preparing to unpack .../16-libssh2-1_1.10.0-3+b1_amd64.deb ...
+#15 15.51 Unpacking libssh2-1:amd64 (1.10.0-3+b1) ...
+#15 15.62 Selecting previously unselected package libcurl4:amd64.
+#15 15.62 Preparing to unpack .../17-libcurl4_7.88.1-10+deb12u14_amd64.deb ...
+#15 15.62 Unpacking libcurl4:amd64 (7.88.1-10+deb12u14) ...
+#15 15.73 Selecting previously unselected package curl.
+#15 15.73 Preparing to unpack .../18-curl_7.88.1-10+deb12u14_amd64.deb ...
+#15 15.74 Unpacking curl (7.88.1-10+deb12u14) ...
+#15 15.85 Selecting previously unselected package libldap-common.
+#15 15.85 Preparing to unpack .../19-libldap-common_2.5.13+dfsg-5_all.deb ...
+#15 15.85 Unpacking libldap-common (2.5.13+dfsg-5) ...
+#15 15.94 Selecting previously unselected package libsasl2-modules:amd64.
+#15 15.94 Preparing to unpack .../20-libsasl2-modules_2.1.28+dfsg-10_amd64.deb ...
+#15 16.01 Unpacking libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+#15 16.11 Selecting previously unselected package publicsuffix.
+#15 16.11 Preparing to unpack .../21-publicsuffix_20230209.2326-1_all.deb ...
+#15 16.11 Unpacking publicsuffix (20230209.2326-1) ...
+#15 16.20 Setting up libkeyutils1:amd64 (1.6.3-2) ...
+#15 16.20 Setting up libpsl5:amd64 (0.21.2-1) ...
+#15 16.21 Setting up libbrotli1:amd64 (1.0.9-2+b6) ...
+#15 16.21 Setting up libssl3:amd64 (3.0.18-1~deb12u2) ...
+#15 16.22 Setting up libnghttp2-14:amd64 (1.52.0-1+deb12u2) ...
+#15 16.22 Setting up krb5-locales (1.20.1-2+deb12u4) ...
+#15 16.22 Setting up libldap-common (2.5.13+dfsg-5) ...
+#15 16.23 Setting up libkrb5support0:amd64 (1.20.1-2+deb12u4) ...
+#15 16.23 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg-10) ...
+#15 16.24 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b2) ...
+#15 16.24 Setting up libk5crypto3:amd64 (1.20.1-2+deb12u4) ...
+#15 16.24 Setting up libsasl2-2:amd64 (2.1.28+dfsg-10) ...
+#15 16.25 Setting up libssh2-1:amd64 (1.10.0-3+b1) ...
+#15 16.25 Setting up libkrb5-3:amd64 (1.20.1-2+deb12u4) ...
+#15 16.26 Setting up openssl (3.0.18-1~deb12u2) ...
+#15 16.28 Setting up publicsuffix (20230209.2326-1) ...
+#15 16.28 Setting up libsasl2-modules:amd64 (2.1.28+dfsg-10) ...
+#15 16.35 Setting up libldap-2.5-0:amd64 (2.5.13+dfsg-5) ...
+#15 16.35 Setting up ca-certificates (20230311+deb12u1) ...
+#15 16.67 debconf: unable to initialize frontend: Dialog
+#15 16.67 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#15 16.67 debconf: falling back to frontend: Readline
+#15 16.68 debconf: unable to initialize frontend: Readline
+#15 16.68 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.36.0 /usr/local/share/perl/5.36.0 /usr/lib/x86_64-linux-gnu/perl5/5.36 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.36 /usr/share/perl/5.36 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+#15 16.68 debconf: falling back to frontend: Teletype
+#15 ...
+
+#14 [linux/amd64 builder 1/7] FROM docker.io/library/rust:1.93-slim-trixie@sha256:c0a38f5662afdb298898da1d70b909af4bda4e0acff2dc52aea6360a9b9c6956
+#14 sha256:0d9aedabe20c6d233d34c2b9851f22f8ce340628650b5a75ab9610119642e5df 289.51MB / 289.51MB 16.9s done
+#14 extracting sha256:0d9aedabe20c6d233d34c2b9851f22f8ce340628650b5a75ab9610119642e5df 2.9s done
+#14 DONE 19.8s
+
+#18 [linux/amd64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#18 0.253 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#18 0.297 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#18 0.297 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#18 0.402 Get:4 http://deb.debian.org/debian trixie/main amd64 Packages [9670 kB]
+#18 1.054 Get:5 http://deb.debian.org/debian trixie-updates/main amd64 Packages [5412 B]
+#18 1.054 Get:6 http://deb.debian.org/debian-security trixie-security/main amd64 Packages [113 kB]
+#18 1.905 Fetched 10.0 MB in 2s (5800 kB/s)
+#18 1.905 Reading package lists...
+#18 2.541 Reading package lists...
+#18 3.106 Building dependency tree...
+#18 3.258 Reading state information...
+#18 3.459 The following additional packages will be installed:
+#18 3.459   bzip2 cmake-data dpkg-dev g++ g++-14 g++-14-x86-64-linux-gnu
+#18 3.459   g++-x86-64-linux-gnu git-man libarchive13t64 libbrotli1 libclang-19-dev
+#18 3.459   libclang-common-19-dev libclang1-19 libcom-err2 libcurl3t64-gnutls
+#18 3.459   libcurl4t64 libdpkg-perl libedit2 liberror-perl libexpat1 libffi8 libgc1
+#18 3.459   libgdbm-compat4t64 libgdbm6t64 libgnutls30t64 libgssapi-krb5-2 libjsoncpp26
+#18 3.459   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap2 libllvm19
+#18 3.459   libncursesw6 libnghttp2-14 libnghttp3-9 libngtcp2-16
+#18 3.459   libngtcp2-crypto-gnutls8 libobjc-14-dev libobjc4 libp11-kit0 libperl5.40
+#18 3.459   libpkgconf3 libproc2-0 libpsl5t64 librhash1 librtmp1 libsasl2-2
+#18 3.459   libsasl2-modules-db libssh2-1t64 libstdc++-14-dev libtasn1-6 libuv1t64
+#18 3.460   libxml2 libz3-4 make patch perl-modules-5.40 pkgconf pkgconf-bin procps
+#18 3.460   xz-utils
+#18 3.462 Suggested packages:
+#18 3.462   bzip2-doc cmake-doc cmake-format elpa-cmake-mode ninja-build debian-keyring
+#18 3.462   debian-tag2upload-keyring g++-multilib g++-14-multilib gcc-14-doc
+#18 3.462   gettext-base git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki
+#18 3.462   git-svn lrzip sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg
+#18 3.462   sensible-utils bzr gdbm-l10n gnutls-bin krb5-doc krb5-user libstdc++-14-doc
+#18 3.462   make-doc ed diffutils-doc perl-doc libterm-readline-gnu-perl
+#18 3.462   | libterm-readline-perl-perl libtap-harness-archive-perl
+#18 3.462 Recommended packages:
+#18 3.462   fakeroot sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg
+#18 3.462   libalgorithm-merge-perl less ssh-client libclang-rt-19-dev
+#18 3.462   libfile-fcntllock-perl liblocale-gettext-perl krb5-locales libldap-common
+#18 3.462   libgpm2 publicsuffix libsasl2-modules netbase psmisc linux-sysctl-defaults
+#18 3.813 The following NEW packages will be installed:
+#18 3.813   build-essential bzip2 cmake cmake-data dpkg-dev g++ g++-14
+#18 3.813   g++-14-x86-64-linux-gnu g++-x86-64-linux-gnu git git-man libarchive13t64
+#18 3.813   libbrotli1 libclang-19-dev libclang-common-19-dev libclang-dev libclang1-19
+#18 3.813   libcom-err2 libcurl3t64-gnutls libcurl4t64 libdpkg-perl libedit2
+#18 3.813   liberror-perl libexpat1 libffi8 libgc1 libgdbm-compat4t64 libgdbm6t64
+#18 3.813   libgnutls30t64 libgssapi-krb5-2 libjsoncpp26 libk5crypto3 libkeyutils1
+#18 3.813   libkrb5-3 libkrb5support0 libldap2 libllvm19 libncursesw6 libnghttp2-14
+#18 3.814   libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libobjc-14-dev libobjc4
+#18 3.814   libp11-kit0 libperl5.40 libpkgconf3 libproc2-0 libpsl5t64 librhash1 librtmp1
+#18 3.814   libsasl2-2 libsasl2-modules-db libssh2-1t64 libstdc++-14-dev libtasn1-6
+#18 3.814   libuv1t64 libxml2 libz3-4 make patch perl perl-modules-5.40 pkg-config
+#18 3.814   pkgconf pkgconf-bin procps wget xz-utils
+#18 3.939 0 upgraded, 69 newly installed, 0 to remove and 0 not upgraded.
+#18 3.939 Need to get 131 MB of archives.
+#18 3.939 After this operation, 775 MB of additional disk space will be used.
+#18 3.939 Get:1 http://deb.debian.org/debian trixie/main amd64 libexpat1 amd64 2.7.1-2 [108 kB]
+#18 3.959 Get:2 http://deb.debian.org/debian trixie/main amd64 libncursesw6 amd64 6.5+20250216-2 [135 kB]
+#18 3.962 Get:3 http://deb.debian.org/debian trixie/main amd64 libproc2-0 amd64 2:4.0.4-9 [65.6 kB]
+#18 3.989 Get:4 http://deb.debian.org/debian trixie/main amd64 procps amd64 2:4.0.4-9 [882 kB]
+#18 4.037 Get:5 http://deb.debian.org/debian trixie/main amd64 bzip2 amd64 1.0.8-6 [40.5 kB]
+#18 4.037 Get:6 http://deb.debian.org/debian trixie/main amd64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
+#18 4.208 Get:7 http://deb.debian.org/debian trixie/main amd64 libgdbm6t64 amd64 1.24-2 [75.2 kB]
+#18 4.210 Get:8 http://deb.debian.org/debian trixie/main amd64 libgdbm-compat4t64 amd64 1.24-2 [50.3 kB]
+#18 4.210 Get:9 http://deb.debian.org/debian trixie/main amd64 libperl5.40 amd64 5.40.1-6 [4341 kB]
+#18 4.487 Get:10 http://deb.debian.org/debian trixie/main amd64 perl amd64 5.40.1-6 [267 kB]
+#18 4.853 Get:11 http://deb.debian.org/debian trixie/main amd64 libffi8 amd64 3.4.8-2 [24.1 kB]
+#18 4.853 Get:12 http://deb.debian.org/debian trixie/main amd64 libp11-kit0 amd64 0.25.5-3 [425 kB]
+#18 4.906 Get:13 http://deb.debian.org/debian trixie/main amd64 libtasn1-6 amd64 4.20.0-2 [49.9 kB]
+#18 4.920 Get:14 http://deb.debian.org/debian-security trixie-security/main amd64 libgnutls30t64 amd64 3.8.9-3+deb13u2 [1468 kB]
+#18 5.041 Get:15 http://deb.debian.org/debian trixie/main amd64 libpsl5t64 amd64 0.21.2-1.1+b1 [57.2 kB]
+#18 5.063 Get:16 http://deb.debian.org/debian trixie/main amd64 wget amd64 1.25.0-2 [984 kB]
+#18 5.155 Get:17 http://deb.debian.org/debian trixie/main amd64 xz-utils amd64 5.8.1-1 [660 kB]
+#18 5.211 Get:18 http://deb.debian.org/debian trixie/main amd64 libstdc++-14-dev amd64 14.2.0-19 [2376 kB]
+#18 5.459 Get:19 http://deb.debian.org/debian trixie/main amd64 g++-14-x86-64-linux-gnu amd64 14.2.0-19 [12.1 MB]
+#18 6.104 Get:20 http://deb.debian.org/debian trixie/main amd64 g++-14 amd64 14.2.0-19 [22.5 kB]
+#18 6.104 Get:21 http://deb.debian.org/debian trixie/main amd64 g++-x86-64-linux-gnu amd64 4:14.2.0-1 [1200 B]
+#18 6.113 Get:22 http://deb.debian.org/debian trixie/main amd64 g++ amd64 4:14.2.0-1 [1344 B]
+#18 6.113 Get:23 http://deb.debian.org/debian trixie/main amd64 make amd64 4.4.1-2 [463 kB]
+#18 6.147 Get:24 http://deb.debian.org/debian trixie/main amd64 libdpkg-perl all 1.22.21 [650 kB]
+#18 6.163 Get:25 http://deb.debian.org/debian trixie/main amd64 patch amd64 2.8-2 [134 kB]
+#18 6.180 Get:26 http://deb.debian.org/debian trixie/main amd64 dpkg-dev all 1.22.21 [1338 kB]
+#18 6.265 Get:27 http://deb.debian.org/debian trixie/main amd64 build-essential amd64 12.12 [4624 B]
+#18 6.266 Get:28 http://deb.debian.org/debian trixie/main amd64 cmake-data all 3.31.6-2 [2268 kB]
+#18 6.389 Get:29 http://deb.debian.org/debian trixie/main amd64 libxml2 amd64 2.12.7+dfsg+really2.9.14-2.1+deb13u2 [698 kB]
+#18 6.452 Get:30 http://deb.debian.org/debian trixie/main amd64 libarchive13t64 amd64 3.7.4-4 [349 kB]
+#18 6.506 Get:31 http://deb.debian.org/debian trixie/main amd64 libbrotli1 amd64 1.1.0-2+b7 [307 kB]
+#18 6.538 Get:32 http://deb.debian.org/debian trixie/main amd64 libkrb5support0 amd64 1.21.3-5 [33.0 kB]
+#18 6.540 Get:33 http://deb.debian.org/debian trixie/main amd64 libcom-err2 amd64 1.47.2-3+b7 [25.0 kB]
+#18 6.544 Get:34 http://deb.debian.org/debian trixie/main amd64 libk5crypto3 amd64 1.21.3-5 [81.5 kB]
+#18 6.545 Get:35 http://deb.debian.org/debian trixie/main amd64 libkeyutils1 amd64 1.6.3-6 [9456 B]
+#18 6.545 Get:36 http://deb.debian.org/debian trixie/main amd64 libkrb5-3 amd64 1.21.3-5 [326 kB]
+#18 6.563 Get:37 http://deb.debian.org/debian trixie/main amd64 libgssapi-krb5-2 amd64 1.21.3-5 [138 kB]
+#18 6.576 Get:38 http://deb.debian.org/debian trixie/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-9 [19.8 kB]
+#18 6.593 Get:39 http://deb.debian.org/debian trixie/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-9 [57.5 kB]
+#18 6.594 Get:40 http://deb.debian.org/debian trixie/main amd64 libldap2 amd64 2.6.10+dfsg-1 [194 kB]
+#18 6.607 Get:41 http://deb.debian.org/debian trixie/main amd64 libnghttp2-14 amd64 1.64.0-1.1 [76.0 kB]
+#18 6.608 Get:42 http://deb.debian.org/debian trixie/main amd64 libnghttp3-9 amd64 1.8.0-1 [67.7 kB]
+#18 6.610 Get:43 http://deb.debian.org/debian trixie/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2+b5 [58.8 kB]
+#18 6.629 Get:44 http://deb.debian.org/debian trixie/main amd64 libssh2-1t64 amd64 1.11.1-1 [245 kB]
+#18 6.762 Get:45 http://deb.debian.org/debian trixie/main amd64 libcurl4t64 amd64 8.14.1-2+deb13u2 [391 kB]
+#18 ...
+
+#19 [linux/arm64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#19 0.188 Get:1 http://deb.debian.org/debian trixie InRelease [140 kB]
+#19 0.314 Get:2 http://deb.debian.org/debian trixie-updates InRelease [47.3 kB]
+#19 0.332 Get:3 http://deb.debian.org/debian-security trixie-security InRelease [43.4 kB]
+#19 0.376 Get:4 http://deb.debian.org/debian trixie/main arm64 Packages [9607 kB]
+#19 0.844 Get:5 http://deb.debian.org/debian trixie-updates/main arm64 Packages [5404 B]
+#19 0.864 Get:6 http://deb.debian.org/debian-security trixie-security/main arm64 Packages [113 kB]
+#19 1.633 Fetched 9957 kB in 2s (6328 kB/s)
+#19 1.633 Reading package lists...
+#19 2.144 Reading package lists...
+#19 2.646 Building dependency tree...
+#19 2.764 Reading state information...
+#19 2.992 The following additional packages will be installed:
+#19 2.992   bzip2 cmake-data dpkg-dev g++ g++-14 g++-14-aarch64-linux-gnu
+#19 2.993   g++-aarch64-linux-gnu git-man libarchive13t64 libbrotli1 libclang-19-dev
+#19 2.993   libclang-common-19-dev libclang1-19 libcom-err2 libcurl3t64-gnutls
+#19 2.993   libcurl4t64 libdpkg-perl libedit2 liberror-perl libexpat1 libffi8 libgc1
+#19 2.993   libgdbm-compat4t64 libgdbm6t64 libgnutls30t64 libgssapi-krb5-2 libjsoncpp26
+#19 2.993   libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap2 libllvm19
+#19 2.993   libncursesw6 libnghttp2-14 libnghttp3-9 libngtcp2-16
+#19 2.993   libngtcp2-crypto-gnutls8 libobjc-14-dev libobjc4 libp11-kit0 libperl5.40
+#19 2.993   libpkgconf3 libproc2-0 libpsl5t64 librhash1 librtmp1 libsasl2-2
+#19 2.993   libsasl2-modules-db libssh2-1t64 libstdc++-14-dev libtasn1-6 libuv1t64
+#19 2.993   libxml2 libz3-4 make patch perl-modules-5.40 pkgconf pkgconf-bin procps
+#19 2.993   xz-utils
+#19 2.994 Suggested packages:
+#19 2.994   bzip2-doc cmake-doc cmake-format elpa-cmake-mode ninja-build debian-keyring
+#19 2.994   debian-tag2upload-keyring gcc-14-doc gettext-base git-doc git-email git-gui
+#19 2.994   gitk gitweb git-cvs git-mediawiki git-svn lrzip sq | sqop | rsop | gosop
+#19 2.994   | pgpainless-cli | gpg-sq | gnupg sensible-utils bzr gdbm-l10n gnutls-bin
+#19 2.994   krb5-doc krb5-user libstdc++-14-doc make-doc ed diffutils-doc perl-doc
+#19 2.994   libterm-readline-gnu-perl | libterm-readline-perl-perl
+#19 2.994   libtap-harness-archive-perl
+#19 2.994 Recommended packages:
+#19 2.994   fakeroot sq | sqop | rsop | gosop | pgpainless-cli | gpg-sq | gnupg
+#19 2.994   libalgorithm-merge-perl less ssh-client libclang-rt-19-dev
+#19 2.994   libfile-fcntllock-perl liblocale-gettext-perl krb5-locales libldap-common
+#19 2.994   libgpm2 publicsuffix libsasl2-modules netbase psmisc linux-sysctl-defaults
+#19 3.792 The following NEW packages will be installed:
+#19 3.792   build-essential bzip2 cmake cmake-data dpkg-dev g++ g++-14
+#19 3.792   g++-14-aarch64-linux-gnu g++-aarch64-linux-gnu git git-man libarchive13t64
+#19 3.792   libbrotli1 libclang-19-dev libclang-common-19-dev libclang-dev libclang1-19
+#19 3.792   libcom-err2 libcurl3t64-gnutls libcurl4t64 libdpkg-perl libedit2
+#19 3.792   liberror-perl libexpat1 libffi8 libgc1 libgdbm-compat4t64 libgdbm6t64
+#19 3.792   libgnutls30t64 libgssapi-krb5-2 libjsoncpp26 libk5crypto3 libkeyutils1
+#19 3.792   libkrb5-3 libkrb5support0 libldap2 libllvm19 libncursesw6 libnghttp2-14
+#19 3.792   libnghttp3-9 libngtcp2-16 libngtcp2-crypto-gnutls8 libobjc-14-dev libobjc4
+#19 3.792   libp11-kit0 libperl5.40 libpkgconf3 libproc2-0 libpsl5t64 librhash1 librtmp1
+#19 3.792   libsasl2-2 libsasl2-modules-db libssh2-1t64 libstdc++-14-dev libtasn1-6
+#19 3.792   libuv1t64 libxml2 libz3-4 make patch perl perl-modules-5.40 pkg-config
+#19 3.792   pkgconf pkgconf-bin procps wget xz-utils
+#19 3.947 0 upgraded, 69 newly installed, 0 to remove and 0 not upgraded.
+#19 3.947 Need to get 121 MB of archives.
+#19 3.947 After this operation, 774 MB of additional disk space will be used.
+#19 3.947 Get:1 http://deb.debian.org/debian trixie/main arm64 libexpat1 arm64 2.7.1-2 [93.3 kB]
+#19 4.049 Get:2 http://deb.debian.org/debian trixie/main arm64 libncursesw6 arm64 6.5+20250216-2 [124 kB]
+#19 4.093 Get:3 http://deb.debian.org/debian trixie/main arm64 libproc2-0 arm64 2:4.0.4-9 [62.8 kB]
+#19 4.110 Get:4 http://deb.debian.org/debian trixie/main arm64 procps arm64 2:4.0.4-9 [871 kB]
+#19 4.325 Get:5 http://deb.debian.org/debian trixie/main arm64 bzip2 arm64 1.0.8-6 [39.5 kB]
+#19 4.327 Get:6 http://deb.debian.org/debian trixie/main arm64 perl-modules-5.40 all 5.40.1-6 [3019 kB]
+#19 4.617 Get:7 http://deb.debian.org/debian trixie/main arm64 libgdbm6t64 arm64 1.24-2 [74.0 kB]
+#19 4.618 Get:8 http://deb.debian.org/debian trixie/main arm64 libgdbm-compat4t64 arm64 1.24-2 [50.3 kB]
+#19 4.641 Get:9 http://deb.debian.org/debian trixie/main arm64 libperl5.40 arm64 5.40.1-6 [4142 kB]
+#19 5.150 Get:10 http://deb.debian.org/debian trixie/main arm64 perl arm64 5.40.1-6 [267 kB]
+#19 5.170 Get:11 http://deb.debian.org/debian trixie/main arm64 libffi8 arm64 3.4.8-2 [21.3 kB]
+#19 5.183 Get:12 http://deb.debian.org/debian trixie/main arm64 libp11-kit0 arm64 0.25.5-3 [409 kB]
+#19 5.237 Get:13 http://deb.debian.org/debian trixie/main arm64 libtasn1-6 arm64 4.20.0-2 [47.3 kB]
+#19 5.240 Get:14 http://deb.debian.org/debian-security trixie-security/main arm64 libgnutls30t64 arm64 3.8.9-3+deb13u2 [1378 kB]
+#19 5.362 Get:15 http://deb.debian.org/debian trixie/main arm64 libpsl5t64 arm64 0.21.2-1.1+b1 [57.1 kB]
+#19 5.375 Get:16 http://deb.debian.org/debian trixie/main arm64 wget arm64 1.25.0-2 [970 kB]
+#19 5.465 Get:17 http://deb.debian.org/debian trixie/main arm64 xz-utils arm64 5.8.1-1 [657 kB]
+#19 5.530 Get:18 http://deb.debian.org/debian trixie/main arm64 libstdc++-14-dev arm64 14.2.0-19 [2295 kB]
+#19 5.711 Get:19 http://deb.debian.org/debian trixie/main arm64 g++-14-aarch64-linux-gnu arm64 14.2.0-19 [10.1 MB]
+#19 6.515 Get:20 http://deb.debian.org/debian trixie/main arm64 g++-14 arm64 14.2.0-19 [22.5 kB]
+#19 6.515 Get:21 http://deb.debian.org/debian trixie/main arm64 g++-aarch64-linux-gnu arm64 4:14.2.0-1 [1200 B]
+#19 6.519 Get:22 http://deb.debian.org/debian trixie/main arm64 g++ arm64 4:14.2.0-1 [1332 B]
+#19 6.533 Get:23 http://deb.debian.org/debian trixie/main arm64 make arm64 4.4.1-2 [452 kB]
+#19 6.574 Get:24 http://deb.debian.org/debian trixie/main arm64 libdpkg-perl all 1.22.21 [650 kB]
+#19 6.620 Get:25 http://deb.debian.org/debian trixie/main arm64 patch arm64 2.8-2 [128 kB]
+#19 6.629 Get:26 http://deb.debian.org/debian trixie/main arm64 dpkg-dev all 1.22.21 [1338 kB]
+#19 6.745 Get:27 http://deb.debian.org/debian trixie/main arm64 build-essential arm64 12.12 [4624 B]
+#19 6.753 Get:28 http://deb.debian.org/debian trixie/main arm64 cmake-data all 3.31.6-2 [2268 kB]
+#19 6.939 Get:29 http://deb.debian.org/debian trixie/main arm64 libxml2 arm64 2.12.7+dfsg+really2.9.14-2.1+deb13u2 [630 kB]
+#19 7.008 Get:30 http://deb.debian.org/debian trixie/main arm64 libarchive13t64 arm64 3.7.4-4 [323 kB]
+#19 7.062 Get:31 http://deb.debian.org/debian trixie/main arm64 libbrotli1 arm64 1.1.0-2+b7 [308 kB]
+#19 7.094 Get:32 http://deb.debian.org/debian trixie/main arm64 libkrb5support0 arm64 1.21.3-5 [32.4 kB]
+#19 7.094 Get:33 http://deb.debian.org/debian trixie/main arm64 libcom-err2 arm64 1.47.2-3+b7 [24.9 kB]
+#19 7.094 Get:34 http://deb.debian.org/debian trixie/main arm64 libk5crypto3 arm64 1.21.3-5 [81.2 kB]
+#19 7.094 Get:35 http://deb.debian.org/debian trixie/main arm64 libkeyutils1 arm64 1.6.3-6 [9716 B]
+#19 7.094 Get:36 http://deb.debian.org/debian trixie/main arm64 libkrb5-3 arm64 1.21.3-5 [308 kB]
+#19 7.114 Get:37 http://deb.debian.org/debian trixie/main arm64 libgssapi-krb5-2 arm64 1.21.3-5 [127 kB]
+#19 7.129 Get:38 http://deb.debian.org/debian trixie/main arm64 libsasl2-modules-db arm64 2.1.28+dfsg1-9 [20.1 kB]
+#19 7.130 Get:39 http://deb.debian.org/debian trixie/main arm64 libsasl2-2 arm64 2.1.28+dfsg1-9 [55.6 kB]
+#19 7.135 Get:40 http://deb.debian.org/debian trixie/main arm64 libldap2 arm64 2.6.10+dfsg-1 [179 kB]
+#19 7.174 Get:41 http://deb.debian.org/debian trixie/main arm64 libnghttp2-14 arm64 1.64.0-1.1 [71.4 kB]
+#19 7.192 Get:42 http://deb.debian.org/debian trixie/main arm64 libnghttp3-9 arm64 1.8.0-1 [63.2 kB]
+#19 7.204 Get:43 http://deb.debian.org/debian trixie/main arm64 librtmp1 arm64 2.4+20151223.gitfa8646d.1-2+b5 [56.8 kB]
+#19 7.243 Get:44 http://deb.debian.org/debian trixie/main arm64 libssh2-1t64 arm64 1.11.1-1 [235 kB]
+#19 7.269 Get:45 http://deb.debian.org/debian trixie/main arm64 libcurl4t64 arm64 8.14.1-2+deb13u2 [359 kB]
+#19 7.309 Get:46 http://deb.debian.org/debian trixie/main arm64 libjsoncpp26 arm64 1.9.6-3 [72.9 kB]
+#19 7.326 Get:47 http://deb.debian.org/debian trixie/main arm64 librhash1 arm64 1.4.5-1 [129 kB]
+#19 7.337 Get:48 http://deb.debian.org/debian trixie/main arm64 libuv1t64 arm64 1.50.0-2 [148 kB]
+#19 7.351 Get:49 http://deb.debian.org/debian trixie/main arm64 cmake arm64 3.31.6-2 [9906 kB]
+#19 8.016 Get:50 http://deb.debian.org/debian trixie/main arm64 libngtcp2-16 arm64 1.11.0-1 [121 kB]
+#19 8.031 Get:51 http://deb.debian.org/debian trixie/main arm64 libngtcp2-crypto-gnutls8 arm64 1.11.0-1 [28.2 kB]
+#19 8.043 Get:52 http://deb.debian.org/debian trixie/main arm64 libcurl3t64-gnutls arm64 8.14.1-2+deb13u2 [354 kB]
+#19 8.076 Get:53 http://deb.debian.org/debian trixie/main arm64 liberror-perl all 0.17030-1 [26.9 kB]
+#19 8.076 Get:54 http://deb.debian.org/debian trixie/main arm64 git-man all 1:2.47.3-0+deb13u1 [2205 kB]
+#19 8.241 Get:55 http://deb.debian.org/debian trixie/main arm64 git arm64 1:2.47.3-0+deb13u1 [8666 kB]
+#19 8.870 Get:56 http://deb.debian.org/debian trixie/main arm64 libgc1 arm64 1:8.2.8-1 [241 kB]
+#19 8.882 Get:57 http://deb.debian.org/debian trixie/main arm64 libobjc4 arm64 14.2.0-19 [39.4 kB]
+#19 8.884 Get:58 http://deb.debian.org/debian trixie/main arm64 libobjc-14-dev arm64 14.2.0-19 [166 kB]
+#19 8.901 Get:59 http://deb.debian.org/debian trixie/main arm64 libedit2 arm64 3.1-20250104-1 [89.3 kB]
+#19 8.914 Get:60 http://deb.debian.org/debian trixie/main arm64 libz3-4 arm64 4.13.3-1 [7507 kB]
+#19 9.889 Get:61 http://deb.debian.org/debian trixie/main arm64 libllvm19 arm64 1:19.1.7-3+b1 [23.3 MB]
+#19 ...
+
+#18 [linux/amd64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#18 6.790 Get:46 http://deb.debian.org/debian trixie/main amd64 libjsoncpp26 amd64 1.9.6-3 [81.7 kB]
+#18 6.798 Get:47 http://deb.debian.org/debian trixie/main amd64 librhash1 amd64 1.4.5-1 [132 kB]
+#18 6.804 Get:48 http://deb.debian.org/debian trixie/main amd64 libuv1t64 amd64 1.50.0-2 [154 kB]
+#18 6.816 Get:49 http://deb.debian.org/debian trixie/main amd64 cmake amd64 3.31.6-2 [12.0 MB]
+#18 7.369 Get:50 http://deb.debian.org/debian trixie/main amd64 libngtcp2-16 amd64 1.11.0-1 [131 kB]
+#18 7.377 Get:51 http://deb.debian.org/debian trixie/main amd64 libngtcp2-crypto-gnutls8 amd64 1.11.0-1 [29.3 kB]
+#18 7.377 Get:52 http://deb.debian.org/debian trixie/main amd64 libcurl3t64-gnutls amd64 8.14.1-2+deb13u2 [383 kB]
+#18 7.385 Get:53 http://deb.debian.org/debian trixie/main amd64 liberror-perl all 0.17030-1 [26.9 kB]
+#18 7.385 Get:54 http://deb.debian.org/debian trixie/main amd64 git-man all 1:2.47.3-0+deb13u1 [2205 kB]
+#18 7.465 Get:55 http://deb.debian.org/debian trixie/main amd64 git amd64 1:2.47.3-0+deb13u1 [8862 kB]
+#18 7.723 Get:56 http://deb.debian.org/debian trixie/main amd64 libgc1 amd64 1:8.2.8-1 [247 kB]
+#18 7.733 Get:57 http://deb.debian.org/debian trixie/main amd64 libobjc4 amd64 14.2.0-19 [43.3 kB]
+#18 7.749 Get:58 http://deb.debian.org/debian trixie/main amd64 libobjc-14-dev amd64 14.2.0-19 [173 kB]
+#18 7.764 Get:59 http://deb.debian.org/debian trixie/main amd64 libedit2 amd64 3.1-20250104-1 [93.8 kB]
+#18 7.779 Get:60 http://deb.debian.org/debian trixie/main amd64 libz3-4 amd64 4.13.3-1 [8560 kB]
+#18 8.068 Get:61 http://deb.debian.org/debian trixie/main amd64 libllvm19 amd64 1:19.1.7-3+b1 [26.0 MB]
+#18 8.960 Get:62 http://deb.debian.org/debian trixie/main amd64 libclang1-19 amd64 1:19.1.7-3+b1 [7623 kB]
+#18 9.277 Get:63 http://deb.debian.org/debian trixie/main amd64 libclang-common-19-dev amd64 1:19.1.7-3+b1 [740 kB]
+#18 9.335 Get:64 http://deb.debian.org/debian trixie/main amd64 libclang-19-dev amd64 1:19.1.7-3+b1 [28.3 MB]
+#18 10.83 Get:65 http://deb.debian.org/debian trixie/main amd64 libclang-dev amd64 1:19.0-63 [5828 B]
+#18 10.83 Get:66 http://deb.debian.org/debian trixie/main amd64 libpkgconf3 amd64 1.8.1-4 [36.4 kB]
+#18 10.83 Get:67 http://deb.debian.org/debian trixie/main amd64 pkgconf-bin amd64 1.8.1-4 [30.2 kB]
+#18 10.85 Get:68 http://deb.debian.org/debian trixie/main amd64 pkgconf amd64 1.8.1-4 [26.2 kB]
+#18 10.85 Get:69 http://deb.debian.org/debian trixie/main amd64 pkg-config amd64 1.8.1-4 [14.0 kB]
+#18 11.19 debconf: unable to initialize frontend: Dialog
+#18 11.19 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#18 11.19 debconf: falling back to frontend: Readline
+#18 11.19 debconf: unable to initialize frontend: Readline
+#18 11.19 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/x86_64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 69.)
+#18 11.19 debconf: falling back to frontend: Teletype
+#18 11.26 debconf: unable to initialize frontend: Teletype
+#18 11.26 debconf: (This frontend requires a controlling tty.)
+#18 11.26 debconf: falling back to frontend: Noninteractive
+#18 13.24 Fetched 131 MB in 7s (18.7 MB/s)
+#18 13.34 Selecting previously unselected package libexpat1:amd64.
+#18 13.34 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9595 files and directories currently installed.)
+#18 13.34 Preparing to unpack .../00-libexpat1_2.7.1-2_amd64.deb ...
+#18 13.35 Unpacking libexpat1:amd64 (2.7.1-2) ...
+#18 13.46 Selecting previously unselected package libncursesw6:amd64.
+#18 13.46 Preparing to unpack .../01-libncursesw6_6.5+20250216-2_amd64.deb ...
+#18 13.46 Unpacking libncursesw6:amd64 (6.5+20250216-2) ...
+#18 13.58 Selecting previously unselected package libproc2-0:amd64.
+#18 13.58 Preparing to unpack .../02-libproc2-0_2%3a4.0.4-9_amd64.deb ...
+#18 13.58 Unpacking libproc2-0:amd64 (2:4.0.4-9) ...
+#18 13.69 Selecting previously unselected package procps.
+#18 13.69 Preparing to unpack .../03-procps_2%3a4.0.4-9_amd64.deb ...
+#18 13.77 Unpacking procps (2:4.0.4-9) ...
+#18 13.91 Selecting previously unselected package bzip2.
+#18 13.91 Preparing to unpack .../04-bzip2_1.0.8-6_amd64.deb ...
+#18 13.91 Unpacking bzip2 (1.0.8-6) ...
+#18 14.01 Selecting previously unselected package perl-modules-5.40.
+#18 14.01 Preparing to unpack .../05-perl-modules-5.40_5.40.1-6_all.deb ...
+#18 14.02 Unpacking perl-modules-5.40 (5.40.1-6) ...
+#18 14.27 Selecting previously unselected package libgdbm6t64:amd64.
+#18 14.28 Preparing to unpack .../06-libgdbm6t64_1.24-2_amd64.deb ...
+#18 14.28 Unpacking libgdbm6t64:amd64 (1.24-2) ...
+#18 14.38 Selecting previously unselected package libgdbm-compat4t64:amd64.
+#18 ...
+
+#15 [linux/amd64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#15 22.05 Updating certificates in /etc/ssl/certs...
+#15 30.79 142 added, 0 removed; done.
+#15 30.86 Setting up libgssapi-krb5-2:amd64 (1.20.1-2+deb12u4) ...
+#15 30.88 Setting up libcurl4:amd64 (7.88.1-10+deb12u14) ...
+#15 30.88 Setting up curl (7.88.1-10+deb12u14) ...
+#15 30.88 Processing triggers for libc-bin (2.36-9+deb12u13) ...
+#15 30.93 Processing triggers for ca-certificates (20230311+deb12u1) ...
+#15 31.00 Updating certificates in /etc/ssl/certs...
+#15 ...
+
+#18 [linux/amd64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#18 14.38 Preparing to unpack .../07-libgdbm-compat4t64_1.24-2_amd64.deb ...
+#18 14.38 Unpacking libgdbm-compat4t64:amd64 (1.24-2) ...
+#18 14.49 Selecting previously unselected package libperl5.40:amd64.
+#18 14.50 Preparing to unpack .../08-libperl5.40_5.40.1-6_amd64.deb ...
+#18 14.50 Unpacking libperl5.40:amd64 (5.40.1-6) ...
+#18 14.78 Selecting previously unselected package perl.
+#18 14.78 Preparing to unpack .../09-perl_5.40.1-6_amd64.deb ...
+#18 14.79 Unpacking perl (5.40.1-6) ...
+#18 14.90 Selecting previously unselected package libffi8:amd64.
+#18 14.91 Preparing to unpack .../10-libffi8_3.4.8-2_amd64.deb ...
+#18 14.91 Unpacking libffi8:amd64 (3.4.8-2) ...
+#18 15.01 Selecting previously unselected package libp11-kit0:amd64.
+#18 15.01 Preparing to unpack .../11-libp11-kit0_0.25.5-3_amd64.deb ...
+#18 15.02 Unpacking libp11-kit0:amd64 (0.25.5-3) ...
+#18 15.14 Selecting previously unselected package libtasn1-6:amd64.
+#18 15.14 Preparing to unpack .../12-libtasn1-6_4.20.0-2_amd64.deb ...
+#18 15.14 Unpacking libtasn1-6:amd64 (4.20.0-2) ...
+#18 15.25 Selecting previously unselected package libgnutls30t64:amd64.
+#18 15.25 Preparing to unpack .../13-libgnutls30t64_3.8.9-3+deb13u2_amd64.deb ...
+#18 15.26 Unpacking libgnutls30t64:amd64 (3.8.9-3+deb13u2) ...
+#18 15.40 Selecting previously unselected package libpsl5t64:amd64.
+#18 15.40 Preparing to unpack .../14-libpsl5t64_0.21.2-1.1+b1_amd64.deb ...
+#18 15.41 Unpacking libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+#18 15.52 Selecting previously unselected package wget.
+#18 15.52 Preparing to unpack .../15-wget_1.25.0-2_amd64.deb ...
+#18 15.52 Unpacking wget (1.25.0-2) ...
+#18 15.66 Selecting previously unselected package xz-utils.
+#18 15.66 Preparing to unpack .../16-xz-utils_5.8.1-1_amd64.deb ...
+#18 15.66 Unpacking xz-utils (5.8.1-1) ...
+#18 15.78 Selecting previously unselected package libstdc++-14-dev:amd64.
+#18 15.78 Preparing to unpack .../17-libstdc++-14-dev_14.2.0-19_amd64.deb ...
+#18 15.78 Unpacking libstdc++-14-dev:amd64 (14.2.0-19) ...
+#18 16.00 Selecting previously unselected package g++-14-x86-64-linux-gnu.
+#18 16.00 Preparing to unpack .../18-g++-14-x86-64-linux-gnu_14.2.0-19_amd64.deb ...
+#18 16.00 Unpacking g++-14-x86-64-linux-gnu (14.2.0-19) ...
+#18 16.49 Selecting previously unselected package g++-14.
+#18 16.49 Preparing to unpack .../19-g++-14_14.2.0-19_amd64.deb ...
+#18 16.49 Unpacking g++-14 (14.2.0-19) ...
+#18 16.61 Selecting previously unselected package g++-x86-64-linux-gnu.
+#18 16.61 Preparing to unpack .../20-g++-x86-64-linux-gnu_4%3a14.2.0-1_amd64.deb ...
+#18 16.61 Unpacking g++-x86-64-linux-gnu (4:14.2.0-1) ...
+#18 16.72 Selecting previously unselected package g++.
+#18 16.72 Preparing to unpack .../21-g++_4%3a14.2.0-1_amd64.deb ...
+#18 16.73 Unpacking g++ (4:14.2.0-1) ...
+#18 16.84 Selecting previously unselected package make.
+#18 16.84 Preparing to unpack .../22-make_4.4.1-2_amd64.deb ...
+#18 16.85 Unpacking make (4.4.1-2) ...
+#18 16.97 Selecting previously unselected package libdpkg-perl.
+#18 16.97 Preparing to unpack .../23-libdpkg-perl_1.22.21_all.deb ...
+#18 16.97 Unpacking libdpkg-perl (1.22.21) ...
+#18 17.09 Selecting previously unselected package patch.
+#18 17.09 Preparing to unpack .../24-patch_2.8-2_amd64.deb ...
+#18 17.09 Unpacking patch (2.8-2) ...
+#18 17.20 Selecting previously unselected package dpkg-dev.
+#18 17.20 Preparing to unpack .../25-dpkg-dev_1.22.21_all.deb ...
+#18 17.21 Unpacking dpkg-dev (1.22.21) ...
+#18 17.34 Selecting previously unselected package build-essential.
+#18 17.35 Preparing to unpack .../26-build-essential_12.12_amd64.deb ...
+#18 17.35 Unpacking build-essential (12.12) ...
+#18 17.45 Selecting previously unselected package cmake-data.
+#18 17.45 Preparing to unpack .../27-cmake-data_3.31.6-2_all.deb ...
+#18 17.52 Unpacking cmake-data (3.31.6-2) ...
+#18 17.81 Selecting previously unselected package libxml2:amd64.
+#18 17.81 Preparing to unpack .../28-libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u2_amd64.deb ...
+#18 17.81 Unpacking libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u2) ...
+#18 17.94 Selecting previously unselected package libarchive13t64:amd64.
+#18 17.94 Preparing to unpack .../29-libarchive13t64_3.7.4-4_amd64.deb ...
+#18 17.94 Unpacking libarchive13t64:amd64 (3.7.4-4) ...
+#18 18.06 Selecting previously unselected package libbrotli1:amd64.
+#18 18.06 Preparing to unpack .../30-libbrotli1_1.1.0-2+b7_amd64.deb ...
+#18 18.06 Unpacking libbrotli1:amd64 (1.1.0-2+b7) ...
+#18 18.33 Selecting previously unselected package libkrb5support0:amd64.
+#18 18.33 Preparing to unpack .../31-libkrb5support0_1.21.3-5_amd64.deb ...
+#18 18.33 Unpacking libkrb5support0:amd64 (1.21.3-5) ...
+#18 18.44 Selecting previously unselected package libcom-err2:amd64.
+#18 18.44 Preparing to unpack .../32-libcom-err2_1.47.2-3+b7_amd64.deb ...
+#18 18.44 Unpacking libcom-err2:amd64 (1.47.2-3+b7) ...
+#18 18.55 Selecting previously unselected package libk5crypto3:amd64.
+#18 18.55 Preparing to unpack .../33-libk5crypto3_1.21.3-5_amd64.deb ...
+#18 18.55 Unpacking libk5crypto3:amd64 (1.21.3-5) ...
+#18 18.66 Selecting previously unselected package libkeyutils1:amd64.
+#18 18.66 Preparing to unpack .../34-libkeyutils1_1.6.3-6_amd64.deb ...
+#18 18.66 Unpacking libkeyutils1:amd64 (1.6.3-6) ...
+#18 18.77 Selecting previously unselected package libkrb5-3:amd64.
+#18 18.77 Preparing to unpack .../35-libkrb5-3_1.21.3-5_amd64.deb ...
+#18 18.77 Unpacking libkrb5-3:amd64 (1.21.3-5) ...
+#18 18.89 Selecting previously unselected package libgssapi-krb5-2:amd64.
+#18 18.89 Preparing to unpack .../36-libgssapi-krb5-2_1.21.3-5_amd64.deb ...
+#18 18.89 Unpacking libgssapi-krb5-2:amd64 (1.21.3-5) ...
+#18 19.10 Selecting previously unselected package libsasl2-modules-db:amd64.
+#18 19.10 Preparing to unpack .../37-libsasl2-modules-db_2.1.28+dfsg1-9_amd64.deb ...
+#18 19.13 Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+#18 19.34 Selecting previously unselected package libsasl2-2:amd64.
+#18 19.34 Preparing to unpack .../38-libsasl2-2_2.1.28+dfsg1-9_amd64.deb ...
+#18 19.35 Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+#18 19.49 Selecting previously unselected package libldap2:amd64.
+#18 19.50 Preparing to unpack .../39-libldap2_2.6.10+dfsg-1_amd64.deb ...
+#18 19.50 Unpacking libldap2:amd64 (2.6.10+dfsg-1) ...
+#18 19.62 Selecting previously unselected package libnghttp2-14:amd64.
+#18 19.62 Preparing to unpack .../40-libnghttp2-14_1.64.0-1.1_amd64.deb ...
+#18 19.62 Unpacking libnghttp2-14:amd64 (1.64.0-1.1) ...
+#18 19.78 Selecting previously unselected package libnghttp3-9:amd64.
+#18 19.78 Preparing to unpack .../41-libnghttp3-9_1.8.0-1_amd64.deb ...
+#18 19.79 Unpacking libnghttp3-9:amd64 (1.8.0-1) ...
+#18 19.90 Selecting previously unselected package librtmp1:amd64.
+#18 19.90 Preparing to unpack .../42-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_amd64.deb ...
+#18 19.90 Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#18 20.01 Selecting previously unselected package libssh2-1t64:amd64.
+#18 20.01 Preparing to unpack .../43-libssh2-1t64_1.11.1-1_amd64.deb ...
+#18 20.02 Unpacking libssh2-1t64:amd64 (1.11.1-1) ...
+#18 20.13 Selecting previously unselected package libcurl4t64:amd64.
+#18 20.14 Preparing to unpack .../44-libcurl4t64_8.14.1-2+deb13u2_amd64.deb ...
+#18 20.14 Unpacking libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+#18 20.28 Selecting previously unselected package libjsoncpp26:amd64.
+#18 20.28 Preparing to unpack .../45-libjsoncpp26_1.9.6-3_amd64.deb ...
+#18 20.28 Unpacking libjsoncpp26:amd64 (1.9.6-3) ...
+#18 20.59 Selecting previously unselected package librhash1:amd64.
+#18 ...
+
+#19 [linux/arm64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#19 14.56 Get:62 http://deb.debian.org/debian trixie/main arm64 libclang1-19 arm64 1:19.1.7-3+b1 [6866 kB]
+#19 14.95 Get:63 http://deb.debian.org/debian trixie/main arm64 libclang-common-19-dev arm64 1:19.1.7-3+b1 [740 kB]
+#19 14.99 Get:64 http://deb.debian.org/debian trixie/main arm64 libclang-19-dev arm64 1:19.1.7-3+b1 [27.5 MB]
+#19 16.18 Get:65 http://deb.debian.org/debian trixie/main arm64 libclang-dev arm64 1:19.0-63 [5828 B]
+#19 16.18 Get:66 http://deb.debian.org/debian trixie/main arm64 libpkgconf3 arm64 1.8.1-4 [35.3 kB]
+#19 16.18 Get:67 http://deb.debian.org/debian trixie/main arm64 pkgconf-bin arm64 1.8.1-4 [29.6 kB]
+#19 16.19 Get:68 http://deb.debian.org/debian trixie/main arm64 pkgconf arm64 1.8.1-4 [26.1 kB]
+#19 16.19 Get:69 http://deb.debian.org/debian trixie/main arm64 pkg-config arm64 1.8.1-4 [14.0 kB]
+#19 16.35 debconf: unable to initialize frontend: Dialog
+#19 16.35 debconf: (TERM is not set, so the dialog frontend is not usable.)
+#19 16.35 debconf: falling back to frontend: Readline
+#19 16.35 debconf: unable to initialize frontend: Readline
+#19 16.35 debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/aarch64-linux-gnu/perl/5.40.1 /usr/local/share/perl/5.40.1 /usr/lib/aarch64-linux-gnu/perl5/5.40 /usr/share/perl5 /usr/lib/aarch64-linux-gnu/perl-base /usr/lib/aarch64-linux-gnu/perl/5.40 /usr/share/perl/5.40 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8, <STDIN> line 69.)
+#19 16.35 debconf: falling back to frontend: Teletype
+#19 16.35 debconf: unable to initialize frontend: Teletype
+#19 16.35 debconf: (This frontend requires a controlling tty.)
+#19 16.35 debconf: falling back to frontend: Noninteractive
+#19 17.74 Fetched 121 MB in 12s (9737 kB/s)
+#19 17.75 Selecting previously unselected package libexpat1:arm64.
+#19 17.75 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9702 files and directories currently installed.)
+#19 17.75 Preparing to unpack .../00-libexpat1_2.7.1-2_arm64.deb ...
+#19 17.75 Unpacking libexpat1:arm64 (2.7.1-2) ...
+#19 17.77 Selecting previously unselected package libncursesw6:arm64.
+#19 17.77 Preparing to unpack .../01-libncursesw6_6.5+20250216-2_arm64.deb ...
+#19 17.77 Unpacking libncursesw6:arm64 (6.5+20250216-2) ...
+#19 17.79 Selecting previously unselected package libproc2-0:arm64.
+#19 17.79 Preparing to unpack .../02-libproc2-0_2%3a4.0.4-9_arm64.deb ...
+#19 17.79 Unpacking libproc2-0:arm64 (2:4.0.4-9) ...
+#19 17.81 Selecting previously unselected package procps.
+#19 17.81 Preparing to unpack .../03-procps_2%3a4.0.4-9_arm64.deb ...
+#19 17.81 Unpacking procps (2:4.0.4-9) ...
+#19 17.87 Selecting previously unselected package bzip2.
+#19 17.87 Preparing to unpack .../04-bzip2_1.0.8-6_arm64.deb ...
+#19 17.87 Unpacking bzip2 (1.0.8-6) ...
+#19 17.89 Selecting previously unselected package perl-modules-5.40.
+#19 17.89 Preparing to unpack .../05-perl-modules-5.40_5.40.1-6_all.deb ...
+#19 17.89 Unpacking perl-modules-5.40 (5.40.1-6) ...
+#19 18.09 Selecting previously unselected package libgdbm6t64:arm64.
+#19 18.09 Preparing to unpack .../06-libgdbm6t64_1.24-2_arm64.deb ...
+#19 18.09 Unpacking libgdbm6t64:arm64 (1.24-2) ...
+#19 18.11 Selecting previously unselected package libgdbm-compat4t64:arm64.
+#19 18.11 Preparing to unpack .../07-libgdbm-compat4t64_1.24-2_arm64.deb ...
+#19 18.11 Unpacking libgdbm-compat4t64:arm64 (1.24-2) ...
+#19 18.12 Selecting previously unselected package libperl5.40:arm64.
+#19 18.12 Preparing to unpack .../08-libperl5.40_5.40.1-6_arm64.deb ...
+#19 18.13 Unpacking libperl5.40:arm64 (5.40.1-6) ...
+#19 18.37 Selecting previously unselected package perl.
+#19 18.37 Preparing to unpack .../09-perl_5.40.1-6_arm64.deb ...
+#19 18.37 Unpacking perl (5.40.1-6) ...
+#19 18.40 Selecting previously unselected package libffi8:arm64.
+#19 18.40 Preparing to unpack .../10-libffi8_3.4.8-2_arm64.deb ...
+#19 18.40 Unpacking libffi8:arm64 (3.4.8-2) ...
+#19 18.41 Selecting previously unselected package libp11-kit0:arm64.
+#19 18.41 Preparing to unpack .../11-libp11-kit0_0.25.5-3_arm64.deb ...
+#19 18.42 Unpacking libp11-kit0:arm64 (0.25.5-3) ...
+#19 18.45 Selecting previously unselected package libtasn1-6:arm64.
+#19 18.45 Preparing to unpack .../12-libtasn1-6_4.20.0-2_arm64.deb ...
+#19 18.45 Unpacking libtasn1-6:arm64 (4.20.0-2) ...
+#19 18.47 Selecting previously unselected package libgnutls30t64:arm64.
+#19 18.47 Preparing to unpack .../13-libgnutls30t64_3.8.9-3+deb13u2_arm64.deb ...
+#19 18.47 Unpacking libgnutls30t64:arm64 (3.8.9-3+deb13u2) ...
+#19 18.54 Selecting previously unselected package libpsl5t64:arm64.
+#19 18.54 Preparing to unpack .../14-libpsl5t64_0.21.2-1.1+b1_arm64.deb ...
+#19 18.54 Unpacking libpsl5t64:arm64 (0.21.2-1.1+b1) ...
+#19 18.55 Selecting previously unselected package wget.
+#19 18.55 Preparing to unpack .../15-wget_1.25.0-2_arm64.deb ...
+#19 18.55 Unpacking wget (1.25.0-2) ...
+#19 18.61 Selecting previously unselected package xz-utils.
+#19 18.61 Preparing to unpack .../16-xz-utils_5.8.1-1_arm64.deb ...
+#19 18.61 Unpacking xz-utils (5.8.1-1) ...
+#19 18.65 Selecting previously unselected package libstdc++-14-dev:arm64.
+#19 18.65 Preparing to unpack .../17-libstdc++-14-dev_14.2.0-19_arm64.deb ...
+#19 18.65 Unpacking libstdc++-14-dev:arm64 (14.2.0-19) ...
+#19 18.80 Selecting previously unselected package g++-14-aarch64-linux-gnu.
+#19 18.80 Preparing to unpack .../18-g++-14-aarch64-linux-gnu_14.2.0-19_arm64.deb ...
+#19 18.80 Unpacking g++-14-aarch64-linux-gnu (14.2.0-19) ...
+#19 19.24 Selecting previously unselected package g++-14.
+#19 19.24 Preparing to unpack .../19-g++-14_14.2.0-19_arm64.deb ...
+#19 19.24 Unpacking g++-14 (14.2.0-19) ...
+#19 19.25 Selecting previously unselected package g++-aarch64-linux-gnu.
+#19 19.25 Preparing to unpack .../20-g++-aarch64-linux-gnu_4%3a14.2.0-1_arm64.deb ...
+#19 19.25 Unpacking g++-aarch64-linux-gnu (4:14.2.0-1) ...
+#19 19.26 Selecting previously unselected package g++.
+#19 19.26 Preparing to unpack .../21-g++_4%3a14.2.0-1_arm64.deb ...
+#19 19.26 Unpacking g++ (4:14.2.0-1) ...
+#19 19.27 Selecting previously unselected package make.
+#19 19.28 Preparing to unpack .../22-make_4.4.1-2_arm64.deb ...
+#19 19.28 Unpacking make (4.4.1-2) ...
+#19 19.32 Selecting previously unselected package libdpkg-perl.
+#19 19.32 Preparing to unpack .../23-libdpkg-perl_1.22.21_all.deb ...
+#19 19.32 Unpacking libdpkg-perl (1.22.21) ...
+#19 19.35 Selecting previously unselected package patch.
+#19 19.36 Preparing to unpack .../24-patch_2.8-2_arm64.deb ...
+#19 19.36 Unpacking patch (2.8-2) ...
+#19 19.37 Selecting previously unselected package dpkg-dev.
+#19 19.38 Preparing to unpack .../25-dpkg-dev_1.22.21_all.deb ...
+#19 19.38 Unpacking dpkg-dev (1.22.21) ...
+#19 19.44 Selecting previously unselected package build-essential.
+#19 19.45 Preparing to unpack .../26-build-essential_12.12_arm64.deb ...
+#19 19.45 Unpacking build-essential (12.12) ...
+#19 19.46 Selecting previously unselected package cmake-data.
+#19 19.46 Preparing to unpack .../27-cmake-data_3.31.6-2_all.deb ...
+#19 19.47 Unpacking cmake-data (3.31.6-2) ...
+#19 19.64 Selecting previously unselected package libxml2:arm64.
+#19 19.64 Preparing to unpack .../28-libxml2_2.12.7+dfsg+really2.9.14-2.1+deb13u2_arm64.deb ...
+#19 19.64 Unpacking libxml2:arm64 (2.12.7+dfsg+really2.9.14-2.1+deb13u2) ...
+#19 19.69 Selecting previously unselected package libarchive13t64:arm64.
+#19 19.69 Preparing to unpack .../29-libarchive13t64_3.7.4-4_arm64.deb ...
+#19 19.69 Unpacking libarchive13t64:arm64 (3.7.4-4) ...
+#19 19.72 Selecting previously unselected package libbrotli1:arm64.
+#19 19.72 Preparing to unpack .../30-libbrotli1_1.1.0-2+b7_arm64.deb ...
+#19 19.72 Unpacking libbrotli1:arm64 (1.1.0-2+b7) ...
+#19 19.75 Selecting previously unselected package libkrb5support0:arm64.
+#19 19.75 Preparing to unpack .../31-libkrb5support0_1.21.3-5_arm64.deb ...
+#19 19.75 Unpacking libkrb5support0:arm64 (1.21.3-5) ...
+#19 19.77 Selecting previously unselected package libcom-err2:arm64.
+#19 19.77 Preparing to unpack .../32-libcom-err2_1.47.2-3+b7_arm64.deb ...
+#19 19.77 Unpacking libcom-err2:arm64 (1.47.2-3+b7) ...
+#19 19.78 Selecting previously unselected package libk5crypto3:arm64.
+#19 19.78 Preparing to unpack .../33-libk5crypto3_1.21.3-5_arm64.deb ...
+#19 19.78 Unpacking libk5crypto3:arm64 (1.21.3-5) ...
+#19 19.80 Selecting previously unselected package libkeyutils1:arm64.
+#19 19.80 Preparing to unpack .../34-libkeyutils1_1.6.3-6_arm64.deb ...
+#19 19.80 Unpacking libkeyutils1:arm64 (1.6.3-6) ...
+#19 19.82 Selecting previously unselected package libkrb5-3:arm64.
+#19 19.82 Preparing to unpack .../35-libkrb5-3_1.21.3-5_arm64.deb ...
+#19 19.82 Unpacking libkrb5-3:arm64 (1.21.3-5) ...
+#19 19.85 Selecting previously unselected package libgssapi-krb5-2:arm64.
+#19 19.85 Preparing to unpack .../36-libgssapi-krb5-2_1.21.3-5_arm64.deb ...
+#19 19.86 Unpacking libgssapi-krb5-2:arm64 (1.21.3-5) ...
+#19 19.87 Selecting previously unselected package libsasl2-modules-db:arm64.
+#19 19.87 Preparing to unpack .../37-libsasl2-modules-db_2.1.28+dfsg1-9_arm64.deb ...
+#19 19.88 Unpacking libsasl2-modules-db:arm64 (2.1.28+dfsg1-9) ...
+#19 19.89 Selecting previously unselected package libsasl2-2:arm64.
+#19 19.89 Preparing to unpack .../38-libsasl2-2_2.1.28+dfsg1-9_arm64.deb ...
+#19 19.89 Unpacking libsasl2-2:arm64 (2.1.28+dfsg1-9) ...
+#19 19.90 Selecting previously unselected package libldap2:arm64.
+#19 19.91 Preparing to unpack .../39-libldap2_2.6.10+dfsg-1_arm64.deb ...
+#19 19.91 Unpacking libldap2:arm64 (2.6.10+dfsg-1) ...
+#19 19.93 Selecting previously unselected package libnghttp2-14:arm64.
+#19 19.93 Preparing to unpack .../40-libnghttp2-14_1.64.0-1.1_arm64.deb ...
+#19 19.93 Unpacking libnghttp2-14:arm64 (1.64.0-1.1) ...
+#19 19.95 Selecting previously unselected package libnghttp3-9:arm64.
+#19 19.95 Preparing to unpack .../41-libnghttp3-9_1.8.0-1_arm64.deb ...
+#19 19.95 Unpacking libnghttp3-9:arm64 (1.8.0-1) ...
+#19 19.97 Selecting previously unselected package librtmp1:arm64.
+#19 19.97 Preparing to unpack .../42-librtmp1_2.4+20151223.gitfa8646d.1-2+b5_arm64.deb ...
+#19 19.97 Unpacking librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#19 19.99 Selecting previously unselected package libssh2-1t64:arm64.
+#19 19.99 Preparing to unpack .../43-libssh2-1t64_1.11.1-1_arm64.deb ...
+#19 19.99 Unpacking libssh2-1t64:arm64 (1.11.1-1) ...
+#19 20.01 Selecting previously unselected package libcurl4t64:arm64.
+#19 20.01 Preparing to unpack .../44-libcurl4t64_8.14.1-2+deb13u2_arm64.deb ...
+#19 20.01 Unpacking libcurl4t64:arm64 (8.14.1-2+deb13u2) ...
+#19 20.04 Selecting previously unselected package libjsoncpp26:arm64.
+#19 20.04 Preparing to unpack .../45-libjsoncpp26_1.9.6-3_arm64.deb ...
+#19 20.05 Unpacking libjsoncpp26:arm64 (1.9.6-3) ...
+#19 20.06 Selecting previously unselected package librhash1:arm64.
+#19 20.06 Preparing to unpack .../46-librhash1_1.4.5-1_arm64.deb ...
+#19 20.06 Unpacking librhash1:arm64 (1.4.5-1) ...
+#19 20.08 Selecting previously unselected package libuv1t64:arm64.
+#19 20.08 Preparing to unpack .../47-libuv1t64_1.50.0-2_arm64.deb ...
+#19 20.08 Unpacking libuv1t64:arm64 (1.50.0-2) ...
+#19 20.10 Selecting previously unselected package cmake.
+#19 20.10 Preparing to unpack .../48-cmake_3.31.6-2_arm64.deb ...
+#19 20.10 Unpacking cmake (3.31.6-2) ...
+#19 20.49 Selecting previously unselected package libngtcp2-16:arm64.
+#19 20.49 Preparing to unpack .../49-libngtcp2-16_1.11.0-1_arm64.deb ...
+#19 20.49 Unpacking libngtcp2-16:arm64 (1.11.0-1) ...
+#19 20.50 Selecting previously unselected package libngtcp2-crypto-gnutls8:arm64.
+#19 20.51 Preparing to unpack .../50-libngtcp2-crypto-gnutls8_1.11.0-1_arm64.deb ...
+#19 20.51 Unpacking libngtcp2-crypto-gnutls8:arm64 (1.11.0-1) ...
+#19 20.52 Selecting previously unselected package libcurl3t64-gnutls:arm64.
+#19 20.52 Preparing to unpack .../51-libcurl3t64-gnutls_8.14.1-2+deb13u2_arm64.deb ...
+#19 20.52 Unpacking libcurl3t64-gnutls:arm64 (8.14.1-2+deb13u2) ...
+#19 20.55 Selecting previously unselected package liberror-perl.
+#19 20.55 Preparing to unpack .../52-liberror-perl_0.17030-1_all.deb ...
+#19 20.55 Unpacking liberror-perl (0.17030-1) ...
+#19 20.56 Selecting previously unselected package git-man.
+#19 20.56 Preparing to unpack .../53-git-man_1%3a2.47.3-0+deb13u1_all.deb ...
+#19 20.57 Unpacking git-man (1:2.47.3-0+deb13u1) ...
+#19 20.64 Selecting previously unselected package git.
+#19 20.64 Preparing to unpack .../54-git_1%3a2.47.3-0+deb13u1_arm64.deb ...
+#19 20.65 Unpacking git (1:2.47.3-0+deb13u1) ...
+#19 20.92 Selecting previously unselected package libgc1:arm64.
+#19 20.92 Preparing to unpack .../55-libgc1_1%3a8.2.8-1_arm64.deb ...
+#19 20.93 Unpacking libgc1:arm64 (1:8.2.8-1) ...
+#19 20.95 Selecting previously unselected package libobjc4:arm64.
+#19 20.95 Preparing to unpack .../56-libobjc4_14.2.0-19_arm64.deb ...
+#19 20.95 Unpacking libobjc4:arm64 (14.2.0-19) ...
+#19 20.96 Selecting previously unselected package libobjc-14-dev:arm64.
+#19 20.96 Preparing to unpack .../57-libobjc-14-dev_14.2.0-19_arm64.deb ...
+#19 20.96 Unpacking libobjc-14-dev:arm64 (14.2.0-19) ...
+#19 20.99 Selecting previously unselected package libedit2:arm64.
+#19 20.99 Preparing to unpack .../58-libedit2_3.1-20250104-1_arm64.deb ...
+#19 20.99 Unpacking libedit2:arm64 (3.1-20250104-1) ...
+#19 21.00 Selecting previously unselected package libz3-4:arm64.
+#19 21.01 Preparing to unpack .../59-libz3-4_4.13.3-1_arm64.deb ...
+#19 21.01 Unpacking libz3-4:arm64 (4.13.3-1) ...
+#19 21.37 Selecting previously unselected package libllvm19:arm64.
+#19 21.37 Preparing to unpack .../60-libllvm19_1%3a19.1.7-3+b1_arm64.deb ...
+#19 21.37 Unpacking libllvm19:arm64 (1:19.1.7-3+b1) ...
+#19 21.91 Selecting previously unselected package libclang1-19.
+#19 21.92 Preparing to unpack .../61-libclang1-19_1%3a19.1.7-3+b1_arm64.deb ...
+#19 21.92 Unpacking libclang1-19 (1:19.1.7-3+b1) ...
+#19 22.22 Selecting previously unselected package libclang-common-19-dev:arm64.
+#19 22.22 Preparing to unpack .../62-libclang-common-19-dev_1%3a19.1.7-3+b1_arm64.deb ...
+#19 22.22 Unpacking libclang-common-19-dev:arm64 (1:19.1.7-3+b1) ...
+#19 22.28 Selecting previously unselected package libclang-19-dev.
+#19 22.29 Preparing to unpack .../63-libclang-19-dev_1%3a19.1.7-3+b1_arm64.deb ...
+#19 22.29 Unpacking libclang-19-dev (1:19.1.7-3+b1) ...
+#19 23.36 Selecting previously unselected package libclang-dev.
+#19 23.36 Preparing to unpack .../64-libclang-dev_1%3a19.0-63_arm64.deb ...
+#19 23.36 Unpacking libclang-dev (1:19.0-63) ...
+#19 23.37 Selecting previously unselected package libpkgconf3:arm64.
+#19 23.37 Preparing to unpack .../65-libpkgconf3_1.8.1-4_arm64.deb ...
+#19 23.38 Unpacking libpkgconf3:arm64 (1.8.1-4) ...
+#19 23.39 Selecting previously unselected package pkgconf-bin.
+#19 23.39 Preparing to unpack .../66-pkgconf-bin_1.8.1-4_arm64.deb ...
+#19 23.39 Unpacking pkgconf-bin (1.8.1-4) ...
+#19 23.40 Selecting previously unselected package pkgconf:arm64.
+#19 23.40 Preparing to unpack .../67-pkgconf_1.8.1-4_arm64.deb ...
+#19 23.41 Unpacking pkgconf:arm64 (1.8.1-4) ...
+#19 23.42 Selecting previously unselected package pkg-config:arm64.
+#19 23.42 Preparing to unpack .../68-pkg-config_1.8.1-4_arm64.deb ...
+#19 23.42 Unpacking pkg-config:arm64 (1.8.1-4) ...
+#19 23.43 Setting up libexpat1:arm64 (2.7.1-2) ...
+#19 23.44 Setting up libkeyutils1:arm64 (1.6.3-6) ...
+#19 23.44 Setting up libgdbm6t64:arm64 (1.24-2) ...
+#19 23.44 Setting up libgdbm-compat4t64:arm64 (1.24-2) ...
+#19 23.44 Setting up libclang-common-19-dev:arm64 (1:19.1.7-3+b1) ...
+#19 23.45 Setting up libbrotli1:arm64 (1.1.0-2+b7) ...
+#19 23.45 Setting up libedit2:arm64 (3.1-20250104-1) ...
+#19 23.46 Setting up libuv1t64:arm64 (1.50.0-2) ...
+#19 23.46 Setting up libpsl5t64:arm64 (0.21.2-1.1+b1) ...
+#19 23.46 Setting up libnghttp2-14:arm64 (1.64.0-1.1) ...
+#19 23.46 Setting up libcom-err2:arm64 (1.47.2-3+b7) ...
+#19 23.47 Setting up bzip2 (1.0.8-6) ...
+#19 23.47 Setting up libkrb5support0:arm64 (1.21.3-5) ...
+#19 23.47 Setting up libsasl2-modules-db:arm64 (2.1.28+dfsg1-9) ...
+#19 23.47 Setting up libz3-4:arm64 (4.13.3-1) ...
+#19 23.48 Setting up libpkgconf3:arm64 (1.8.1-4) ...
+#19 23.48 Setting up make (4.4.1-2) ...
+#19 23.48 Setting up libjsoncpp26:arm64 (1.9.6-3) ...
+#19 23.49 Setting up xz-utils (5.8.1-1) ...
+#19 23.49 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+#19 23.49 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+#19 23.49 Setting up libproc2-0:arm64 (2:4.0.4-9) ...
+#19 23.50 Setting up patch (2.8-2) ...
+#19 23.50 Setting up pkgconf-bin (1.8.1-4) ...
+#19 23.50 Setting up libncursesw6:arm64 (6.5+20250216-2) ...
+#19 23.50 Setting up libk5crypto3:arm64 (1.21.3-5) ...
+#19 23.51 Setting up libgc1:arm64 (1:8.2.8-1) ...
+#19 23.51 Setting up libsasl2-2:arm64 (2.1.28+dfsg1-9) ...
+#19 23.51 Setting up libnghttp3-9:arm64 (1.8.0-1) ...
+#19 23.51 Setting up libffi8:arm64 (3.4.8-2) ...
+#19 23.52 Setting up perl-modules-5.40 (5.40.1-6) ...
+#19 23.52 Setting up procps (2:4.0.4-9) ...
+#19 23.53 Setting up libtasn1-6:arm64 (4.20.0-2) ...
+#19 23.53 Setting up git-man (1:2.47.3-0+deb13u1) ...
+#19 23.53 Setting up libngtcp2-16:arm64 (1.11.0-1) ...
+#19 23.54 Setting up cmake-data (3.31.6-2) ...
+#19 23.54 Setting up librhash1:arm64 (1.4.5-1) ...
+#19 23.54 Setting up libkrb5-3:arm64 (1.21.3-5) ...
+#19 23.55 Setting up libssh2-1t64:arm64 (1.11.1-1) ...
+#19 23.55 Setting up libstdc++-14-dev:arm64 (14.2.0-19) ...
+#19 23.55 Setting up libxml2:arm64 (2.12.7+dfsg+really2.9.14-2.1+deb13u2) ...
+#19 23.55 Setting up libldap2:arm64 (2.6.10+dfsg-1) ...
+#19 23.56 Setting up libllvm19:arm64 (1:19.1.7-3+b1) ...
+#19 23.56 Setting up g++-14-aarch64-linux-gnu (14.2.0-19) ...
+#19 23.56 Setting up libclang1-19 (1:19.1.7-3+b1) ...
+#19 23.57 Setting up libobjc4:arm64 (14.2.0-19) ...
+#19 23.57 Setting up libobjc-14-dev:arm64 (14.2.0-19) ...
+#19 23.57 Setting up pkgconf:arm64 (1.8.1-4) ...
+#19 23.57 Setting up libperl5.40:arm64 (5.40.1-6) ...
+#19 23.58 Setting up perl (5.40.1-6) ...
+#19 23.58 Setting up libp11-kit0:arm64 (0.25.5-3) ...
+#19 23.58 Setting up libgssapi-krb5-2:arm64 (1.21.3-5) ...
+#19 23.59 Setting up pkg-config:arm64 (1.8.1-4) ...
+#19 23.59 Setting up libdpkg-perl (1.22.21) ...
+#19 23.59 Setting up g++-aarch64-linux-gnu (4:14.2.0-1) ...
+#19 23.60 Setting up g++-14 (14.2.0-19) ...
+#19 23.60 Setting up libclang-19-dev (1:19.1.7-3+b1) ...
+#19 23.60 Setting up libarchive13t64:arm64 (3.7.4-4) ...
+#19 23.61 Setting up libgnutls30t64:arm64 (3.8.9-3+deb13u2) ...
+#19 23.61 Setting up libclang-dev (1:19.0-63) ...
+#19 23.61 Setting up wget (1.25.0-2) ...
+#19 23.62 Setting up dpkg-dev (1.22.21) ...
+#19 23.62 Setting up liberror-perl (0.17030-1) ...
+#19 23.62 Setting up librtmp1:arm64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#19 23.63 Setting up g++ (4:14.2.0-1) ...
+#19 23.63 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+#19 23.63 Setting up build-essential (12.12) ...
+#19 23.64 Setting up libngtcp2-crypto-gnutls8:arm64 (1.11.0-1) ...
+#19 23.64 Setting up libcurl4t64:arm64 (8.14.1-2+deb13u2) ...
+#19 23.64 Setting up libcurl3t64-gnutls:arm64 (8.14.1-2+deb13u2) ...
+#19 23.64 Setting up git (1:2.47.3-0+deb13u1) ...
+#19 23.65 Setting up cmake (3.31.6-2) ...
+#19 23.65 Processing triggers for libc-bin (2.41-12+deb13u1) ...
+#19 DONE 23.9s
+
+#18 [linux/amd64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#18 20.60 Preparing to unpack .../46-librhash1_1.4.5-1_amd64.deb ...
+#18 20.60 Unpacking librhash1:amd64 (1.4.5-1) ...
+#18 20.72 Selecting previously unselected package libuv1t64:amd64.
+#18 ...
+
+#20 [linux/arm64 builder 3/7] RUN if [ "0" = "0" ]; then         ARCH=$(uname -m) &&         case "${ARCH}" in             "aarch64")                 wget -q https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-arm64_linux.tar.xz                 && tar -xf upx-5.0.0-arm64_linux.tar.xz                 && cp upx-5.0.0-arm64_linux/upx /usr/local/bin/                 && rm -rf upx-5.0.0-*                 ;;             "x86_64")                 wget -q https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-amd64_linux.tar.xz                 && tar -xf upx-5.0.0-amd64_linux.tar.xz                 && cp upx-5.0.0-amd64_linux/upx /usr/local/bin/                 && rm -rf upx-5.0.0-*                 ;;         esac;     fi
+#20 DONE 0.6s
+
+#21 [linux/arm64 builder 4/7] WORKDIR /usr/src/app
+#21 DONE 0.0s
+
+#22 [linux/arm64 builder 5/7] COPY . .
+#22 ...
+
+#15 [linux/amd64 stage-1 2/7] RUN apt-get update && apt-get install -y     ca-certificates     curl     && apt-get clean autoclean --yes     && apt-get autoremove --yes     && rm -rf /var/cache/apt/archives* /var/lib/apt/lists/*
+#15 38.89 0 added, 0 removed; done.
+#15 38.89 Running hooks in /etc/ca-certificates/update.d...
+#15 38.91 done.
+#15 39.13 Reading package lists...
+#15 39.66 Building dependency tree...
+#15 39.80 Reading state information...
+#15 39.97 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+#15 DONE 40.2s
+
+#23 [linux/amd64 stage-1 3/7] WORKDIR /app
+#23 DONE 0.0s
+
+#18 [linux/amd64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#18 20.72 Preparing to unpack .../47-libuv1t64_1.50.0-2_amd64.deb ...
+#18 20.72 Unpacking libuv1t64:amd64 (1.50.0-2) ...
+#18 20.84 Selecting previously unselected package cmake.
+#18 20.84 Preparing to unpack .../48-cmake_3.31.6-2_amd64.deb ...
+#18 20.84 Unpacking cmake (3.31.6-2) ...
+#18 21.29 Selecting previously unselected package libngtcp2-16:amd64.
+#18 21.29 Preparing to unpack .../49-libngtcp2-16_1.11.0-1_amd64.deb ...
+#18 21.29 Unpacking libngtcp2-16:amd64 (1.11.0-1) ...
+#18 21.42 Selecting previously unselected package libngtcp2-crypto-gnutls8:amd64.
+#18 21.42 Preparing to unpack .../50-libngtcp2-crypto-gnutls8_1.11.0-1_amd64.deb ...
+#18 21.42 Unpacking libngtcp2-crypto-gnutls8:amd64 (1.11.0-1) ...
+#18 21.53 Selecting previously unselected package libcurl3t64-gnutls:amd64.
+#18 21.54 Preparing to unpack .../51-libcurl3t64-gnutls_8.14.1-2+deb13u2_amd64.deb ...
+#18 21.54 Unpacking libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u2) ...
+#18 21.66 Selecting previously unselected package liberror-perl.
+#18 21.67 Preparing to unpack .../52-liberror-perl_0.17030-1_all.deb ...
+#18 21.67 Unpacking liberror-perl (0.17030-1) ...
+#18 21.77 Selecting previously unselected package git-man.
+#18 21.78 Preparing to unpack .../53-git-man_1%3a2.47.3-0+deb13u1_all.deb ...
+#18 21.78 Unpacking git-man (1:2.47.3-0+deb13u1) ...
+#18 21.93 Selecting previously unselected package git.
+#18 21.93 Preparing to unpack .../54-git_1%3a2.47.3-0+deb13u1_amd64.deb ...
+#18 22.00 Unpacking git (1:2.47.3-0+deb13u1) ...
+#18 22.50 Selecting previously unselected package libgc1:amd64.
+#18 22.50 Preparing to unpack .../55-libgc1_1%3a8.2.8-1_amd64.deb ...
+#18 22.50 Unpacking libgc1:amd64 (1:8.2.8-1) ...
+#18 22.62 Selecting previously unselected package libobjc4:amd64.
+#18 22.62 Preparing to unpack .../56-libobjc4_14.2.0-19_amd64.deb ...
+#18 22.62 Unpacking libobjc4:amd64 (14.2.0-19) ...
+#18 22.73 Selecting previously unselected package libobjc-14-dev:amd64.
+#18 22.73 Preparing to unpack .../57-libobjc-14-dev_14.2.0-19_amd64.deb ...
+#18 22.73 Unpacking libobjc-14-dev:amd64 (14.2.0-19) ...
+#18 22.85 Selecting previously unselected package libedit2:amd64.
+#18 22.85 Preparing to unpack .../58-libedit2_3.1-20250104-1_amd64.deb ...
+#18 22.85 Unpacking libedit2:amd64 (3.1-20250104-1) ...
+#18 22.96 Selecting previously unselected package libz3-4:amd64.
+#18 22.97 Preparing to unpack .../59-libz3-4_4.13.3-1_amd64.deb ...
+#18 22.97 Unpacking libz3-4:amd64 (4.13.3-1) ...
+#18 23.57 Selecting previously unselected package libllvm19:amd64.
+#18 23.57 Preparing to unpack .../60-libllvm19_1%3a19.1.7-3+b1_amd64.deb ...
+#18 23.58 Unpacking libllvm19:amd64 (1:19.1.7-3+b1) ...
+#18 ...
+
+#22 [linux/arm64 builder 5/7] COPY . .
+#22 DONE 3.2s
+
+#18 [linux/amd64 builder 2/7] RUN apt-get update && apt-get install -y --no-install-recommends     build-essential     cmake     perl     pkg-config     libclang-dev     git     wget     && rm -rf /var/lib/apt/lists/*
+#18 24.48 Selecting previously unselected package libclang1-19.
+#18 24.48 Preparing to unpack .../61-libclang1-19_1%3a19.1.7-3+b1_amd64.deb ...
+#18 24.48 Unpacking libclang1-19 (1:19.1.7-3+b1) ...
+#18 24.83 Selecting previously unselected package libclang-common-19-dev:amd64.
+#18 24.83 Preparing to unpack .../62-libclang-common-19-dev_1%3a19.1.7-3+b1_amd64.deb ...
+#18 24.83 Unpacking libclang-common-19-dev:amd64 (1:19.1.7-3+b1) ...
+#18 24.97 Selecting previously unselected package libclang-19-dev.
+#18 24.97 Preparing to unpack .../63-libclang-19-dev_1%3a19.1.7-3+b1_amd64.deb ...
+#18 24.97 Unpacking libclang-19-dev (1:19.1.7-3+b1) ...
+#18 25.95 Selecting previously unselected package libclang-dev.
+#18 25.96 Preparing to unpack .../64-libclang-dev_1%3a19.0-63_amd64.deb ...
+#18 25.96 Unpacking libclang-dev (1:19.0-63) ...
+#18 26.05 Selecting previously unselected package libpkgconf3:amd64.
+#18 26.05 Preparing to unpack .../65-libpkgconf3_1.8.1-4_amd64.deb ...
+#18 26.05 Unpacking libpkgconf3:amd64 (1.8.1-4) ...
+#18 26.15 Selecting previously unselected package pkgconf-bin.
+#18 26.15 Preparing to unpack .../66-pkgconf-bin_1.8.1-4_amd64.deb ...
+#18 26.15 Unpacking pkgconf-bin (1.8.1-4) ...
+#18 26.24 Selecting previously unselected package pkgconf:amd64.
+#18 26.24 Preparing to unpack .../67-pkgconf_1.8.1-4_amd64.deb ...
+#18 26.26 Unpacking pkgconf:amd64 (1.8.1-4) ...
+#18 26.37 Selecting previously unselected package pkg-config:amd64.
+#18 26.37 Preparing to unpack .../68-pkg-config_1.8.1-4_amd64.deb ...
+#18 26.40 Unpacking pkg-config:amd64 (1.8.1-4) ...
+#18 26.50 Setting up libexpat1:amd64 (2.7.1-2) ...
+#18 26.50 Setting up libkeyutils1:amd64 (1.6.3-6) ...
+#18 26.51 Setting up libgdbm6t64:amd64 (1.24-2) ...
+#18 26.51 Setting up libgdbm-compat4t64:amd64 (1.24-2) ...
+#18 26.52 Setting up libclang-common-19-dev:amd64 (1:19.1.7-3+b1) ...
+#18 26.52 Setting up libbrotli1:amd64 (1.1.0-2+b7) ...
+#18 26.53 Setting up libedit2:amd64 (3.1-20250104-1) ...
+#18 26.53 Setting up libuv1t64:amd64 (1.50.0-2) ...
+#18 26.54 Setting up libpsl5t64:amd64 (0.21.2-1.1+b1) ...
+#18 26.54 Setting up libnghttp2-14:amd64 (1.64.0-1.1) ...
+#18 26.55 Setting up libcom-err2:amd64 (1.47.2-3+b7) ...
+#18 26.55 Setting up bzip2 (1.0.8-6) ...
+#18 26.56 Setting up libkrb5support0:amd64 (1.21.3-5) ...
+#18 26.56 Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-9) ...
+#18 26.57 Setting up libz3-4:amd64 (4.13.3-1) ...
+#18 26.57 Setting up libpkgconf3:amd64 (1.8.1-4) ...
+#18 26.57 Setting up make (4.4.1-2) ...
+#18 26.58 Setting up libjsoncpp26:amd64 (1.9.6-3) ...
+#18 26.58 Setting up xz-utils (5.8.1-1) ...
+#18 26.63 update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+#18 26.63 update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+#18 26.64 Setting up libproc2-0:amd64 (2:4.0.4-9) ...
+#18 26.64 Setting up patch (2.8-2) ...
+#18 26.65 Setting up pkgconf-bin (1.8.1-4) ...
+#18 26.67 Setting up libncursesw6:amd64 (6.5+20250216-2) ...
+#18 26.67 Setting up libk5crypto3:amd64 (1.21.3-5) ...
+#18 26.68 Setting up libgc1:amd64 (1:8.2.8-1) ...
+#18 26.68 Setting up libsasl2-2:amd64 (2.1.28+dfsg1-9) ...
+#18 26.68 Setting up libnghttp3-9:amd64 (1.8.0-1) ...
+#18 26.69 Setting up libffi8:amd64 (3.4.8-2) ...
+#18 26.70 Setting up perl-modules-5.40 (5.40.1-6) ...
+#18 26.70 Setting up procps (2:4.0.4-9) ...
+#18 26.89 Setting up libtasn1-6:amd64 (4.20.0-2) ...
+#18 26.89 Setting up git-man (1:2.47.3-0+deb13u1) ...
+#18 26.89 Setting up libngtcp2-16:amd64 (1.11.0-1) ...
+#18 26.89 Setting up cmake-data (3.31.6-2) ...
+#18 26.97 Setting up librhash1:amd64 (1.4.5-1) ...
+#18 26.97 Setting up libkrb5-3:amd64 (1.21.3-5) ...
+#18 26.98 Setting up libssh2-1t64:amd64 (1.11.1-1) ...
+#18 26.98 Setting up libstdc++-14-dev:amd64 (14.2.0-19) ...
+#18 26.98 Setting up libxml2:amd64 (2.12.7+dfsg+really2.9.14-2.1+deb13u2) ...
+#18 26.99 Setting up libldap2:amd64 (2.6.10+dfsg-1) ...
+#18 26.99 Setting up libllvm19:amd64 (1:19.1.7-3+b1) ...
+#18 26.99 Setting up libclang1-19 (1:19.1.7-3+b1) ...
+#18 27.00 Setting up libobjc4:amd64 (14.2.0-19) ...
+#18 27.00 Setting up libobjc-14-dev:amd64 (14.2.0-19) ...
+#18 27.01 Setting up pkgconf:amd64 (1.8.1-4) ...
+#18 27.01 Setting up libperl5.40:amd64 (5.40.1-6) ...
+#18 27.02 Setting up perl (5.40.1-6) ...
+#18 27.07 Setting up libp11-kit0:amd64 (0.25.5-3) ...
+#18 27.07 Setting up libgssapi-krb5-2:amd64 (1.21.3-5) ...
+#18 27.09 Setting up pkg-config:amd64 (1.8.1-4) ...
+#18 27.10 Setting up libdpkg-perl (1.22.21) ...
+#18 27.10 Setting up g++-14-x86-64-linux-gnu (14.2.0-19) ...
+#18 27.10 Setting up g++-x86-64-linux-gnu (4:14.2.0-1) ...
+#18 27.11 Setting up g++-14 (14.2.0-19) ...
+#18 27.11 Setting up libclang-19-dev (1:19.1.7-3+b1) ...
+#18 27.12 Setting up libarchive13t64:amd64 (3.7.4-4) ...
+#18 27.12 Setting up libgnutls30t64:amd64 (3.8.9-3+deb13u2) ...
+#18 27.12 Setting up libclang-dev (1:19.0-63) ...
+#18 27.13 Setting up wget (1.25.0-2) ...
+#18 27.13 Setting up dpkg-dev (1.22.21) ...
+#18 27.14 Setting up liberror-perl (0.17030-1) ...
+#18 27.14 Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2+b5) ...
+#18 27.15 Setting up g++ (4:14.2.0-1) ...
+#18 27.19 update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+#18 27.19 Setting up build-essential (12.12) ...
+#18 27.20 Setting up libngtcp2-crypto-gnutls8:amd64 (1.11.0-1) ...
+#18 27.21 Setting up libcurl4t64:amd64 (8.14.1-2+deb13u2) ...
+#18 27.21 Setting up libcurl3t64-gnutls:amd64 (8.14.1-2+deb13u2) ...
+#18 27.22 Setting up git (1:2.47.3-0+deb13u1) ...
+#18 27.34 Setting up cmake (3.31.6-2) ...
+#18 27.35 Processing triggers for libc-bin (2.41-12+deb13u1) ...
+#18 DONE 27.9s
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 0.305     Updating crates.io index
+#24 1.211  Downloading crates ...
+#24 1.863   Downloaded alloc-no-stdlib v2.0.4
+#24 1.871   Downloaded actix-codec v0.5.2
+#24 1.877   Downloaded atomic-waker v1.1.2
+#24 1.885   Downloaded async-trait v0.1.89
+#24 1.888   Downloaded foldhash v0.1.5
+#24 1.890   Downloaded bitflags v2.10.0
+#24 1.898   Downloaded cexpr v0.6.0
+#24 1.901   Downloaded async-stream-impl v0.3.6
+#24 1.902   Downloaded actix-rt v2.11.0
+#24 1.905   Downloaded actix-web-codegen v4.3.0
+#24 1.915   Downloaded alloc-stdlib v0.2.2
+#24 1.917   Downloaded actix-server v2.6.0
+#24 1.920   Downloaded cfg-if v1.0.4
+#24 1.921   Downloaded bytestring v1.5.0
+#24 1.923   Downloaded async-stream v0.3.6
+#24 1.924   Downloaded antidote v1.0.0
+#24 1.925   Downloaded actix-utils v3.0.1
+#24 1.927   Downloaded actix-macros v0.2.4
+#24 1.932   Downloaded autocfg v1.5.0
+#24 1.935   Downloaded actix-service v2.0.3
+#24 1.938   Downloaded clang-sys v1.8.1
+#24 1.940   Downloaded cmake v0.1.54
+#24 1.942   Downloaded base64 v0.22.1
+#24 1.945   Downloaded block-buffer v0.10.4
+#24 1.947   Downloaded arc-swap v1.7.1
+#24 1.950   Downloaded adler2 v2.0.1
+#24 1.951   Downloaded actix-router v0.5.4
+#24 1.953   Downloaded cc v1.2.43
+#24 1.956   Downloaded bytes v1.10.1
+#24 1.961   Downloaded async-compression v0.4.32
+#24 1.968   Downloaded aho-corasick v1.1.3
+#24 1.974   Downloaded actix-http v3.12.0
+#24 1.982   Downloaded http-body v1.0.1
+#24 1.983   Downloaded futures-sink v0.3.32
+#24 1.985   Downloaded foreign-types-macros v0.2.3
+#24 1.986   Downloaded fslock v0.2.1
+#24 1.988   Downloaded fastrand v2.3.0
+#24 1.990   Downloaded document-features v0.2.12
+#24 1.991   Downloaded fnv v1.0.7
+#24 1.992   Downloaded equivalent v1.0.2
+#24 1.994   Downloaded cpufeatures v0.2.17
+#24 1.995   Downloaded bindgen v0.72.1
+#24 2.004   Downloaded httpdate v1.0.3
+#24 2.006   Downloaded getopts v0.2.24
+#24 2.007   Downloaded data-encoding v2.9.0
+#24 2.008   Downloaded crypto-common v0.1.6
+#24 2.010   Downloaded ego-tree v0.10.0
+#24 2.012   Downloaded find-msvc-tools v0.1.4
+#24 2.014   Downloaded iana-time-zone v0.1.64
+#24 2.016   Downloaded actix-web v4.13.0
+#24 2.027   Downloaded httparse v1.10.1
+#24 2.029   Downloaded getrandom v0.3.4
+#24 2.032   Downloaded getrandom v0.2.16
+#24 2.034   Downloaded dtoa-short v0.3.5
+#24 2.036   Downloaded linked_hash_set v0.1.5
+#24 2.037   Downloaded itoa v1.0.15
+#24 2.039   Downloaded linked-hash-map v0.5.6
+#24 2.040   Downloaded ipnet v2.11.0
+#24 2.042   Downloaded dtoa v1.0.10
+#24 2.044   Downloaded deranged v0.5.4
+#24 2.045   Downloaded impl-more v0.1.9
+#24 2.047   Downloaded local-channel v0.1.5
+#24 2.049   Downloaded jobserver v0.1.34
+#24 2.052   Downloaded litrs v1.0.0
+#24 2.055   Downloaded local-waker v0.1.4
+#24 2.055   Downloaded litemap v0.8.0
+#24 2.057   Downloaded icu_provider v2.0.0
+#24 2.060   Downloaded icu_normalizer v2.0.0
+#24 2.063   Downloaded html5ever v0.36.1
+#24 2.066   Downloaded lru v0.13.0
+#24 2.067   Downloaded lock_api v0.4.14
+#24 2.069   Downloaded language-tags v0.3.2
+#24 2.071   Downloaded http v0.2.12
+#24 2.075   Downloaded icu_properties v2.0.1
+#24 2.077   Downloaded log v0.4.29
+#24 2.079   Downloaded http v1.3.1
+#24 2.084   Downloaded derive_more-impl v2.0.1
+#24 2.088   Downloaded lru-cache v0.1.2
+#24 2.089   Downloaded hyper2 v1.5.5
+#24 2.095   Downloaded hashbrown v0.16.0
+#24 2.100   Downloaded mac v0.1.1
+#24 2.101   Downloaded h2 v0.3.27
+#24 2.110   Downloaded precomputed-hash v0.1.1
+#24 2.111   Downloaded phf_codegen v0.13.1
+#24 2.112   Downloaded powerfmt v0.2.0
+#24 2.113   Downloaded potential_utf v0.1.3
+#24 2.115   Downloaded qstring v0.7.2
+#24 2.116   Downloaded indexmap v2.12.0
+#24 2.120   Downloaded pkg-config v0.3.32
+#24 2.122   Downloaded psl-types v2.0.11
+#24 2.123   Downloaded pretty_env_logger v0.5.0
+#24 2.125   Downloaded phf_shared v0.13.1
+#24 2.126   Downloaded phf_generator v0.13.1
+#24 2.127   Downloaded pin-project-lite v0.2.16
+#24 2.131   Downloaded phf_macros v0.13.1
+#24 2.133   Downloaded parking_lot_core v0.9.12
+#24 2.136   Downloaded rand_chacha v0.9.0
+#24 2.138   Downloaded rand_core v0.6.4
+#24 2.140   Downloaded siphasher v1.0.1
+#24 2.141   Downloaded idna v1.1.0
+#24 2.145   Downloaded rustc-hash v2.1.1
+#24 2.146   Downloaded rand_chacha v0.3.1
+#24 2.147   Downloaded proc-macro2 v1.0.103
+#24 2.151   Downloaded resolv-conf v0.7.5
+#24 2.153   Downloaded rand_core v0.9.3
+#24 2.155   Downloaded icu_properties_data v2.0.1
+#24 2.163   Downloaded ppv-lite86 v0.2.21
+#24 2.164   Downloaded itertools v0.13.0
+#24 2.171   Downloaded stable_deref_trait v1.2.1
+#24 2.172   Downloaded simd-adler32 v0.3.7
+#24 2.174   Downloaded sha1 v0.10.6
+#24 2.176   Downloaded scopeguard v1.2.0
+#24 2.177   Downloaded shlex v1.3.0
+#24 2.179   Downloaded servo_arc v0.4.3
+#24 2.179   Downloaded serde_urlencoded v0.7.1
+#24 2.180   Downloaded rustls-pki-types v1.12.0
+#24 2.183   Downloaded scraper v0.25.0
+#24 2.185   Downloaded time-core v0.1.6
+#24 2.187   Downloaded tinyvec_macros v0.1.1
+#24 2.187   Downloaded http2 v0.4.21
+#24 2.193   Downloaded tokio-macros v2.6.0
+#24 2.195   Downloaded tokio-boring2 v4.15.15
+#24 2.196   Downloaded brotli v8.0.2
+#24 2.211   Downloaded termcolor v1.4.1
+#24 2.212   Downloaded socket2 v0.6.1
+#24 2.213   Downloaded selectors v0.33.0
+#24 2.215   Downloaded nom v7.1.3
+#24 2.219   Downloaded rand v0.8.5
+#24 2.223   Downloaded publicsuffix v2.3.0
+#24 2.226   Downloaded tinyvec v1.10.0
+#24 2.228   Downloaded rand v0.9.2
+#24 2.233   Downloaded regex-lite v0.1.8
+#24 2.236   Downloaded regex v1.12.2
+#24 2.243   Downloaded mio v1.1.0
+#24 2.247   Downloaded serde v1.0.228
+#24 2.250   Downloaded idna v0.4.0
+#24 2.255   Downloaded tendril v0.4.3
+#24 2.256   Downloaded socket2 v0.5.10
+#24 2.257   Downloaded tinystr v0.8.1
+#24 2.259   Downloaded thiserror v1.0.69
+#24 2.263   Downloaded webpki-root-certs v0.26.11
+#24 2.265   Downloaded tower-service v0.3.3
+#24 2.266   Downloaded serde_json v1.0.149
+#24 2.272   Downloaded zerofrom v0.1.6
+#24 2.273   Downloaded yoke-derive v0.8.0
+#24 2.274   Downloaded version_check v0.9.5
+#24 2.275   Downloaded utf-8 v0.7.6
+#24 2.276   Downloaded urlencoding v2.1.3
+#24 2.277   Downloaded unicode-xid v0.2.6
+#24 2.278   Downloaded try-lock v0.2.5
+#24 2.279   Downloaded regex-syntax v0.8.8
+#24 2.287   Downloaded zstd v0.13.3
+#24 2.289   Downloaded zerofrom-derive v0.1.6
+#24 2.290   Downloaded yoke v0.8.0
+#24 2.291   Downloaded want v0.3.1
+#24 2.292   Downloaded utf8_iter v1.0.4
+#24 2.292   Downloaded writeable v0.6.1
+#24 2.294   Downloaded zmij v1.0.12
+#24 2.296   Downloaded zerovec-derive v0.11.1
+#24 2.297   Downloaded zstd-safe v7.2.4
+#24 2.299   Downloaded unicode-ident v1.0.20
+#24 2.302   Downloaded wreq-util v2.2.6
+#24 2.304   Downloaded unicode-bidi v0.3.18
+#24 2.306   Downloaded tower v0.5.2
+#24 2.312   Downloaded tracing-core v0.1.34
+#24 2.314   Downloaded tokio-util v0.7.16
+#24 2.319   Downloaded time v0.3.44
+#24 2.325   Downloaded web_atoms v0.2.0
+#24 2.326   Downloaded sysinfo v0.38.2
+#24 2.334   Downloaded regex-automata v0.4.13
+#24 2.347   Downloaded syn v2.0.108
+#24 2.355   Downloaded libc v0.2.177
+#24 2.377   Downloaded zerotrie v0.2.2
+#24 2.379   Downloaded trust-dns-resolver v0.23.2
+#24 2.382   Downloaded zerovec v0.11.4
+#24 2.387   Downloaded unicode-normalization v0.1.24
+#24 2.390   Downloaded tracing v0.1.41
+#24 2.393   Downloaded webpki-root-certs v1.0.3
+#24 2.396   Downloaded encoding_rs v0.8.35
+#24 2.415   Downloaded url v2.5.7
+#24 2.417   Downloaded wreq v5.3.0
+#24 2.424   Downloaded zerocopy v0.8.27
+#24 2.437   Downloaded unicode-width v0.2.2
+#24 2.442   Downloaded typenum v1.19.0
+#24 2.445   Downloaded tracing-attributes v0.1.30
+#24 2.447   Downloaded typed-builder-macro v0.21.2
+#24 2.448   Downloaded typed-builder v0.21.2
+#24 2.449   Downloaded tower-layer v0.3.3
+#24 2.450   Downloaded miniz_oxide v0.8.9
+#24 2.452   Downloaded trust-dns-proto v0.23.2
+#24 2.462   Downloaded tokio v1.49.0
+#24 2.492   Downloaded minimal-lexical v0.2.1
+#24 2.495   Downloaded humantime v2.3.0
+#24 2.496   Downloaded memchr v2.7.6
+#24 2.500   Downloaded time-macros v0.2.24
+#24 2.501   Downloaded thiserror-impl v1.0.69
+#24 2.502   Downloaded synstructure v0.13.2
+#24 2.503   Downloaded string_cache v0.9.0
+#24 2.504   Downloaded smallvec v1.15.1
+#24 2.505   Downloaded serde_derive v1.0.228
+#24 2.507   Downloaded serde_core v1.0.228
+#24 2.509   Downloaded slab v0.4.11
+#24 2.510   Downloaded signal-hook-registry v1.4.6
+#24 2.511   Downloaded ryu v1.0.20
+#24 2.513   Downloaded sync_wrapper v1.0.2
+#24 2.513   Downloaded string_cache_codegen v0.6.1
+#24 2.514   Downloaded quote v1.0.41
+#24 2.515   Downloaded phf v0.13.1
+#24 2.516   Downloaded zstd-sys v2.0.16+zstd.1.5.7
+#24 2.529   Downloaded once_cell v1.21.3
+#24 2.531   Downloaded icu_collections v2.0.0
+#24 2.534   Downloaded mime v0.3.17
+#24 2.535   Downloaded markup5ever v0.36.1
+#24 2.536   Downloaded icu_normalizer_data v2.0.0
+#24 2.537   Downloaded icu_locale_core v2.0.0
+#24 2.541   Downloaded flate2 v1.1.5
+#24 2.544   Downloaded percent-encoding v2.3.2
+#24 2.544   Downloaded parking_lot v0.12.5
+#24 2.546   Downloaded openssl-macros v0.1.1
+#24 2.546   Downloaded num-traits v0.2.19
+#24 2.548   Downloaded num-conv v0.1.0
+#24 2.548   Downloaded new_debug_unreachable v1.0.6
+#24 2.549   Downloaded futures-util v0.3.32
+#24 2.556   Downloaded derive_more v2.0.1
+#24 2.563   Downloaded cookie_store v0.21.1
+#24 2.565   Downloaded libloading v0.8.9
+#24 2.567   Downloaded brotli-decompressor v5.0.0
+#24 2.572   Downloaded idna_adapter v1.2.1
+#24 2.572   Downloaded is-terminal v0.4.17
+#24 2.573   Downloaded futures v0.3.32
+#24 2.576   Downloaded cssparser v0.36.0
+#24 2.579   Downloaded futures-channel v0.3.32
+#24 2.580   Downloaded fs_extra v1.3.0
+#24 2.581   Downloaded env_logger v0.10.2
+#24 2.584   Downloaded either v1.15.0
+#24 2.585   Downloaded crc32fast v1.5.0
+#24 2.587   Downloaded cookie v0.16.2
+#24 2.588   Downloaded cookie v0.18.1
+#24 2.590   Downloaded displaydoc v0.2.5
+#24 2.592   Downloaded digest v0.10.7
+#24 2.594   Downloaded compression-core v0.4.29
+#24 2.594   Downloaded compression-codecs v0.4.31
+#24 2.597   Downloaded http-body-util v0.1.3
+#24 2.598   Downloaded heck v0.5.0
+#24 2.599   Downloaded glob v0.3.3
+#24 2.601   Downloaded generic-array v0.14.9
+#24 2.602   Downloaded futures-task v0.3.32
+#24 2.603   Downloaded futures-io v0.3.32
+#24 2.604   Downloaded futures-executor v0.3.32
+#24 2.605   Downloaded form_urlencoded v1.2.2
+#24 2.606   Downloaded foreign-types-shared v0.3.1
+#24 2.606   Downloaded foreign-types v0.5.0
+#24 2.607   Downloaded chrono v0.4.44
+#24 2.613   Downloaded futures-macro v0.3.32
+#24 2.614   Downloaded futures-core v0.3.32
+#24 2.615   Downloaded futf v0.1.5
+#24 2.615   Downloaded enum-as-inner v0.6.1
+#24 2.616   Downloaded cssparser-macros v0.6.1
+#24 2.617   Downloaded boring2 v4.15.15
+#24 2.623   Downloaded boring-sys2 v4.15.15
+#24 2.760    Compiling proc-macro2 v1.0.103
+#24 2.760    Compiling quote v1.0.41
+#24 2.760    Compiling unicode-ident v1.0.20
+#24 2.762    Compiling libc v0.2.177
+#24 2.762    Compiling cfg-if v1.0.4
+#24 2.764    Compiling smallvec v1.15.1
+#24 2.765    Compiling log v0.4.29
+#24 2.767    Compiling pin-project-lite v0.2.16
+#24 2.768    Compiling memchr v2.7.6
+#24 2.768    Compiling parking_lot_core v0.9.12
+#24 2.871    Compiling futures-core v0.3.32
+#24 2.874    Compiling scopeguard v1.2.0
+#24 2.902    Compiling lock_api v0.4.14
+#24 2.920    Compiling serde_core v1.0.228
+#24 2.932    Compiling stable_deref_trait v1.2.1
+#24 2.936    Compiling bytes v1.10.1
+#24 2.950    Compiling itoa v1.0.15
+#24 2.958    Compiling shlex v1.3.0
+#24 3.010    Compiling find-msvc-tools v0.1.4
+#24 3.013    Compiling futures-sink v0.3.32
+#24 3.054    Compiling version_check v0.9.5
+#24 3.054    Compiling siphasher v1.0.1
+#24 3.105    Compiling serde v1.0.228
+#24 3.141    Compiling phf_shared v0.13.1
+#24 3.148    Compiling fastrand v2.3.0
+#24 3.247    Compiling slab v0.4.11
+#24 3.279    Compiling litemap v0.8.0
+#24 3.290    Compiling writeable v0.6.1
+#24 3.318    Compiling phf_generator v0.13.1
+#24 3.334    Compiling pkg-config v0.3.32
+#24 3.393    Compiling futures-channel v0.3.32
+#24 3.502    Compiling icu_normalizer_data v2.0.0
+#24 3.534    Compiling icu_properties_data v2.0.1
+#24 3.602    Compiling futures-io v0.3.32
+#24 3.603    Compiling futures-task v0.3.32
+#24 3.618    Compiling percent-encoding v2.3.2
+#24 3.626    Compiling fnv v1.0.7
+#24 3.641    Compiling glob v0.3.3
+#24 3.714    Compiling zerocopy v0.8.27
+#24 3.719    Compiling autocfg v1.5.0
+#24 3.724    Compiling alloc-no-stdlib v2.0.4
+#24 3.777    Compiling syn v2.0.108
+#24 3.804    Compiling zstd-safe v7.2.4
+#24 3.812    Compiling crc32fast v1.5.0
+#24 3.854    Compiling jobserver v0.1.34
+#24 3.860    Compiling mio v1.1.0
+#24 3.869    Compiling socket2 v0.6.1
+#24 3.905    Compiling signal-hook-registry v1.4.6
+#24 3.934    Compiling clang-sys v1.8.1
+#24 3.957    Compiling parking_lot v0.12.5
+#24 3.989    Compiling alloc-stdlib v0.2.2
+#24 4.026    Compiling cc v1.2.43
+#24 4.062    Compiling once_cell v1.21.3
+#24 4.083    Compiling minimal-lexical v0.2.1
+#24 4.141    Compiling adler2 v2.0.1
+#24 4.184    Compiling regex-syntax v0.8.8
+#24 4.185    Compiling simd-adler32 v0.3.7
+#24 4.186    Compiling tracing-core v0.1.34
+#24 4.202    Compiling brotli-decompressor v5.0.0
+#24 4.318    Compiling miniz_oxide v0.8.9
+#24 4.392    Compiling libloading v0.8.9
+#24 4.446    Compiling nom v7.1.3
+#24 4.504    Compiling phf_codegen v0.13.1
+#24 4.596    Compiling bitflags v2.10.0
+#24 4.700    Compiling typenum v1.19.0
+#24 4.706    Compiling utf8_iter v1.0.4
+#24 4.783    Compiling either v1.15.0
+#24 4.808    Compiling bindgen v0.72.1
+#24 ...
+
+#25 [linux/amd64 builder 3/7] RUN if [ "0" = "0" ]; then         ARCH=$(uname -m) &&         case "${ARCH}" in             "aarch64")                 wget -q https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-arm64_linux.tar.xz                 && tar -xf upx-5.0.0-arm64_linux.tar.xz                 && cp upx-5.0.0-arm64_linux/upx /usr/local/bin/                 && rm -rf upx-5.0.0-*                 ;;             "x86_64")                 wget -q https://github.com/upx/upx/releases/download/v5.0.0/upx-5.0.0-amd64_linux.tar.xz                 && tar -xf upx-5.0.0-amd64_linux.tar.xz                 && cp upx-5.0.0-amd64_linux/upx /usr/local/bin/                 && rm -rf upx-5.0.0-*                 ;;         esac;     fi
+#25 DONE 1.3s
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 4.908    Compiling itertools v0.13.0
+#24 ...
+
+#26 [linux/amd64 builder 4/7] WORKDIR /usr/src/app
+#26 DONE 0.1s
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 4.955    Compiling brotli v8.0.2
+#24 4.989    Compiling regex-automata v0.4.13
+#24 5.134    Compiling flate2 v1.1.5
+#24 5.300    Compiling zstd-sys v2.0.16+zstd.1.5.7
+#24 5.534    Compiling ppv-lite86 v0.2.21
+#24 5.599    Compiling form_urlencoded v1.2.2
+#24 5.659    Compiling cexpr v0.6.0
+#24 5.662    Compiling generic-array v0.14.9
+#24 5.667    Compiling powerfmt v0.2.0
+#24 5.676    Compiling num-conv v0.1.0
+#24 5.729    Compiling hashbrown v0.16.0
+#24 5.751    Compiling equivalent v1.0.2
+#24 5.775    Compiling time-core v0.1.6
+#24 5.783    Compiling new_debug_unreachable v1.0.6
+#24 5.813    Compiling rustc-hash v2.1.1
+#24 5.863    Compiling deranged v0.5.4
+#24 5.866    Compiling time-macros v0.2.24
+#24 6.053    Compiling regex v1.12.2
+#24 6.156    Compiling indexmap v2.12.0
+#24 6.197    Compiling cmake v0.1.54
+#24 6.321    Compiling synstructure v0.13.2
+#24 6.405    Compiling fslock v0.2.1
+#24 6.474    Compiling getrandom v0.3.4
+#24 6.499    Compiling httparse v1.10.1
+#24 6.546    Compiling zmij v1.0.12
+#24 6.587    Compiling fs_extra v1.3.0
+#24 6.698    Compiling string_cache_codegen v0.6.1
+#24 6.702    Compiling http v1.3.1
+#24 6.714    Compiling time v0.3.44
+#24 6.750    Compiling aho-corasick v1.1.3
+#24 6.997    Compiling unicode-xid v0.2.6
+#24 7.031    Compiling serde_json v1.0.149
+#24 7.071    Compiling precomputed-hash v0.1.1
+#24 7.146    Compiling web_atoms v0.2.0
+#24 7.351    Compiling zerofrom-derive v0.1.6
+#24 7.415    Compiling yoke-derive v0.8.0
+#24 7.492    Compiling zerovec-derive v0.11.1
+#24 7.553    Compiling tokio-macros v2.6.0
+#24 7.887    Compiling displaydoc v0.2.5
+#24 8.085    Compiling tokio v1.49.0
+#24 8.099    Compiling serde_derive v1.0.228
+#24 8.248    Compiling futures-macro v0.3.32
+#24 8.335    Compiling tracing-attributes v0.1.30
+#24 8.339    Compiling phf_macros v0.13.1
+#24 8.461    Compiling zerofrom v0.1.6
+#24 8.509    Compiling yoke v0.8.0
+#24 8.592    Compiling zerovec v0.11.4
+#24 8.957    Compiling zerotrie v0.2.2
+#24 9.054    Compiling futures-util v0.3.32
+#24 9.157    Compiling phf v0.13.1
+#24 9.234    Compiling derive_more-impl v2.0.1
+#24 9.291    Compiling tinystr v0.8.1
+#24 9.400    Compiling icu_locale_core v2.0.0
+#24 9.405    Compiling potential_utf v0.1.3
+#24 9.484    Compiling icu_collections v2.0.0
+#24 9.569    Compiling tracing v0.1.41
+#24 9.777    Compiling icu_provider v2.0.0
+#24 9.875    Compiling foreign-types-macros v0.2.3
+#24 9.968    Compiling icu_normalizer v2.0.0
+#24 10.07    Compiling icu_properties v2.0.1
+#24 10.60    Compiling getrandom v0.2.16
+#24 10.68    Compiling cookie v0.18.1
+#24 10.75    Compiling idna_adapter v1.2.1
+#24 10.75    Compiling boring-sys2 v4.15.15
+#24 10.81    Compiling tinyvec_macros v0.1.1
+#24 10.83    Compiling mac v0.1.1
+#24 10.84    Compiling local-waker v0.1.4
+#24 10.85    Compiling linked-hash-map v0.5.6
+#24 10.86    Compiling tokio-util v0.7.16
+#24 10.86    Compiling idna v1.1.0
+#24 10.99    Compiling foreign-types-shared v0.3.1
+#24 11.01    Compiling foreign-types v0.5.0
+#24 11.03    Compiling futf v0.1.5
+#24 11.09    Compiling url v2.5.7
+#24 11.11    Compiling tinyvec v1.10.0
+#24 11.21    Compiling string_cache v0.9.0
+#24 11.40    Compiling derive_more v2.0.1
+#24 11.43    Compiling rand_core v0.6.4
+#24 11.59    Compiling rand_core v0.9.3
+#24 11.70    Compiling openssl-macros v0.1.1
+#24 11.78    Compiling http-body v1.0.1
+#24 11.85    Compiling crypto-common v0.1.6
+#24 11.91    Compiling block-buffer v0.10.4
+#24 11.96    Compiling socket2 v0.5.10
+#24 11.97    Compiling http v0.2.12
+#24 12.06    Compiling encoding_rs v0.8.35
+#24 12.07    Compiling utf-8 v0.7.6
+#24 12.14    Compiling rustls-pki-types v1.12.0
+#24 12.17    Compiling thiserror v1.0.69
+#24 12.31    Compiling try-lock v0.2.5
+#24 12.32    Compiling atomic-waker v1.1.2
+#24 12.35    Compiling psl-types v2.0.11
+#24 12.35    Compiling litrs v1.0.0
+#24 12.41    Compiling base64 v0.22.1
+#24 12.42    Compiling compression-core v0.4.29
+#24 12.46    Compiling dtoa v1.0.10
+#24 12.52    Compiling mime v0.3.17
+#24 12.62    Compiling ipnet v2.11.0
+#24 12.65    Compiling ryu v1.0.20
+#24 12.72    Compiling bytestring v1.5.0
+#24 12.76    Compiling serde_urlencoded v0.7.1
+#24 12.77    Compiling document-features v0.2.12
+#24 12.78    Compiling dtoa-short v0.3.5
+#24 12.80    Compiling publicsuffix v2.3.0
+#24 12.84    Compiling http2 v0.4.21
+#24 12.86    Compiling want v0.3.1
+#24 12.91    Compiling webpki-root-certs v1.0.3
+#24 12.92    Compiling tendril v0.4.3
+#24 12.95    Compiling digest v0.10.7
+#24 13.01    Compiling rand_chacha v0.9.0
+#24 13.05    Compiling rand_chacha v0.3.1
+#24 13.16    Compiling unicode-normalization v0.1.24
+#24 13.17    Compiling actix-utils v3.0.1
+#24 13.25    Compiling actix-rt v2.11.0
+#24 13.43    Compiling cssparser-macros v0.6.1
+#24 13.57    Compiling typed-builder-macro v0.21.2
+#24 13.58    Compiling thiserror-impl v1.0.69
+#24 13.60    Compiling selectors v0.33.0
+#24 13.62    Compiling num-traits v0.2.19
+#24 13.73    Compiling cpufeatures v0.2.17
+#24 13.82    Compiling cookie v0.16.2
+#24 13.83    Compiling actix-service v2.0.3
+#24 13.89    Compiling sync_wrapper v1.0.2
+#24 13.94    Compiling tower-service v0.3.3
+#24 13.97    Compiling heck v0.5.0
+#24 13.98    Compiling tower-layer v0.3.3
+#24 14.02    Compiling unicode-bidi v0.3.18
+#24 14.17    Compiling regex-lite v0.1.8
+#24 14.20    Compiling tower v0.5.2
+#24 14.22    Compiling enum-as-inner v0.6.1
+#24 14.56    Compiling idna v0.4.0
+#24 14.68    Compiling cssparser v0.36.0
+#24 14.69    Compiling hyper2 v1.5.5
+#24 14.93    Compiling actix-router v0.5.4
+#24 ...
+
+#27 [linux/amd64 builder 5/7] COPY . .
+#27 ...
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 15.11    Compiling sha1 v0.10.6
+#24 15.30    Compiling markup5ever v0.36.1
+#24 15.31    Compiling cookie_store v0.21.1
+#24 15.48    Compiling rand v0.8.5
+#24 15.49    Compiling rand v0.9.2
+#24 15.52    Compiling typed-builder v0.21.2
+#24 15.57    Compiling webpki-root-certs v0.26.11
+#24 15.58    Compiling h2 v0.3.27
+#24 15.63    Compiling#24 ...
+
+#27 [linux/amd64 builder 5/7] COPY . .
+#27 DONE 10.8s
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 15.63    Compiling http-body-util v0.1.3
+#24 15.70    Compiling actix-codec v0.5.2
+#24 15.91    Compiling local-channel v0.1.5
+#24 16.06    Compiling linked_hash_set v0.1.5
+#24 16.14    Compiling async-trait v0.1.89
+#24 16.17    Compiling is-terminal v0.4.17
+#24 16.19    Compiling servo_arc v0.4.3
+#24 16.21    Compiling data-encoding v2.9.0
+#24 16.26    Compiling humantime v2.3.0
+#24 16.35    Compiling termcolor v1.4.1
+#24 16.42    Compiling httpdate v1.0.3
+#24 16.51    Compiling language-tags v0.3.2
+#24 16.64    Compiling lru v0.13.0
+#24 16.79    Compiling unicode-width v0.2.2
+#24 16.82    Compiling arc-swap v1.7.1
+#24 16.86    Compiling foldhash v0.1.5
+#24 17.02    Compiling antidote v1.0.0
+#24 17.12    Compiling getopts v0.2.24
+#24 17.15    Compiling env_logger v0.10.2
+#24 17.42    Compiling actix-web-codegen v4.3.0
+#24 17.77    Compiling trust-dns-proto v0.23.2
+#24 17.87    Compiling html5ever v0.36.1
+#24 18.76    Compiling actix-server v2.6.0
+#24 18.92    Compiling lru-cache v0.1.2
+#24 18.98    Compiling futures-executor v0.3.32
+#24 18.98    Compiling async-stream-impl v0.3.6
+#24 19.00    Compiling actix-macros v0.2.4
+#24 19.11    Compiling ego-tree v0.10.0
+#24 19.18    Compiling iana-time-zone v0.1.64
+#24 19.18    Compiling resolv-conf v0.7.5
+#24 19.29    Compiling impl-more v0.1.9
+#24 19.33    Compiling chrono v0.4.44
+#24 19.36    Compiling scraper v0.25.0
+#24 19.41    Compiling futures v0.3.32
+#24 19.42    Compiling pretty_env_logger v0.5.0
+#24 19.44    Compiling sysinfo v0.38.2
+#24 19.48    Compiling async-stream v0.3.6
+#24 19.54    Compiling qstring v0.7.2
+#24 19.57    Compiling urlencoding v2.1.3
+#24 20.03    Compiling trust-dns-resolver v0.23.2
+#24 ...
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 2.005     Updating crates.io index
+#28 5.693  Downloading crates ...
+#28 6.396   Downloaded actix-server v2.6.0
+#28 6.440   Downloaded actix-service v2.0.3
+#28 6.454   Downloaded actix-utils v3.0.1
+#28 6.458   Downloaded find-msvc-tools v0.1.4
+#28 6.464   Downloaded cookie v0.18.1
+#28 6.475   Downloaded enum-as-inner v0.6.1
+#28 6.494   Downloaded fastrand v2.3.0
+#28 6.498   Downloaded foreign-types-macros v0.2.3
+#28 6.516   Downloaded http-body v1.0.1
+#28 6.535   Downloaded httpdate v1.0.3
+#28 6.555   Downloaded impl-more v0.1.9
+#28 6.567   Downloaded linked-hash-map v0.5.6
+#28 6.577   Downloaded mime v0.3.17
+#28 6.579   Downloaded html5ever v0.36.1
+#28 6.601   Downloaded lock_api v0.4.14
+#28 6.608   Downloaded phf_shared v0.13.1
+#28 6.611   Downloaded icu_normalizer_data v2.0.0
+#28 6.616   Downloaded aho-corasick v1.1.3
+#28 6.622   Downloaded icu_locale_core v2.0.0
+#28 6.628   Downloaded http v1.3.1
+#28 6.685   Downloaded rustc-hash v2.1.1
+#28 6.688   Downloaded sha1 v0.10.6
+#28 6.690   Downloaded serde_urlencoded v0.7.1
+#28 6.692   Downloaded scopeguard v1.2.0
+#28 6.694   Downloaded ryu v1.0.20
+#28 6.699   Downloaded shlex v1.3.0
+#28 6.701   Downloaded mio v1.1.0
+#28 6.709   Downloaded tinyvec_macros v0.1.1
+#28 6.711   Downloaded nom v7.1.3
+#28 6.731   Downloaded tower-service v0.3.3
+#28 6.731   Downloaded string_cache v0.9.0
+#28 6.733   Downloaded slab v0.4.11
+#28 6.734   Downloaded signal-hook-registry v1.4.6
+#28 6.735   Downloaded tower-layer v0.3.3
+#28 6.735   Downloaded tokio-macros v2.6.0
+#28 6.737   Downloaded time-core v0.1.6
+#28 6.751   Downloaded tokio-boring2 v4.15.15
+#28 6.754   Downloaded tinyvec v1.10.0
+#28 6.759   Downloaded socket2 v0.6.1
+#28 6.759   Downloaded socket2 v0.5.10
+#28 6.768   Downloaded typed-builder v0.21.2
+#28 6.779   Downloaded regex v1.12.2
+#28 6.792   Downloaded tracing-core v0.1.34
+#28 6.798   Downloaded version_check v0.9.5
+#28 6.798   Downloaded tracing-attributes v0.1.30
+#28 6.802   Downloaded yoke-derive v0.8.0
+#28 6.809   Downloaded webpki-root-certs v0.26.11
+#28 6.810   Downloaded want v0.3.1
+#28 6.812   Downloaded utf8_iter v1.0.4
+#28 6.812   Downloaded urlencoding v2.1.3
+#28 6.813   Downloaded unicode-xid v0.2.6
+#28 6.814   Downloaded serde_json v1.0.149
+#28 6.833   Downloaded zstd-safe v7.2.4
+#28 6.835   Downloaded zmij v1.0.12
+#28 6.837   Downloaded unicode-bidi v0.3.18
+#28 6.839   Downloaded tower v0.5.2
+#28 6.867   Downloaded typed-builder-macro v0.21.2
+#28 6.879   Downloaded tokio-util v0.7.16
+#28 6.890   Downloaded trust-dns-resolver v0.23.2
+#28 6.909   Downloaded sysinfo v0.38.2
+#28 6.934   Downloaded brotli v8.0.2
+#28 6.958   Downloaded syn v2.0.108
+#28 6.972   Downloaded zerotrie v0.2.2
+#28 6.983   Downloaded url v2.5.7
+#28 6.989   Downloaded regex-automata v0.4.13
+#28 7.029   Downloaded zerovec v0.11.4
+#28 7.049   Downloaded webpki-root-certs v1.0.3
+#28 7.068   Downloaded trust-dns-proto v0.23.2
+#28 7.099   Downloaded humantime v2.3.0
+#28 7.101   Downloaded zerocopy v0.8.27
+#28 7.116   Downloaded unicode-width v0.2.2
+#28 7.122   Downloaded typenum v1.19.0
+#28 7.126   Downloaded wreq v5.3.0
+#28 7.133   Downloaded unicode-normalization v0.1.24
+#28 7.137   Downloaded libc v0.2.177
+#28 7.160   Downloaded tracing v0.1.41
+#28 7.169   Downloaded time v0.3.44
+#28 7.172   Downloaded regex-syntax v0.8.8
+#28 7.178   Downloaded zerovec-derive v0.11.1
+#28 7.179   Downloaded writeable v0.6.1
+#28 7.180   Downloaded wreq-util v2.2.6
+#28 7.183   Downloaded web_atoms v0.2.0
+#28 7.184   Downloaded unicode-ident v1.0.20
+#28 7.186   Downloaded zstd v0.13.3
+#28 7.189   Downloaded tokio v1.49.0
+#28 7.229   Downloaded zerofrom-derive v0.1.6
+#28 7.230   Downloaded zerofrom v0.1.6
+#28 7.230   Downloaded yoke v0.8.0
+#28 7.232   Downloaded utf-8 v0.7.6
+#28 7.233   Downloaded encoding_rs v0.8.35
+#28 7.255   Downloaded try-lock v0.2.5
+#28 7.256   Downloaded idna v0.4.0
+#28 7.261   Downloaded serde v1.0.228
+#28 7.264   Downloaded regex-lite v0.1.8
+#28 7.267   Downloaded rand v0.9.2
+#28 7.270   Downloaded rand v0.8.5
+#28 7.273   Downloaded publicsuffix v2.3.0
+#28 7.275   Downloaded tinystr v0.8.1
+#28 7.277   Downloaded time-macros v0.2.24
+#28 7.279   Downloaded termcolor v1.4.1
+#28 7.280   Downloaded tendril v0.4.3
+#28 7.281   Downloaded smallvec v1.15.1
+#28 7.283   Downloaded thiserror-impl v1.0.69
+#28 7.284   Downloaded thiserror v1.0.69
+#28 7.287   Downloaded synstructure v0.13.2
+#28 7.289   Downloaded sync_wrapper v1.0.2
+#28 7.289   Downloaded string_cache_codegen v0.6.1
+#28 7.290   Downloaded serde_derive v1.0.228
+#28 7.293   Downloaded zstd-sys v2.0.16+zstd.1.5.7
+#28 7.309   Downloaded selectors v0.33.0
+#28 7.311   Downloaded chrono v0.4.44
+#28 7.317   Downloaded stable_deref_trait v1.2.1
+#28 7.319   Downloaded siphasher v1.0.1
+#28 7.319   Downloaded simd-adler32 v0.3.7
+#28 7.320   Downloaded serde_core v1.0.228
+#28 7.323   Downloaded rustls-pki-types v1.12.0
+#28 7.326   Downloaded memchr v2.7.6
+#28 7.330   Downloaded itertools v0.13.0
+#28 7.335   Downloaded idna v1.1.0
+#28 7.338   Downloaded icu_properties_data v2.0.1
+#28 7.356   Downloaded http2 v0.4.21
+#28 7.363   Downloaded h2 v0.3.27
+#28 7.368   Downloaded futures-util v0.3.32
+#28 7.376   Downloaded bindgen v0.72.1
+#28 7.382   Downloaded servo_arc v0.4.3
+#28 7.383   Downloaded scraper v0.25.0
+#28 7.385   Downloaded proc-macro2 v1.0.103
+#28 7.387   Downloaded resolv-conf v0.7.5
+#28 7.388   Downloaded rand_core v0.9.3
+#28 7.389   Downloaded rand_core v0.6.4
+#28 7.390   Downloaded rand_chacha v0.9.0
+#28 7.391   Downloaded quote v1.0.41
+#28 7.393   Downloaded ppv-lite86 v0.2.21
+#28 7.401   Downloaded potential_utf v0.1.3
+#28 7.401   Downloaded pkg-config v0.3.32
+#28 7.401   Downloaded pin-project-lite v0.2.16
+#28 7.405   Downloaded num-traits v0.2.19
+#28 7.408   Downloaded miniz_oxide v0.8.9
+#28 7.411   Downloaded minimal-lexical v0.2.1
+#28 7.414   Downloaded indexmap v2.12.0
+#28 7.418   Downloaded hyper2 v1.5.5
+#28 7.423   Downloaded hashbrown v0.16.0
+#28 7.435   Downloaded brotli-decompressor v5.0.0
+#28 7.446   Downloaded boring2 v4.15.15
+#28 7.452   Downloaded actix-web v4.13.0
+#28 7.463   Downloaded rand_chacha v0.3.1
+#28 7.464   Downloaded qstring v0.7.2
+#28 7.464   Downloaded psl-types v2.0.11
+#28 7.465   Downloaded pretty_env_logger v0.5.0
+#28 7.465   Downloaded precomputed-hash v0.1.1
+#28 7.468   Downloaded powerfmt v0.2.0
+#28 7.468   Downloaded phf_macros v0.13.1
+#28 7.468   Downloaded phf_generator v0.13.1
+#28 7.469   Downloaded parking_lot_core v0.9.12
+#28 7.470   Downloaded parking_lot v0.12.5
+#28 7.472   Downloaded once_cell v1.21.3
+#28 7.475   Downloaded log v0.4.29
+#28 7.480   Downloaded litemap v0.8.0
+#28 7.481   Downloaded http v0.2.12
+#28 7.486   Downloaded phf_codegen v0.13.1
+#28 7.489   Downloaded phf v0.13.1
+#28 7.489   Downloaded percent-encoding v2.3.2
+#28 7.489   Downloaded openssl-macros v0.1.1
+#28 7.489   Downloaded num-conv v0.1.0
+#28 7.490   Downloaded new_debug_unreachable v1.0.6
+#28 7.490   Downloaded markup5ever v0.36.1
+#28 7.491   Downloaded litrs v1.0.0
+#28 7.493   Downloaded language-tags v0.3.2
+#28 7.495   Downloaded icu_properties v2.0.1
+#28 7.497   Downloaded icu_collections v2.0.0
+#28 7.502   Downloaded ipnet v2.11.0
+#28 7.503   Downloaded icu_provider v2.0.0
+#28 7.505   Downloaded icu_normalizer v2.0.0
+#28 7.508   Downloaded actix-http v3.12.0
+#28 7.515   Downloaded mac v0.1.1
+#28 7.516   Downloaded lru-cache v0.1.2
+#28 7.517   Downloaded lru v0.13.0
+#28 7.518   Downloaded local-waker v0.1.4
+#28 7.518   Downloaded local-channel v0.1.5
+#28 7.519   Downloaded linked_hash_set v0.1.5
+#28 7.520   Downloaded derive_more v2.0.1
+#28 7.526   Downloaded libloading v0.8.9
+#28 7.542   Downloaded jobserver v0.1.34
+#28 7.546   Downloaded itoa v1.0.15
+#28 7.547   Downloaded is-terminal v0.4.17
+#28 7.548   Downloaded getrandom v0.3.4
+#28 7.551   Downloaded flate2 v1.1.5
+#28 7.554   Downloaded cc v1.2.43
+#28 7.557   Downloaded idna_adapter v1.2.1
+#28 7.557   Downloaded iana-time-zone v0.1.64
+#28 7.559   Downloaded futures v0.3.32
+#28 7.563   Downloaded derive_more-impl v2.0.1
+#28 7.566   Downloaded bytes v1.10.1
+#28 7.572   Downloaded async-compression v0.4.32
+#28 7.577   Downloaded httparse v1.10.1
+#28 7.579   Downloaded http-body-util v0.1.3
+#28 7.580   Downloaded heck v0.5.0
+#28 7.581   Downloaded glob v0.3.3
+#28 7.582   Downloaded getrandom v0.2.16
+#28 7.584   Downloaded getopts v0.2.24
+#28 7.585   Downloaded generic-array v0.14.9
+#28 7.586   Downloaded futures-task v0.3.32
+#28 7.587   Downloaded futures-sink v0.3.32
+#28 7.588   Downloaded futures-macro v0.3.32
+#28 7.588   Downloaded futures-executor v0.3.32
+#28 7.589   Downloaded futures-core v0.3.32
+#28 7.590   Downloaded futures-channel v0.3.32
+#28 7.592   Downloaded futf v0.1.5
+#28 7.593   Downloaded fs_extra v1.3.0
+#28 7.594   Downloaded form_urlencoded v1.2.2
+#28 7.595   Downloaded foldhash v0.1.5
+#28 7.596   Downloaded fnv v1.0.7
+#28 7.597   Downloaded cssparser v0.36.0
+#28 7.599   Downloaded base64 v0.22.1
+#28 7.604   Downloaded arc-swap v1.7.1
+#28 7.607   Downloaded futures-io v0.3.32
+#28 7.608   Downloaded fslock v0.2.1
+#28 7.609   Downloaded foreign-types-shared v0.3.1
+#28 7.610   Downloaded foreign-types v0.5.0
+#28 7.610   Downloaded env_logger v0.10.2
+#28 7.612   Downloaded either v1.15.0
+#28 7.613   Downloaded dtoa v1.0.10
+#28 7.615   Downloaded document-features v0.2.12
+#28 7.616   Downloaded displaydoc v0.2.5
+#28 7.618   Downloaded digest v0.10.7
+#28 7.620   Downloaded deranged v0.5.4
+#28 7.622   Downloaded data-encoding v2.9.0
+#28 7.623   Downloaded equivalent v1.0.2
+#28 7.624   Downloaded ego-tree v0.10.0
+#28 7.632   Downloaded dtoa-short v0.3.5
+#28 7.635   Downloaded boring-sys2 v4.15.15
+#28 7.733   Downloaded crc32fast v1.5.0
+#28 7.736   Downloaded clang-sys v1.8.1
+#28 7.739   Downloaded adler2 v2.0.1
+#28 7.739   Downloaded actix-web-codegen v4.3.0
+#28 7.740   Downloaded cssparser-macros v0.6.1
+#28 7.740   Downloaded cookie_store v0.21.1
+#28 7.743   Downloaded cexpr v0.6.0
+#28 7.743   Downloaded compression-codecs v0.4.31
+#28 7.747   Downloaded cmake v0.1.54
+#28 7.747   Downloaded antidote v1.0.0
+#28 7.747   Downloaded crypto-common v0.1.6
+#28 7.747   Downloaded cpufeatures v0.2.17
+#28 7.750   Downloaded cookie v0.16.2
+#28 7.750   Downloaded compression-core v0.4.29
+#28 7.751   Downloaded cfg-if v1.0.4
+#28 7.760   Downloaded bytestring v1.5.0
+#28 7.763   Downloaded block-buffer v0.10.4
+#28 7.763   Downloaded bitflags v2.10.0
+#28 7.765   Downloaded autocfg v1.5.0
+#28 7.768   Downloaded atomic-waker v1.1.2
+#28 7.774   Downloaded async-trait v0.1.89
+#28 7.781   Downloaded async-stream-impl v0.3.6
+#28 7.787   Downloaded async-stream v0.3.6
+#28 7.790   Downloaded alloc-stdlib v0.2.2
+#28 7.790   Downloaded alloc-no-stdlib v2.0.4
+#28 7.792   Downloaded actix-rt v2.11.0
+#28 7.801   Downloaded actix-router v0.5.4
+#28 7.808   Downloaded actix-codec v0.5.2
+#28 7.811   Downloaded actix-macros v0.2.4
+#28 8.051    Compiling proc-macro2 v1.0.103
+#28 8.052    Compiling quote v1.0.41
+#28 8.053    Compiling unicode-ident v1.0.20
+#28 8.054    Compiling libc v0.2.177
+#28 8.054    Compiling cfg-if v1.0.4
+#28 8.054    Compiling smallvec v1.15.1
+#28 8.057    Compiling log v0.4.29
+#28 8.058    Compiling pin-project-lite v0.2.16
+#28 8.058    Compiling memchr v2.7.6
+#28 8.058    Compiling parking_lot_core v0.9.12
+#28 ...
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 24.21    Compiling zstd v0.13.3
+#24 24.33    Compiling compression-codecs v0.4.31
+#24 24.33    Compiling actix-http v3.12.0
+#24 24.53    Compiling async-compression v0.4.32
+#24 25.96    Compiling actix-web v4.13.0
+#24 ...
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 8.987    Compiling futures-core v0.3.32
+#28 9.550    Compiling scopeguard v1.2.0
+#28 9.751    Compiling bytes v1.10.1
+#28 10.53    Compiling lock_api v0.4.14
+#28 10.54    Compiling serde_core v1.0.228
+#28 10.63    Compiling stable_deref_trait v1.2.1
+#28 10.92    Compiling itoa v1.0.15
+#28 10.93    Compiling shlex v1.3.0
+#28 11.12    Compiling find-msvc-tools v0.1.4
+#28 11.70    Compiling futures-sink v0.3.32
+#28 12.28    Compiling version_check v0.9.5
+#28 12.52    Compiling serde v1.0.228
+#28 12.69    Compiling siphasher v1.0.1
+#28 12.88    Compiling fastrand v2.3.0
+#28 13.51    Compiling jobserver v0.1.34
+#28 13.53    Compiling signal-hook-registry v1.4.6
+#28 13.62    Compiling mio v1.1.0
+#28 14.19    Compiling socket2 v0.6.1
+#28 14.20    Compiling phf_shared v0.13.1
+#28 14.43    Compiling pkg-config v0.3.32
+#28 14.61    Compiling slab v0.4.11
+#28 15.47    Compiling parking_lot v0.12.5
+#28 15.68    Compiling cc v1.2.43
+#28 ...
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 31.64    Compiling boring2 v4.15.15
+#24 32.99    Compiling tokio-boring2 v4.15.15
+#24 33.05    Compiling wreq v5.3.0
+#24 34.94    Compiling wreq-util v2.2.6
+#24 ...
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 15.92    Compiling phf_generator v0.13.1
+#28 16.11    Compiling litemap v0.8.0
+#28 16.25    Compiling writeable v0.6.1
+#28 16.38    Compiling futures-channel v0.3.32
+#28 17.01    Compiling syn v2.0.108
+#28 17.08    Compiling futures-task v0.3.32
+#28 17.30    Compiling futures-io v0.3.32
+#28 17.48    Compiling percent-encoding v2.3.2
+#28 18.01    Compiling icu_properties_data v2.0.1
+#28 18.61    Compiling icu_normalizer_data v2.0.0
+#28 18.72    Compiling fnv v1.0.7
+#28 18.75    Compiling glob v0.3.3
+#28 18.92    Compiling autocfg v1.5.0
+#28 18.99    Compiling zstd-safe v7.2.4
+#28 19.06    Compiling alloc-no-stdlib v2.0.4
+#28 19.59    Compiling crc32fast v1.5.0
+#28 19.60    Compiling zerocopy v0.8.27
+#28 19.97    Compiling simd-adler32 v0.3.7
+#28 20.19    Compiling alloc-stdlib v0.2.2
+#28 20.25    Compiling zstd-sys v2.0.16+zstd.1.5.7
+#28 20.45    Compiling adler2 v2.0.1
+#28 20.49    Compiling regex-syntax v0.8.8
+#28 20.82    Compiling clang-sys v1.8.1
+#28 20.98    Compiling minimal-lexical v0.2.1
+#28 21.43    Compiling once_cell v1.21.3
+#28 ...
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 37.63    Compiling ygege v0.8.0 (/usr/src/app)
+#24 ...
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 22.06    Compiling miniz_oxide v0.8.9
+#28 22.51    Compiling brotli-decompressor v5.0.0
+#28 22.83    Compiling synstructure v0.13.2
+#28 23.30    Compiling regex-automata v0.4.13
+#28 23.59    Compiling nom v7.1.3
+#28 23.96    Compiling tracing-core v0.1.34
+#28 24.68    Compiling libloading v0.8.9
+#28 25.27    Compiling zerovec-derive v0.11.1
+#28 25.31    Compiling zerofrom-derive v0.1.6
+#28 25.60    Compiling yoke-derive v0.8.0
+#28 25.67    Compiling displaydoc v0.2.5
+#28 26.37    Compiling tokio-macros v2.6.0
+#28 26.71    Compiling serde_derive v1.0.228
+#28 27.15    Compiling futures-macro v0.3.32
+#28 27.18    Compiling tracing-attributes v0.1.30
+#28 27.97    Compiling phf_codegen v0.13.1
+#28 28.35    Compiling bindgen v0.72.1
+#28 28.64    Compiling zerofrom v0.1.6
+#28 28.64    Compiling utf8_iter v1.0.4
+#28 29.08    Compiling either v1.15.0
+#28 29.10    Compiling tokio v1.49.0
+#28 29.65    Compiling yoke v0.8.0
+#28 29.85    Compiling typenum v1.19.0
+#28 29.89    Compiling futures-util v0.3.32
+#28 30.01    Compiling bitflags v2.10.0
+#28 30.37    Compiling itertools v0.13.0
+#28 30.74    Compiling tracing v0.1.41
+#28 31.21    Compiling zerovec v0.11.4
+#28 31.69    Compiling zerotrie v0.2.2
+#28 32.18    Compiling cexpr v0.6.0
+#28 32.28    Compiling regex v1.12.2
+#28 33.43    Compiling ppv-lite86 v0.2.21
+#28 34.34    Compiling tinystr v0.8.1
+#28 34.56    Compiling potential_utf v0.1.3
+#28 34.59    Compiling brotli v8.0.2
+#28 35.17    Compiling flate2 v1.1.5
+#28 35.22    Compiling form_urlencoded v1.2.2
+#28 35.28    Compiling generic-array v0.14.9
+#28 35.87    Compiling icu_locale_core v2.0.0
+#28 36.19    Compiling icu_collections v2.0.0
+#28 36.33    Compiling rustc-hash v2.1.1
+#28 36.44    Compiling new_debug_unreachable v1.0.6
+#28 37.00    Compiling num-conv v0.1.0
+#28 37.21    Compiling time-core v0.1.6
+#28 37.49    Compiling powerfmt v0.2.0
+#28 37.80    Compiling tokio-util v0.7.16
+#28 37.94    Compiling equivalent v1.0.2
+#28 38.63    Compiling icu_provider v2.0.0
+#28 39.17    Compiling hashbrown v0.16.0
+#28 39.25    Compiling deranged v0.5.4
+#28 39.41    Compiling time-macros v0.2.24
+#28 40.93    Compiling icu_properties v2.0.1
+#28 41.14    Compiling icu_normalizer v2.0.0
+#28 41.28    Compiling indexmap v2.12.0
+#28 41.43    Compiling phf_macros v0.13.1
+#28 41.66    Compiling cmake v0.1.54
+#28 41.74    Compiling fslock v0.2.1
+#28 43.20    Compiling httparse v1.10.1
+#28 43.34    Compiling fs_extra v1.3.0
+#28 43.47    Compiling getrandom v0.3.4
+#28 43.99    Compiling idna_adapter v1.2.1
+#28 44.08    Compiling zmij v1.0.12
+#28 44.39    Compiling time v0.3.44
+#28 44.44    Compiling phf v0.13.1
+#28 45.18    Compiling idna v1.1.0
+#28 45.29    Compiling http v1.3.1
+#28 45.31    Compiling string_cache_codegen v0.6.1
+#28 45.42    Compiling aho-corasick v1.1.3
+#28 45.63    Compiling serde_json v1.0.149
+#28 45.88    Compiling precomputed-hash v0.1.1
+#28 46.71    Compiling unicode-xid v0.2.6
+#28 47.08    Compiling url v2.5.7
+#28 47.39    Compiling web_atoms v0.2.0
+#28 47.98    Compiling derive_more-impl v2.0.1
+#28 49.25    Compiling boring-sys2 v4.15.15
+#28 51.31    Compiling foreign-types-macros v0.2.3
+#28 52.81    Compiling cookie v0.18.1
+#28 53.68    Compiling getrandom v0.2.16
+#28 54.51    Compiling tinyvec_macros v0.1.1
+#28 54.69    Compiling foreign-types-shared v0.3.1
+#28 54.99    Compiling local-waker v0.1.4
+#28 55.04    Compiling mac v0.1.1
+#28 55.58    Compiling linked-hash-map v0.5.6
+#28 55.78    Compiling rand_core v0.6.4
+#28 56.59    Compiling foreign-types v0.5.0
+#28 56.71    Compiling futf v0.1.5
+#28 57.16    Compiling tinyvec v1.10.0
+#28 57.82    Compiling rand_core v0.9.3
+#28 57.90    Compiling derive_more v2.0.1
+#28 58.64    Compiling http-body v1.0.1
+#28 58.67    Compiling block-buffer v0.10.4
+#28 59.71    Compiling crypto-common v0.1.6
+#28 59.87    Compiling string_cache v0.9.0
+#28 60.57    Compiling openssl-macros v0.1.1
+#28 60.77    Compiling http v0.2.12
+#28 60.82    Compiling socket2 v0.5.10
+#28 61.34    Compiling encoding_rs v0.8.35
+#28 62.98    Compiling utf-8 v0.7.6
+#28 64.52    Compiling thiserror v1.0.69
+#28 64.88    Compiling ipnet v2.11.0
+#28 65.54    Compiling ryu v1.0.20
+#28 67.62    Compiling psl-types v2.0.11
+#28 67.78    Compiling compression-core v0.4.29
+#28 67.87    Compiling rustls-pki-types v1.12.0
+#28 69.41    Compiling dtoa v1.0.10
+#28 69.63    Compiling litrs v1.0.0
+#28 70.11    Compiling atomic-waker v1.1.2
+#28 ...
+
+#24 [linux/arm64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#24 85.92     Finished `release` profile [optimized] target(s) in 1m 25s
+#24 DONE 86.3s
+
+#29 [linux/arm64 builder 7/7] RUN if [ "0" = "0" ]; then         upx --best --lzma /usr/src/app/target/release/ygege;     fi
+#29 0.738                        Ultimate Packer for eXecutables
+#29 0.738                           Copyright (C) 1996 - 2025
+#29 ...
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 70.48    Compiling base64 v0.22.1
+#28 71.05    Compiling try-lock v0.2.5
+#28 72.68    Compiling mime v0.3.17
+#28 72.71    Compiling want v0.3.1
+#28 72.84    Compiling dtoa-short v0.3.5
+#28 73.39    Compiling http2 v0.4.21
+#28 74.67    Compiling document-features v0.2.12
+#28 74.86    Compiling bytestring v1.5.0
+#28 75.95    Compiling webpki-root-certs v1.0.3
+#28 76.00    Compiling publicsuffix v2.3.0
+#28 77.36    Compiling serde_urlencoded v0.7.1
+#28 77.57    Compiling tendril v0.4.3
+#28 77.80    Compiling digest v0.10.7
+#28 79.02    Compiling unicode-normalization v0.1.24
+#28 80.79    Compiling rand_chacha v0.9.0
+#28 81.64    Compiling rand_chacha v0.3.1
+#28 82.10    Compiling actix-utils v3.0.1
+#28 82.46    Compiling actix-rt v2.11.0
+#28 ...
+
+#29 [linux/arm64 builder 7/7] RUN if [ "0" = "0" ]; then         upx --best --lzma /usr/src/app/target/release/ygege;     fi
+#29 12.67 UPX 5.0.0       Markus Oberhumer, Laszlo Molnar & John Reiser   Feb 20th 2025
+#29 12.67 
+#29 12.67         File size         Ratio      Format      Name
+#29 12.67    --------------------   ------   -----------   -----------
+#29 12.67    8407400 ->   2772376   32.98%   linux/arm64   ygege
+#29 12.67 
+#29 12.67 Packed 1 file.
+#29 DONE 13.0s
+
+#30 [linux/arm64 stage-1 4/7] COPY --from=builder /usr/src/app/target/release/ygege /app/ygege
+#30 DONE 0.4s
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 83.50    Compiling selectors v0.33.0
+#28 83.93    Compiling typed-builder-macro v0.21.2
+#28 ...
+
+#31 [linux/arm64 stage-1 5/7] RUN chmod +x /app/ygege
+#31 DONE 0.7s
+
+#32 [linux/arm64 stage-1 6/7] RUN mkdir -p /app/sessions
+#32 DONE 0.8s
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 85.29    Compiling thiserror-impl v1.0.69
+#28 85.83    Compiling cssparser-macros v0.6.1
+#28 ...
+
+#33 [linux/arm64 stage-1 7/7] RUN addgroup --gid 10001 --system ygege     && adduser --uid 10001 --system --ingroup ygege --home /home/ygege --shell /sbin/nologin ygege     && chown -R ygege:ygege /app /home/ygege
+#33 0.583 Adding group `ygege' (GID 10001) ...
+#33 0.816 Done.
+#33 0.842 Adding system user `ygege' (UID 10001) ...
+#33 0.842 Adding new user `ygege' (UID 10001) with group `ygege' ...
+#33 0.874 useradd warning: ygege's uid 10001 is greater than SYS_UID_MAX 999
+#33 0.934 Creating home directory `/home/ygege' ...
+#33 DONE 1.1s
+
+#28 [linux/amd64 builder 6/7] RUN BUILD_COMMIT=unknown BUILD_DATE=unknown BUILD_BRANCH=unknown     cargo build --release
+#28 87.41    Compiling num-traits v0.2.19
+#28 88.48    Compiling cookie v0.16.2
+#28 89.95    Compiling actix-service v2.0.3
+#28 90.08    Compiling sync_wrapper v1.0.2
+#28 90.61    Compiling cpufeatures v0.2.17
+#28 91.13    Compiling tower-layer v0.3.3
+#28 91.73    Compiling heck v0.5.0
+#28 91.85    Compiling tower-service v0.3.3
+#28 91.91    Compiling regex-lite v0.1.8
+#28 92.41    Compiling unicode-bidi v0.3.18
+#28 92.95    Compiling typed-builder v0.21.2
+#28 93.48    Compiling tower v0.5.2
+#28 93.52    Compiling sha1 v0.10.6
+#28 93.88    Compiling cssparser v0.36.0
+#28 94.84    Compiling cookie_store v0.21.1
+#28 96.01    Compiling enum-as-inner v0.6.1
+#28 96.67    Compiling idna v0.4.0
+#28 98.21    Compiling actix-router v0.5.4
+#28 98.30    Compiling rand v0.8.5
+#28 99.05    Compiling rand v0.9.2
+#28 99.32    Compiling markup5ever v0.36.1
+#28 100.5    Compiling hyper2 v1.5.5
+#28 103.1    Compiling webpki-root-certs v0.26.11
+#28 103.3    Compiling h2 v0.3.27
+#28 103.9    Compiling http-body-util v0.1.3
+#28 105.2    Compiling linked_hash_set v0.1.5
+#28 105.6    Compiling local-channel v0.1.5
+#28 105.7    Compiling actix-codec v0.5.2
+#28 106.4    Compiling async-trait v0.1.89
+#28 107.1    Compiling is-terminal v0.4.17
+#28 107.3    Compiling servo_arc v0.4.3
+#28 107.9    Compiling arc-swap v1.7.1
+#28 108.7    Compiling termcolor v1.4.1
+#28 109.1    Compiling foldhash v0.1.5
+#28 110.3    Compiling language-tags v0.3.2
+#28 112.0    Compiling unicode-width v0.2.2
+#28 112.0    Compiling httpdate v1.0.3
+#28 113.3    Compiling humantime v2.3.0
+#28 116.0    Compiling antidote v1.0.0
+#28 116.2    Compiling lru v0.13.0
+#28 116.5    Compiling data-encoding v2.9.0
+#28 116.6    Compiling getopts v0.2.24
+#28 118.7    Compiling env_logger v0.10.2
+#28 118.8    Compiling actix-web-codegen v4.3.0
+#28 119.6    Compiling html5ever v0.36.1
+#28 126.7    Compiling trust-dns-proto v0.23.2
+#28 127.6    Compiling actix-server v2.6.0
+#28 127.6    Compiling lru-cache v0.1.2
+#28 127.8    Compiling futures-executor v0.3.32
+#28 129.3    Compiling actix-macros v0.2.4
+#28 129.4    Compiling async-stream-impl v0.3.6
+#28 130.9    Compiling impl-more v0.1.9
+#28 130.9    Compiling resolv-conf v0.7.5
+#28 131.4    Compiling iana-time-zone v0.1.64
+#28 132.2    Compiling ego-tree v0.10.0
+#28 132.3    Compiling futures v0.3.32
+#28 132.8    Compiling pretty_env_logger v0.5.0
+#28 133.1    Compiling qstring v0.7.2
+#28 133.2    Compiling async-stream v0.3.6
+#28 135.7    Compiling chrono v0.4.44
+#28 136.0    Compiling zstd v0.13.3
+#28 136.7    Compiling sysinfo v0.38.2
+#28 136.9    Compiling scraper v0.25.0
+#28 137.3    Compiling urlencoding v2.1.3
+#28 138.1    Compiling trust-dns-resolver v0.23.2
+#28 140.0    Compiling compression-codecs v0.4.31
+#28 141.1    Compiling actix-http v3.12.0
+#28 143.8    Compiling async-compression v0.4.32
+#28 152.2    Compiling actix-web v4.13.0
+#28 165.5    Compiling boring2 v4.15.15
+#28 172.0    Compiling tokio-boring2 v4.15.15
+#28 173.2    Compiling wreq v5.3.0
+#28 181.7    Compiling wreq-util v2.2.6
+#28 192.3    Compiling ygege v0.8.0 (/usr/src/app)
+#28 297.4     Finished `release` profile [optimized] target(s) in 4m 56s
+#28 DONE 297.6s
+
+#34 [linux/amd64 builder 7/7] RUN if [ "0" = "0" ]; then         upx --best --lzma /usr/src/app/target/release/ygege;     fi
+#34 0.222                        Ultimate Packer for eXecutables
+#34 0.222                           Copyright (C) 1996 - 2025
+#34 8.039 UPX 5.0.0       Markus Oberhumer, Laszlo Molnar & John Reiser   Feb 20th 2025
+#34 8.039 
+#34 8.039         File size         Ratio      Format      Name
+#34 8.039    --------------------   ------   -----------   -----------
+#34 8.039    9166456 ->   2930592   31.97%   linux/amd64   ygege
+#34 8.039 
+#34 8.039 Packed 1 file.
+#34 DONE 8.1s
+
+#35 [linux/amd64 stage-1 4/7] COPY --from=builder /usr/src/app/target/release/ygege /app/ygege
+#35 DONE 0.0s
+
+#36 [linux/amd64 stage-1 5/7] RUN chmod +x /app/ygege
+#36 DONE 0.1s
+
+#37 [linux/amd64 stage-1 6/7] RUN mkdir -p /app/sessions
+#37 DONE 0.1s
+
+#38 [linux/amd64 stage-1 7/7] RUN addgroup --gid 10001 --system ygege     && adduser --uid 10001 --system --ingroup ygege --home /home/ygege --shell /sbin/nologin ygege     && chown -R ygege:ygege /app /home/ygege
+#38 0.287 Adding group `ygege' (GID 10001) ...
+#38 0.341 Done.
+#38 0.515 Adding system user `ygege' (UID 10001) ...
+#38 0.515 Adding new user `ygege' (UID 10001) with group `ygege' ...
+#38 0.554 useradd warning: ygege's uid 10001 is greater than SYS_UID_MAX 999
+#38 0.585 Creating home directory `/home/ygege' ...
+#38 DONE 0.6s
+
+#39 exporting to image
+#39 exporting layers
+#39 exporting layers 0.8s done
+#39 exporting manifest sha256:9beb860824d68de676cdf250105f38416a7f06588e5f463733f4312e48da196f
+#39 exporting manifest sha256:9beb860824d68de676cdf250105f38416a7f06588e5f463733f4312e48da196f done
+#39 exporting config sha256:34a5f4427352a020823b2a6cb024107f25ff31f574bfb0e86a841bff5bc0b792 done
+#39 exporting attestation manifest sha256:5de73636ea3a3ea888dcdfcdcd740b4784eb1e67b71d64c78289138e1f152a08 0.0s done
+#39 exporting manifest sha256:639e43cc3130b28cea1177d5b4aed85a450f0285f246b33d8e7b0513b99b035b done
+#39 exporting config sha256:308e797186fcebc64b3b3dc5f8628b81b91fc28d3dcbfd7d9bd609ecc9de5169 done
+#39 exporting attestation manifest sha256:22831e979f6f5d781ce56131710b3a9a5aef045d77da5363ed70cea8570011c4 0.0s done
+#39 exporting manifest list sha256:8cf37c03c75fa37c352f33da216ffcf4ad5fa4569cacc1b0774190774041076f done
+#39 pushing layers
+#39 ...
+
+#40 [auth] theodep/ygege:pull,push token for registry-1.docker.io
+#40 DONE 0.0s
+
+#39 exporting to image
+#39 pushing layers 7.8s done
+#39 pushing manifest for docker.io/theodep/ygege:latest@sha256:8cf37c03c75fa37c352f33da216ffcf4ad5fa4569cacc1b0774190774041076f
+#39 pushing manifest for docker.io/theodep/ygege:latest@sha256:8cf37c03c75fa37c352f33da216ffcf4ad5fa4569cacc1b0774190774041076f 4.3s done
+#39 DONE 13.1s

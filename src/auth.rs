@@ -66,27 +66,36 @@ pub async fn login(
         }
 
         // check if the session is still valid
-        let response = client
+        let session_check = client
             .get(format!("https://{domain}/"))
             .headers(headers.clone())
             .send()
-            .await?;
-        if response.status().is_success() {
-            let stop = std::time::Instant::now();
-            debug!(
-                "Successfully resumed session in {:?}",
-                stop.duration_since(start)
-            );
-            return Ok(client);
-        } else {
-            debug!(
-                "Session is not valid, deleting session file (code {})",
-                response.status()
-            );
-            // session is not valid, delete the file
-            let session_file = format!("sessions/{}.cookies", username);
-            let _ = std::fs::remove_file(&session_file);
-            debug!("Session file deleted");
+            .await;
+
+        match session_check {
+            Ok(response) if response.status().is_success() => {
+                let stop = std::time::Instant::now();
+                debug!(
+                    "Successfully resumed session in {:?}",
+                    stop.duration_since(start)
+                );
+                return Ok(client);
+            }
+            Ok(response) => {
+                debug!(
+                    "Session is not valid, deleting session file (code {})",
+                    response.status()
+                );
+                let session_file = format!("sessions/{}.cookies", username);
+                let _ = std::fs::remove_file(&session_file);
+                debug!("Session file deleted");
+            }
+            Err(e) => {
+                warn!("Session validation failed (connection error): {}", e);
+                let session_file = format!("sessions/{}.cookies", username);
+                let _ = std::fs::remove_file(&session_file);
+                debug!("Session file deleted due to connection error");
+            }
         }
     }
 
@@ -232,13 +241,18 @@ async fn try_flaresolverr_login(
 ) -> Result<(FlareSolverrClient, Vec<Cookie>), Box<dyn std::error::Error>> {
     let mut flare_client = FlareSolverrClient::new(flaresolverr_url.to_string())?;
 
+    // Create a persistent session so the browser state (including cf_clearance) is reused
+    if let Err(e) = flare_client.create_session().await {
+        warn!("Failed to create FlareSolverr session: {}, proceeding without session", e);
+    }
+
     // Step 1: Get login page with account_created cookie
     let account_cookie = Cookie {
         name: "account_created".to_string(),
         value: "true".to_string(),
     };
 
-    let (_, mut cookies) = flare_client
+    let (_, mut cookies, _) = flare_client
         .get_with_cookies(
             &format!("https://{domain}{LOGIN_PAGE}"),
             Some(&[account_cookie]),
@@ -267,7 +281,7 @@ async fn try_flaresolverr_login(
     cookies.extend(login_cookies);
 
     // Step 3: Get final cookies from root page
-    let (_, final_cookies) = flare_client
+    let (_, final_cookies, _) = flare_client
         .get_with_cookies(&format!("https://{domain}/"), Some(&cookies))
         .await?;
 

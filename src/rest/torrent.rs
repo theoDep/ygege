@@ -21,26 +21,41 @@ pub async fn download_torrent(
 
     // Request token
     let url = format!("https://{}/engine/start_download_timer", domain);
-    let body = format!("torrent_id={}", id);
+    let form_body = format!("torrent_id={}", id);
 
-    debug!("Request download token {} {}", url, body);
+    debug!("Request download token {} {}", url, form_body);
 
-    let response = data
-        .client
-        .post(&url)
-        .body(body)
-        .header(
-            "Content-Type",
-            "application/x-www-form-urlencoded; charset=UTF-8",
-        )
-        .send()
-        .await?;
+    let result = crate::flaresolverr::post_page(
+        &data.client,
+        &url,
+        &form_body,
+        "application/x-www-form-urlencoded; charset=UTF-8",
+    )
+    .await?;
 
-    if !response.status().is_success() {
-        return Err(format!("Failed to get token: {}", response.status()).into());
+    if result.status_code != 200 {
+        return Err(format!("Failed to get token: {}", result.status_code).into());
     }
 
-    let body: Value = response.json().await?;
+    // FlareSolverr wraps JSON API responses in HTML (browser rendering).
+    // Try raw JSON first, then extract JSON object from within HTML.
+    let response_body = &result.body;
+    let body: Value = match serde_json::from_str(response_body) {
+        Ok(v) => v,
+        Err(_) => {
+            debug!("Response is not raw JSON, extracting JSON from HTML wrapper");
+            // Extract JSON by finding first { and last }
+            let json_str = if let (Some(start), Some(end)) = (response_body.find('{'), response_body.rfind('}')) {
+                &response_body[start..=end]
+            } else {
+                response_body.as_str()
+            };
+            serde_json::from_str(json_str).map_err(|e| {
+                error!("Failed to parse token response: {}. Body: {}", e, &response_body[..response_body.len().min(500)]);
+                format!("Failed to parse token response: {}", e)
+            })?
+        }
+    };
     debug!("Response {}", body);
 
     let token = body
@@ -61,36 +76,45 @@ pub async fn download_torrent(
     );
     debug!("download URL {}", url);
 
-    let result = crate::flaresolverr::fetch_page(&data.client, &url).await?;
-
-    if result.status_code != 200 {
-        if result.status_code == 302 {
-            return match crate::utils::get_remaining_downloads(&data.client).await {
-                Ok(0) => {
-                    error!("No remaining downloads");
-                    Err("No remaining downloads".into())
-                }
-                Ok(n) => {
-                    warn!(
-                        "Failed to download torrent, but you have {} remaining downloads, might be caused by an insufficient ratio.",
-                        n
-                    );
-                    Err("Failed to download torrent, but you have remaining downloads.".into())
-                }
-                Err(e) => {
-                    error!("Error while checking remaining downloads: {}", e);
-                    Err("Failed to download torrent and check remaining downloads.".into())
-                }
-            };
+    // For binary files, use fetch_binary to avoid FlareSolverr's text corruption
+    let body: Vec<u8>;
+    if crate::flaresolverr::is_flaresolverr_active() {
+        body = crate::flaresolverr::fetch_binary(&url).await?;
+        if body.is_empty() {
+            return Err("Downloaded torrent file is empty".into());
         }
-        return Err(format!(
-            "Failed to get torrent file: {}",
-            result.status_code,
-        )
-        .into());
-    }
+        debug!("Downloaded torrent file: {} bytes", body.len());
+    } else {
+        let result = crate::flaresolverr::fetch_page(&data.client, &url).await?;
 
-    let body = result.body.into_bytes();
+        if result.status_code != 200 {
+            if result.status_code == 302 {
+                return match crate::utils::get_remaining_downloads(&data.client).await {
+                    Ok(0) => {
+                        error!("No remaining downloads");
+                        Err("No remaining downloads".into())
+                    }
+                    Ok(n) => {
+                        warn!(
+                            "Failed to download torrent, but you have {} remaining downloads, might be caused by an insufficient ratio.",
+                            n
+                        );
+                        Err("Failed to download torrent, but you have remaining downloads.".into())
+                    }
+                    Err(e) => {
+                        error!("Error while checking remaining downloads: {}", e);
+                        Err("Failed to download torrent and check remaining downloads.".into())
+                    }
+                };
+            }
+            return Err(format!(
+                "Failed to get torrent file: {}",
+                result.status_code,
+            )
+            .into());
+        }
+        body = result.body.into_bytes();
+    }
 
     let mut response_builder = HttpResponse::Ok();
     response_builder
