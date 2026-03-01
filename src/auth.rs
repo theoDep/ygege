@@ -1,7 +1,7 @@
 use crate::client::build_client;
 use crate::config::Config;
 use crate::domain::get_leaked_ip;
-use crate::flaresolverr::{Cookie, FlareSolverrClient, set_global_flaresolverr};
+use crate::flaresolverr::{Cookie, FlareSolverrClient, init_session_pool};
 use crate::{DOMAIN, LOGIN_PAGE, LOGIN_PROCESS_PAGE};
 use std::collections::HashMap;
 use std::fs::File;
@@ -140,8 +140,8 @@ pub async fn login(
             simple_client.set_cookie(&base_url, wreq_cookie);
         }
 
-        // Store the FlareSolverr client globally so fetch_page() can use it
-        set_global_flaresolverr(flare_client, cookies);
+        // Initialize the FlareSolverr session pool so fetch_page() can use it
+        init_session_pool(flare_client, cookies, domain).await;
 
         let stop = std::time::Instant::now();
         debug!(
